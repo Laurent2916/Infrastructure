@@ -5,33 +5,37 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
+  imports = [
       ./hardware-configuration.nix
     ];
 
   networking.hostName = "neodymium";
 
-  # Use the systemd-boot EFI boot loader.
+  # use systemd-boot EFI boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  hardware.enableRedistributableFirmware = true;
+  # configure hardware
+  hardware = {
+    enableRedistributableFirmware = true;
+    opengl = {
+      enable = true;
+      driSupport = true;
+    };
+  };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # internationalisation
   time.timeZone = "Europe/Paris";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_IE.UTF-8";
+  i18n.defaultLocale = "en_DK.UTF-8";
   console = {
     keyMap = "fr";
   };
 
   fonts.fonts = with pkgs; [
+    fira-code fira-code-symbols
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
@@ -52,8 +56,6 @@
     enable = true;
     wrapperFeatures.gtk = true;
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   programs.light.enable = true;
 
@@ -411,10 +413,17 @@
     };
   };
 
+  # enable ssh agent
   programs.ssh.startAgent = true;
 
-  # Enable polkit
+  # enable polkit
   security.polkit.enable = true;
+
+  # enable unfree
+  nixpkgs.config.allowUnfree = true;
+
+  # experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
