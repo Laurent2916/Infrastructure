@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, lib, ... }:
 
 let
@@ -110,11 +106,25 @@ in
     home.pointerCursor = {
       name = "Catppuccin-Mocha-Dark-Cursors";
       package = pkgs.catppuccin-cursors.mochaDark;
-      gtk.enable = true;
       size = 32;
-      x11 = {
-        enable = true;
-        defaultCursor = "Catppuccin-Mocha-Dark-Cursors";
+      gtk.enable = true;
+      x11.enable = true;
+    };
+
+    gtk = {
+      enable = true;
+      font = {
+        name = "Inter";
+        package = pkgs.inter;
+        size = 10;
+      };
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+      theme = {
+        name = "Catppuccin-Mocha-Standard-Blue-Dark";
+        package = pkgs.catppuccin-gtk;
       };
     };
 
