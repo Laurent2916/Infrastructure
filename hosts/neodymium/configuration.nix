@@ -94,7 +94,6 @@
       mpv
       feh
       vscode
-      librewolf
       keepassxc
       x2goclient
       thunderbird
@@ -155,6 +154,16 @@
       signing = {
         signByDefault = true;
         key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@neodymium";
+      };
+    };
+
+    programs.librewolf = {
+      enable = true;
+      settings = {
+        "privacy.clearOnShutdown.history" = false;
+        "privacy.clearOnShutdown.downloads" = false;
+        "privacy.donottrackheader.enabled" = true;
+        "general.autoScroll" = true;
       };
     };
 
