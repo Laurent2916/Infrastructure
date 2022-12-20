@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -23,7 +23,6 @@
       driSupport = true;
     };
   };
-
 
   networking.networkmanager.enable = true;
 
@@ -133,7 +132,26 @@
         path = "$HOME/.zsh_history";
         extended = true;
       };
+      initExtra = ''
+        bindkey -e
+        bindkey "^[[1;5C" forward-word
+        bindkey "^[[1;5D" backward-word
+        bindkey "^[[1;3C" forward-word
+        bindkey "^[[1;3D" backward-word
+        bindkey '^H' backward-kill-word
+        bindkey '5~' kill-word
+      '';
       plugins = [
+        {
+          name = "powerlevel10k";
+          src = pkgs.zsh-powerlevel10k;
+          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        }
+        {
+          name = "powerlevel10k-config";
+          src = lib.cleanSource ./. ;
+          file = ".p10k.zsh";
+        }
         {
           name = "zsh-nix-shell";
           file = "nix-shell.plugin.zsh";
