@@ -62,11 +62,13 @@
     isNormalUser = true;
     initialPassword = "laurent";
     extraGroups = [ "wheel" "video" ];
+    shell = pkgs.zsh;
   };
   home-manager.users.laurent = {
     home.stateVersion = "22.11";
     home.packages = with pkgs; [
       exa
+      duf
       bat
       tmux
       htop
@@ -106,6 +108,42 @@
         enable = true;
         defaultCursor = "Catppuccin-Mocha-Dark-Cursors";
       };
+    };
+
+    programs.zsh = {
+      enable = true;
+      enableAutosuggestions = true;
+      enableSyntaxHighlighting = true;
+      enableCompletion = true;
+      sessionVariables = {
+        MANPAGER = "nvim +Man!";
+        VISUAL = "nvim";
+        EDITOR = "nvim";
+      };
+      shellAliases = {
+        ls = "exa";
+        l = "exa -l -h -g --icons --grid --git --time-style=long-iso";
+        ll = "exa -l -h -g --icons --grid --git --time-style=long-iso -a";
+        cat = "bat";
+        df = "duf";
+      };
+      history = {
+        size = 1000000000;
+        path = "$HOME/.zsh_history";
+        extended = true;
+      };
+      plugins = [
+        {
+          name = "zsh-nix-shell";
+          file = "nix-shell.plugin.zsh";
+          src = pkgs.fetchFromGitHub {
+            owner = "chisui";
+            repo = "zsh-nix-shell";
+            rev = "v0.5.0";
+            sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
+          };
+        }
+      ];
     };
 
     programs.git = {
