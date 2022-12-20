@@ -6,16 +6,18 @@
 
 {
   imports = [
-      ./hardware-configuration.nix
-    ];
+    ./hardware-configuration.nix
+  ];
 
+  # networking
   networking.hostName = "neodymium";
+  networking.networkmanager.enable = true;
 
   # use systemd-boot EFI boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # configure hardware
+  # hardware
   hardware = {
     enableRedistributableFirmware = true;
     opengl = {
@@ -24,8 +26,6 @@
     };
   };
 
-  networking.networkmanager.enable = true;
-
   # internationalisation
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "en_DK.UTF-8";
@@ -33,11 +33,13 @@
     keyMap = "fr";
   };
 
+  # fonts
   fonts.fonts = with pkgs; [
     fira-code fira-code-symbols
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
+  # audio
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -48,12 +50,10 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
-
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
+    ];
   };
 
   programs.light.enable = true;
@@ -76,7 +76,7 @@
       rsync
       pwgen
       neovim
-      
+
       baobab
       alacritty
       pavucontrol
@@ -239,7 +239,7 @@
           { command = "element-desktop"; }
           { command = "thunderbird"; }
           { command = "webcord"; }
-          { 
+          {
             command = ''
               swayidle -w \
                 timeout 100 'swaylock -f --grace 3' \
@@ -247,7 +247,7 @@
                 resume 'swaymsg "output * dpms on"' \
                 timeout 300 'systemctl suspend' \
                 before-sleep 'swaylock -f'
-            ''; 
+            '';
           }
         ];
         keybindings = {
@@ -331,7 +331,7 @@
           "${modifier}+KP_Up" = "workspace 18";
           "${modifier}+KP_Prior" = "workspace 19";
           "${modifier}+KP_Insert" = "workspace 20";
-          
+
           # Move focused container to workspace
           "${modifier}+Shift+ampersand" = "move container to workspace number 1";
           "${modifier}+Shift+eacute" = "move container to workspace number 2";
