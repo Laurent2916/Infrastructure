@@ -4,6 +4,15 @@
 
 { config, pkgs, lib, ... }:
 
+let
+  catppuccin-alacritty = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "alacritty";
+    rev = "3c808cbb4f9c87be43ba5241bc57373c793d2f17";
+    sha256 = "w9XVtEe7TqzxxGUCDUR9BFkzLZjG8XrplXJ3lX6f+x0=";
+  };
+in
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -78,7 +87,6 @@
       neovim
 
       baobab
-      alacritty
       pavucontrol
 
       grim
@@ -172,6 +180,14 @@
       signing = {
         signByDefault = true;
         key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@neodymium";
+      };
+    };
+
+    programs.alacritty = {
+      enable = true;
+      settings = {
+        import = [ "${catppuccin-alacritty}/catppuccin-mocha.yml" ];
+        window.opacity = 0.825;
       };
     };
 
