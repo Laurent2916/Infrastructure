@@ -78,13 +78,14 @@
       alacritty
       pavucontrol
 
+      grim
+      mako
+      slurp
+      waybar
+      pamixer
       swaylock
       swayidle
       wl-clipboard
-      waybar
-      slurp
-      grim
-      mako
 
       mpv
       feh
@@ -127,13 +128,101 @@
           "*" = {
             bg = "~/Pictures/wallpapers/kai-oberhauser-unsplash.jpg fill";
           };
+          eDP-1 = {
+            mode = "1920x1080";
+            adaptive_sync = "on";
+          };
+          eDP-2 = {
+            mode = "1920x1080";
+            adaptive_sync = "on";
+          };
+          DP-1 = {
+            disable = "";
+          };
+        };
+        fonts = {
+          names = [ "FiraCode" ];
+          size = 10.0;
         };
         bars = [
-          {command = "${pkgs.waybar}/bin/waybar";}
+          { command = "${pkgs.waybar}/bin/waybar"; }
+        ];
+        gaps = {
+          smartGaps = true;
+          inner = 5;
+        };
+        window = {
+          border = 0;
+        };
+        floating = {
+          border = 0;
+        };
+        startup = [
+          { command = "element-desktop"; }
+          { command = "thunderbird"; }
+          { command = "webcord"; }
+          { 
+            command = ''
+              swayidle -w \
+                timeout 100 'swaylock -f --grace 3' \
+                timeout 130 'swaymsg "output * dpms off"' \
+                resume 'swaymsg "output * dpms on"' \
+                timeout 300 'systemctl suspend' \
+                before-sleep 'swaylock -f'
+            ''; 
+          }
+
         ];
         keybindings = {
           # Start a terminal
           "${modifier}+Return" = "exec ${terminal}";
+          # Kill focused window
+          "${modifier}+q" = "kill";
+          # Reload the configuration file
+          "${modifier}+twosuperior" = "reload";
+          # Exit sway (logs you out of your Wayland session)
+          "${modifier}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
+          # Lock
+          "${modifier}+Delete" = "exec swaylock -f";
+
+          # Screenshot whole screen
+          "Print" = "exec grim `date +'%Y-%m-%dT%H:%M:%S'`.png";
+          # Screenshot whole screen to clipboard
+          "Shift+Print" = "exec grim - | wl-copy -t 'image/png'";
+          # Screenshot area
+          "${modifier}+Print" = "exec grim -g '$(slurp -d)' `date +'%Y-%m-%dT%H:%M:%S'`.png";
+          # Screenshot area to clipboard
+          "${modifier}+Shift+Print" = "exec grim -g '$(slurp -d)' - | wl-copy -t 'image/png'";
+
+          # backlight
+          "XF86MonBrightnessUp" = "exec light -A 5";
+          "XF86MonBrightnessDown" = "exec light -U 5";
+
+          # audio
+          "XF86AudioMute" = "exec pamixer --sink 0 -t";
+          "XF86AudioRaiseVolume" = "exec pamixer -i 5";
+          "XF86AudioLowerVolume" = "exec pamixer -d 5";
+          "XF86AudioMicMute" = "exec pamixer --source 0 -t";
+
+          # split horizontally or vertically
+          "${modifier}+b" = "splith";
+          "${modifier}+v" = "splitv";
+          # Make the current focus fullscreen
+          "${modifier}+f" = "fullscreen";
+          # Toggle the current focus between tiling and floating mode
+          "${modifier}+s" = "floating toggle";
+
+          # Move your focus around
+          "${modifier}+Left" = "focus left";
+          "${modifier}+Down" = "focus down";
+          "${modifier}+Up" = "focus up";
+          "${modifier}+Right" = "focus right";
+          # Move the focused window around
+          "${modifier}+Shift+Left" = "move left";
+          "${modifier}+Shift+Down" = "move down";
+          "${modifier}+Shift+Up" = "move up";
+          "${modifier}+Shift+Right" = "move right";
+
           # Switch to workspace
           "${modifier}+ampersand" = "workspace 1";
           "${modifier}+eacute" = "workspace 2";
@@ -165,6 +254,7 @@
           "${modifier}+KP_Up" = "workspace 18";
           "${modifier}+KP_Prior" = "workspace 19";
           "${modifier}+KP_Insert" = "workspace 20";
+          
           # Move focused container to workspace
           "${modifier}+Shift+ampersand" = "move container to workspace number 1";
           "${modifier}+Shift+eacute" = "move container to workspace number 2";
@@ -187,6 +277,88 @@
           "${modifier}+Shift+KP_Prior" = "move container to workspace number 19";
           "${modifier}+Shift+KP_Insert" = "move container to workspace number 20";
         };
+        workspaceOutputAssign = [
+          {
+            workspace = "1";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "2";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "3";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "4";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "5";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "6";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "7";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "8";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "9";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "10";
+            output = "eDP-1 eDP-2";
+          }
+          {
+            workspace = "11";
+            output = "DP-1";
+          }
+          {
+            workspace = "12";
+            output = "DP-1";
+          }
+          {
+            workspace = "13";
+            output = "DP-1";
+          }
+          {
+            workspace = "14";
+            output = "DP-1";
+          }
+          {
+            workspace = "15";
+            output = "DP-1";
+          }
+          {
+            workspace = "16";
+            output = "DP-1";
+          }
+          {
+            workspace = "17";
+            output = "DP-1";
+          }
+          {
+            workspace = "18";
+            output = "DP-1";
+          }
+          {
+            workspace = "19";
+            output = "DP-1";
+          }
+          {
+            workspace = "20";
+            output = "DP-1";
+          }
+        ];
       };
     };
   };
