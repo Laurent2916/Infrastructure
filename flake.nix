@@ -1,11 +1,14 @@
 {
-  description = "Laurent's infrastructure";
+  description = "Laureηt's infrastructure";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+
+    webcord.url = "github:fufexan/webcord-flake";
   };
   
-  outputs = { self, nixpkgs }: {
+  outputs = { nixpkgs, webcord, home-manager, ... } @ inputs : {
     # colmena
     colmena = {
       meta = {
@@ -15,17 +18,31 @@
         };
       };
 
-      # personnal laptop
-      neodymium = { name, nodes, ... }: {
-        networking.hostName = "neodymium";
-
+      # default config
+      defaults = { name, ... }: {
         imports = [
-          ./hosts/neodymium/configuration.nix
+          ./hosts/${name}/configuration.nix
+          home-manager.nixosModules.home-manager
         ];
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+        };
+      };
 
+      # personnal laptop
+      neodymium = { ... }: {
         deployment = {
           allowLocalDeployment = true;
           targetHost = null;
+        };
+      };
+
+      # ovh vps
+      hydrogen = { ... }: {
+        deployment = {
+          targetHost = "178.62.253.235";
+          targetUser = "root";
         };
       };
     };

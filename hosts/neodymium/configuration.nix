@@ -6,10 +6,11 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
-      <home-manager/nixos>
     ];
+
+  networking.hostName = "neodymium";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -23,7 +24,6 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
-
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_IE.UTF-8";
@@ -78,6 +78,7 @@
       librewolf
       keepassxc
       x2goclient
+      thunderbird
       element-desktop
 
       baobab
@@ -96,6 +97,9 @@
     ];
   };
 
+  users.mutableUsers = false;
+
+  programs.ssh.startAgent = true;
 
   # Enable polkit
   security.polkit.enable = true;
