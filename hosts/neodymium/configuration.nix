@@ -97,6 +97,17 @@
       element-desktop
     ];
 
+    home.pointerCursor = {
+      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+      gtk.enable = true;
+      size = 32;
+      x11 = {
+        enable = true;
+        defaultCursor = "Catppuccin-Mocha-Dark-Cursors";
+      };
+    };
+
     programs.git = {
       enable = true;
       userName = "Laureηt";
@@ -171,7 +182,6 @@
                 before-sleep 'swaylock -f'
             ''; 
           }
-
         ];
         keybindings = {
           # Start a terminal
