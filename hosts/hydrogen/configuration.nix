@@ -9,9 +9,9 @@
     hostName = name;
     domain = "fainsin.bzh";
     firewall.allowedTCPPorts = [
-    22    # ssh
-    80    # http
-    443   # https
+      22    # ssh
+      80    # http
+      443   # https
     ];
   };
 
@@ -32,34 +32,33 @@
   services.nginx = {
     enable = true;
 
-    # recommendedTlsSettings = true;
-    # recommendedOptimisation = true;
-    # recommendedGzipSettings = true;
-    # recommendedProxySettings = true;
+    recommendedTlsSettings = true;
+    recommendedOptimisation = true;
+    recommendedGzipSettings = true;
+    recommendedProxySettings = true;
 
-    # commonHttpConfig = ''
-    # log_format vhosts '$host $remote_addr - $remote_user [$time_local] '
-    #                 "$request" $status $body_bytes_sent "$http_referer" '
-    #                 '"$http_user_agent" "$http_x_forwarded_for"';
-
-    # access_log  /var/log/nginx/access.log vhosts;
-    # '';
+    commonHttpConfig = ''
+      log_format vhosts '$host $remote_addr - $remote_user [$time_local] '
+                        '$request $status $body_bytes_sent $http_referer '
+                        '$http_user_agent $http_x_forwarded_for';
+      access_log  /var/log/nginx/access.log vhosts;
+    '';
 
     virtualHosts = {
-    "fainsin.bzh" = {
-      enableACME = true;
-      forceSSL = true;
-      locations."/".return = "301 \"$scheme://laurent.fainsin.bzh$request_uri\"";
-    };
-    "laurent.fainsin.bzh" = {
-      enableACME = true;
-      forceSSL = true;
-      root = "/srv/www/";
-    };
-    default = {
-      default = true;
-      locations."/".return = "301 \"$scheme://fainsin.bzh\" ";
-    };
+      "fainsin.bzh" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/".return = "301 \"$scheme://laurent.fainsin.bzh$request_uri\"";
+      };
+      "laurent.fainsin.bzh" = {
+        enableACME = true;
+        forceSSL = true;
+        root = "/srv/www/";
+      };
+      default = {
+        default = true;
+        locations."/".return = "301 \"$scheme://fainsin.bzh\" ";
+      };
     };
   };
 
