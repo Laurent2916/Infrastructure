@@ -1,17 +1,17 @@
-{modulesPath, pkgs, lib, name, config, ... }:
+{ modulesPath, pkgs, lib, name, config, ... }:
 
 {
-  imports = lib.optional (builtins.pathExists ./do-userdata.nix) ./do-userdata.nix ++ [
-    (modulesPath + "/virtualisation/digital-ocean-config.nix")
-  ];
+  imports =
+    lib.optional (builtins.pathExists ./do-userdata.nix) ./do-userdata.nix
+    ++ [ (modulesPath + "/virtualisation/digital-ocean-config.nix") ];
 
   networking = {
     hostName = name;
     domain = "fainsin.bzh";
     firewall.allowedTCPPorts = [
-      22    # ssh
-      80    # http
-      443   # https
+      22 # ssh
+      80 # http
+      443 # https
     ];
   };
 
@@ -25,9 +25,7 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu"
   ];
 
-  environment.systemPackages = with pkgs; [
-    htop
-  ];
+  environment.systemPackages = with pkgs; [ htop ];
 
   services.nginx = {
     enable = true;
@@ -48,7 +46,8 @@
       "fainsin.bzh" = {
         enableACME = true;
         forceSSL = true;
-        locations."/".return = "301 \"$scheme://laurent.fainsin.bzh$request_uri\"";
+        locations."/".return =
+          ''301 "$scheme://laurent.fainsin.bzh$request_uri"'';
       };
       "laurent.fainsin.bzh" = {
         enableACME = true;
@@ -57,7 +56,7 @@
       };
       default = {
         default = true;
-        locations."/".return = "301 \"$scheme://fainsin.bzh\" ";
+        locations."/".return = ''301 "$scheme://fainsin.bzh" '';
       };
     };
   };

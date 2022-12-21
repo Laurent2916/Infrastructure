@@ -1,18 +1,16 @@
 { config, pkgs, lib, ... }:
 
 let
+
   catppuccin-alacritty = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "alacritty";
     rev = "3c808cbb4f9c87be43ba5241bc57373c793d2f17";
     sha256 = "w9XVtEe7TqzxxGUCDUR9BFkzLZjG8XrplXJ3lX6f+x0=";
   };
-in
 
-{
-  imports = [
-    ./hardware-configuration.nix
-  ];
+in {
+  imports = [ ./hardware-configuration.nix ];
 
   # networking
   networking.hostName = "neodymium";
@@ -34,9 +32,7 @@ in
   # internationalisation
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "en_DK.UTF-8";
-  console = {
-    keyMap = "fr";
-  };
+  console.keyMap = "fr";
 
   # fonts
   fonts.fonts = with pkgs; [
@@ -60,10 +56,7 @@ in
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
-    ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
   };
 
   programs.light.enable = true;
@@ -175,7 +168,7 @@ in
         }
         {
           name = "powerlevel10k-config";
-          src = lib.cleanSource ./. ;
+          src = lib.cleanSource ./.;
           file = ".p10k.zsh";
         }
         {
@@ -197,7 +190,8 @@ in
       userEmail = "laurent@fainsin.bzh";
       signing = {
         signByDefault = true;
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@neodymium";
+        key =
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@neodymium";
       };
     };
 
@@ -254,30 +248,20 @@ in
             mode = "1920x1080";
             adaptive_sync = "on";
           };
-          DP-1 = {
-            disable = "";
-          };
+          DP-1 = { disable = ""; };
         };
         fonts = {
           names = [ "FiraCode" ];
           size = 10.0;
         };
-        bars = [
-          { command = "${pkgs.waybar}/bin/waybar"; }
-        ];
+        bars = [{ command = "${pkgs.waybar}/bin/waybar"; }];
         gaps = {
           smartGaps = true;
           inner = 5;
         };
-        window = {
-          border = 0;
-        };
-        floating = {
-          border = 0;
-        };
-        focus = {
-          followMouse = "no";
-        };
+        window = { border = 0; };
+        floating = { border = 0; };
+        focus = { followMouse = "no"; };
         startup = [
           { command = "element-desktop"; }
           { command = "thunderbird"; }
@@ -305,7 +289,8 @@ in
           # Reload the configuration file
           "${modifier}+twosuperior" = "reload";
           # Exit sway (logs you out of your Wayland session)
-          "${modifier}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
+          "${modifier}+Shift+e" =
+            "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'";
           # Lock
           "${modifier}+Delete" = "exec swaylock -f";
 
@@ -314,9 +299,11 @@ in
           # Screenshot whole screen to clipboard
           "Shift+Print" = "exec grim - | wl-copy -t 'image/png'";
           # Screenshot area
-          "${modifier}+Print" = "exec grim -g '$(slurp -d)' `date +'%Y-%m-%dT%H:%M:%S'`.png";
+          "${modifier}+Print" =
+            "exec grim -g '$(slurp -d)' `date +'%Y-%m-%dT%H:%M:%S'`.png";
           # Screenshot area to clipboard
-          "${modifier}+Shift+Print" = "exec grim -g '$(slurp -d)' - | wl-copy -t 'image/png'";
+          "${modifier}+Shift+Print" =
+            "exec grim -g '$(slurp -d)' - | wl-copy -t 'image/png'";
 
           # backlight
           "XF86MonBrightnessUp" = "exec light -A 5";
@@ -380,26 +367,34 @@ in
           "${modifier}+KP_Insert" = "workspace 20";
 
           # Move focused container to workspace
-          "${modifier}+Shift+ampersand" = "move container to workspace number 1";
+          "${modifier}+Shift+ampersand" =
+            "move container to workspace number 1";
           "${modifier}+Shift+eacute" = "move container to workspace number 2";
           "${modifier}+Shift+quotedbl" = "move container to workspace number 3";
-          "${modifier}+Shift+apostrophe" = "move container to workspace number 4";
-          "${modifier}+Shift+parenleft" = "move container to workspace number 5";
+          "${modifier}+Shift+apostrophe" =
+            "move container to workspace number 4";
+          "${modifier}+Shift+parenleft" =
+            "move container to workspace number 5";
           "${modifier}+Shift+minus" = "move container to workspace number 6";
           "${modifier}+Shift+egrave" = "move container to workspace number 7";
-          "${modifier}+Shift+underscore" = "move container to workspace number 8";
+          "${modifier}+Shift+underscore" =
+            "move container to workspace number 8";
           "${modifier}+Shift+ccedilla" = "move container to workspace number 9";
           "${modifier}+Shift+agrave" = "move container to workspace number 10";
           "${modifier}+Shift+KP_End" = "move container to workspace number 11";
           "${modifier}+Shift+KP_Down" = "move container to workspace number 12";
           "${modifier}+Shift+KP_Next" = "move container to workspace number 13";
           "${modifier}+Shift+KP_Left" = "move container to workspace number 14";
-          "${modifier}+Shift+KP_Begin" = "move container to workspace number 15";
-          "${modifier}+Shift+KP_Right" = "move container to workspace number 16";
+          "${modifier}+Shift+KP_Begin" =
+            "move container to workspace number 15";
+          "${modifier}+Shift+KP_Right" =
+            "move container to workspace number 16";
           "${modifier}+Shift+KP_Home" = "move container to workspace number 17";
           "${modifier}+Shift+KP_Up" = "move container to workspace number 18";
-          "${modifier}+Shift+KP_Prior" = "move container to workspace number 19";
-          "${modifier}+Shift+KP_Insert" = "move container to workspace number 20";
+          "${modifier}+Shift+KP_Prior" =
+            "move container to workspace number 19";
+          "${modifier}+Shift+KP_Insert" =
+            "move container to workspace number 20";
         };
         workspaceOutputAssign = [
           {

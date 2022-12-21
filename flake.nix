@@ -7,14 +7,14 @@
 
     webcord.url = "github:fufexan/webcord-flake";
   };
-  
-  outputs = { nixpkgs, webcord, home-manager, ... } @ inputs : {
+
+  outputs = { nixpkgs, webcord, home-manager, ... }@inputs: {
     # colmena
     colmena = {
       meta = {
         nixpkgs = import nixpkgs {
           system = "x86_64-linux";
-          overlays = [];
+          overlays = [ ];
         };
       };
 

@@ -1,9 +1,4 @@
 { pkgs ? import <nixpkgs> { } }:
 with pkgs;
 
-mkShell {
-  buildInputs = [
-    colmena
-    nixfmt
-  ];
-}
+mkShell { buildInputs = [ colmena nixfmt ]; }
