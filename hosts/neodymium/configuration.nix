@@ -40,7 +40,12 @@ in
 
   # fonts
   fonts.fonts = with pkgs; [
-    fira-code fira-code-symbols
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-extra
+    noto-fonts-emoji
+    fira-code
+    fira-code-symbols
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
@@ -202,7 +207,7 @@ in
       settings = {
         import = [ "${catppuccin-alacritty}/catppuccin-mocha.yml" ];
         window.opacity = 0.825;
-        font.size = 9.25;
+        font.size = 9.5;
       };
     };
 
