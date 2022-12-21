@@ -99,6 +99,7 @@ in
       mpv
       feh
       vscode
+      chromium
       keepassxc
       x2goclient
       thunderbird
@@ -201,7 +202,7 @@ in
       settings = {
         import = [ "${catppuccin-alacritty}/catppuccin-mocha.yml" ];
         window.opacity = 0.825;
-        font.size = 9.5;
+        font.size = 9.25;
       };
     };
 
