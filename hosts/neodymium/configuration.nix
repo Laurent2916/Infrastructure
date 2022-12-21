@@ -211,6 +211,7 @@ in
         "privacy.clearOnShutdown.downloads" = false;
         "privacy.donottrackheader.enabled" = true;
         "general.autoScroll" = true;
+        "pdfjs.viewerCssTheme" = 2;
       };
     };
 
