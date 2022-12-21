@@ -217,6 +217,7 @@ in
         "privacy.clearOnShutdown.history" = false;
         "privacy.clearOnShutdown.downloads" = false;
         "privacy.donottrackheader.enabled" = true;
+        "browser.ctrlTab.sortByRecentlyUsed" = true;
         "general.autoScroll" = true;
         "pdfjs.viewerCssTheme" = 2;
       };
