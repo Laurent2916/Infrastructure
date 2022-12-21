@@ -159,6 +159,7 @@ in {
         bindkey "^[[1;3D" backward-word
         bindkey '^H' backward-kill-word
         bindkey '5~' kill-word
+        eval "$(direnv hook zsh)"
       '';
       plugins = [
         {
@@ -182,6 +183,11 @@ in {
           };
         }
       ];
+    };
+
+    programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
     };
 
     programs.git = {
