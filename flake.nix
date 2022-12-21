@@ -3,12 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     webcord.url = "github:fufexan/webcord-flake";
   };
 
-  outputs = { nixpkgs, webcord, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, ... }@inputs: {
     # colmena
     colmena = {
       meta = {

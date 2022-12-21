@@ -151,6 +151,11 @@ in {
         path = "$HOME/.zsh_history";
         extended = true;
       };
+      loginExtra = ''
+        if [[ "$(tty)" == "/dev/tty1" ]]; then
+          exec sway
+        fi
+      '';
       initExtra = ''
         bindkey -e
         bindkey "^[[1;5C" forward-word
@@ -185,7 +190,7 @@ in {
       ];
     };
 
-    programs.direnv = {
+    programs.direnv = { # TODO: use github:numtide/devshell ?
       enable = true;
       nix-direnv.enable = true;
     };
