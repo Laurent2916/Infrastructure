@@ -104,7 +104,6 @@ in
       mpv
       feh
       vscode
-      chromium
       keepassxc
       x2goclient
       thunderbird
