@@ -103,6 +103,7 @@ in
       x2goclient
       thunderbird
       element-desktop
+      libreoffice-fresh
     ];
 
     home.pointerCursor = {
