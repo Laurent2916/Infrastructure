@@ -82,6 +82,8 @@ in
       pwgen
       neovim
 
+      dconf
+
       baobab
       pavucontrol
 
@@ -262,6 +264,9 @@ in
         floating = {
           border = 0;
         };
+        focus = {
+          followMouse = "no";
+        };
         startup = [
           { command = "element-desktop"; }
           { command = "thunderbird"; }
@@ -277,6 +282,10 @@ in
             '';
           }
         ];
+        assigns = {
+          "9" = [{ class = "^Element$"; }];
+          # "10" = [{ class = "^Thunderbird"; }];
+        };
         keybindings = {
           # Start a terminal
           "${modifier}+Return" = "exec ${terminal}";
