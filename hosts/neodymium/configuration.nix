@@ -10,10 +10,7 @@ let
   };
 
 in {
-  imports = [
-    <nixpkgs/nixos/modules/profiles/hardened.nix>
-    ./hardware-configuration.nix
-  ];
+  imports = [ ./hardware-configuration.nix ];
 
   # networking
   networking.hostName = "neodymium";
