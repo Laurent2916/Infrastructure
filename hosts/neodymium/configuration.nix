@@ -29,6 +29,9 @@ in {
   # clean /tmp at each boot
   boot.cleanTmpDir = true;
 
+  # use latest kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # restrict nix command to sudoers
   nix.allowedUsers = [ "@wheel" ];
 
