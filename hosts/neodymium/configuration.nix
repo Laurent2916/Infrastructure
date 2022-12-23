@@ -10,14 +10,17 @@ let
   };
 
 in {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    <nixpkgs/nixos/modules/profiles/hardened.nix>
+    ./hardware-configuration.nix
+  ];
 
   # networking
   networking.hostName = "neodymium";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [];
-  networking.firewall.allowedUDPPorts = [];
+  networking.firewall.allowedTCPPorts = [ ];
+  networking.firewall.allowedUDPPorts = [ ];
 
   # use systemd-boot EFI boot loader
   boot.loader.systemd-boot.enable = true;
