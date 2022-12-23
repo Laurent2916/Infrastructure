@@ -15,6 +15,9 @@ in {
   # networking
   networking.hostName = "neodymium";
   networking.networkmanager.enable = true;
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [];
+  networking.firewall.allowedUDPPorts = [];
 
   # use systemd-boot EFI boot loader
   boot.loader.systemd-boot.enable = true;
