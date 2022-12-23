@@ -108,7 +108,6 @@ in {
 
       mpv
       feh
-      vscode
       birdtray
       keepassxc
       x2goclient
@@ -241,6 +240,40 @@ in {
         "general.autoScroll" = true;
         "pdfjs.viewerCssTheme" = 2; # dark theme for pdf viewer
         "browser.startup.page" = 3; # always restore tabs
+      };
+    };
+
+    programs.vscode = {
+      enable = true;
+      package = pkgs.vscodium;
+      extensions = with pkgs.vscode-extensions; [
+        bbenoist.nix
+        brettm12345.nixfmt-vscode
+        arrterian.nix-env-selector
+
+        eamodio.gitlens
+        github.copilot
+
+        editorconfig.editorconfig
+        yzhang.markdown-all-in-one
+
+        catppuccin.catppuccin-vsc
+        file-icons.file-icons
+      ];
+      userSettings = {
+        "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
+        "editor.fontLigatures" = true;
+        "editor.formatOnSave" = true;
+        "git.autofetch" = true;
+        "git.confirmSync" = false;
+        "git.enableSmartCommit" = true;
+        "terminal.integrated.fontFamily" =
+          "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
+        "window.menuBarVisibility" = "toggle";
+        "window.zoomLevel" = -0.25;
+        "workbench.colorTheme" = "Catppuccin Mocha";
+        "workbench.editor.untitled.hint" = "hidden";
+        "workbench.iconTheme" = "file-icons";
       };
     };
 
