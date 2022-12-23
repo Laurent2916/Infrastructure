@@ -109,6 +109,7 @@ in {
       mpv
       feh
       vscode
+      birdtray
       keepassxc
       x2goclient
       thunderbird
@@ -288,6 +289,7 @@ in {
         startup = [
           { command = "element-desktop"; }
           { command = "thunderbird"; }
+          { command = "birdtray"; }
           { command = "webcord"; }
           {
             command = ''
