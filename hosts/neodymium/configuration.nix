@@ -302,7 +302,7 @@ in {
         ];
         assigns = {
           "9" = [{ class = "^Element$"; }];
-          # "10" = [{ class = "^Thunderbird"; }];
+          "10" = [{ app_id = "thunderbird"; }];
         };
         keybindings = {
           # Start a terminal
