@@ -26,6 +26,9 @@ in {
   # clean /tmp at each boot
   boot.cleanTmpDir = true;
 
+  # restrict nix command to sudoers
+  nix.allowedUsers = [ "@wheel" ];
+
   # hardware
   hardware = {
     enableRedistributableFirmware = true;
