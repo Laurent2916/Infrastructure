@@ -23,6 +23,9 @@ in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # clean /tmp at each boot
+  boot.cleanTmpDir = true;
+
   # hardware
   hardware = {
     enableRedistributableFirmware = true;
