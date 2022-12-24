@@ -12,7 +12,7 @@
     webcord.url = "github:fufexan/webcord-flake";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, webcord, ... }@inputs: {
     # colmena
     colmena = {
       meta = {
@@ -36,6 +36,9 @@
 
       # personnal laptop
       neodymium = { ... }: {
+        home-manager.users.laurent = {
+          imports = [ webcord.homeManagerModules.default ];
+        };
         deployment = {
           allowLocalDeployment = true;
           targetHost = null;

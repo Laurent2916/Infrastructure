@@ -9,6 +9,13 @@ let
     sha256 = "w9XVtEe7TqzxxGUCDUR9BFkzLZjG8XrplXJ3lX6f+x0=";
   };
 
+  catppuccin-discord = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "discord";
+    rev = "159aac939d8c18da2e184c6581f5e13896e11697";
+    sha256 = "sha256-cWpog52Ft4hqGh8sMWhiLUQp/XXipOPnSTG6LwUAGGA=";
+  };
+
 in {
   imports = [ ./hardware-configuration.nix ];
 
@@ -205,6 +212,13 @@ in {
     programs.direnv = { # TODO: use github:numtide/devshell ?
       enable = true;
       nix-direnv.enable = true;
+    };
+
+    programs.webcord = {
+      enable = true;
+      themes = {
+        CatpuccinMocha = "${catppuccin-discord}/themes/mocha.theme.css";
+      };
     };
 
     programs.git = {
