@@ -97,9 +97,7 @@ in {
   home-manager.users.laurent = {
     home.stateVersion = "22.11";
     home.packages = with pkgs; [
-      exa
       duf
-      bat
       tmux
       htop
       rsync
@@ -165,13 +163,10 @@ in {
         VISUAL = "nvim";
         EDITOR = "nvim";
       };
-      shellAliases = {
-        l = "exa -l -h -g --icons --git --time-style=long-iso";
-        ls = "exa -l -h -g --icons --git --time-style=long-iso --grid";
-        ll = "exa -l -h -g --icons --grid --git --time-style=long-iso -a";
-        cat = "bat";
-        df = "duf";
-      };
+      # shellAliases = {
+      #   cat = "bat";
+      #   df = "duf";
+      # };
       history = {
         size = 1000000000;
         path = "$HOME/.zsh_history";
@@ -246,6 +241,18 @@ in {
           builtins.readFile "${catppuccin-bat}/Catppuccin-mocha.tmTheme";
       };
       config.theme = "catppuccin";
+      extraPackages = with pkgs.bat-extras; [ batman ];
+    };
+    programs.zsh.shellAliases = {
+      cat = "bat";
+      man = "batman";
+    };
+
+    programs.exa = { enable = true; };
+    programs.zsh.shellAliases = {
+      l = "exa -l -h -g --icons --git --time-style=long-iso";
+      ls = "exa -l -h -g --icons --git --time-style=long-iso --grid";
+      ll = "exa -l -h -g --icons --grid --git --time-style=long-iso -a";
     };
 
     programs.alacritty = {
