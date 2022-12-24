@@ -120,7 +120,6 @@ in {
 
       mpv
       feh
-      birdtray
       keepassxc
       x2goclient
       thunderbird
@@ -360,7 +359,6 @@ in {
         startup = [
           { command = "element-desktop"; }
           { command = "thunderbird"; }
-          { command = "birdtray"; }
           { command = "webcord"; }
           {
             command = ''
@@ -374,6 +372,7 @@ in {
           }
         ];
         assigns = {
+          "8" = [{ class = "^WebCord$"; }];
           "9" = [{ class = "^Element$"; }];
           "10" = [{ app_id = "thunderbird"; }];
         };
