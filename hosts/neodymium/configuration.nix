@@ -398,7 +398,7 @@ in {
             "exec slurp -d | grim -g - `date +'%Y-%m-%dT%H:%M:%S'`.png";
           # Screenshot area to clipboard
           "${modifier}+Shift+Print" =
-            "exec slurp -d | grim -g - | wl-copy -t 'image/png'";
+            "exec slurp -d | grim -g - - | wl-copy -t 'image/png'";
 
           # backlight
           "XF86MonBrightnessUp" = "exec light -A 5";
