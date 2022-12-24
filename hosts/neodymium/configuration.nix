@@ -37,6 +37,9 @@ in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # enable NTFS disk mounting
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # clean /tmp at each boot
   boot.cleanTmpDir = true;
 
@@ -114,7 +117,6 @@ in {
       slurp
       waybar
       pamixer
-      swaylock
       swayidle
       wl-clipboard
 
@@ -311,6 +313,12 @@ in {
         "workbench.editor.untitled.hint" = "hidden";
         "workbench.iconTheme" = "file-icons";
       };
+    };
+
+    programs.swaylock = {
+      settings = { };
+      # enable = true;
+      # package = pkgs.swaylock-effects;
     };
 
     wayland.windowManager.sway = {
