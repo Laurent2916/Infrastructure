@@ -16,6 +16,13 @@ let
     sha256 = "sha256-cWpog52Ft4hqGh8sMWhiLUQp/XXipOPnSTG6LwUAGGA=";
   };
 
+  catppuccin-bat = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "bat";
+    rev = "ba4d16880d63e656acced2b7d4e034e4a93f74b1";
+    sha256 = "1g2r6j33f4zys853i1c5gnwcdbwb6xv5w6pazfdslxf69904lrg9";
+  };
+
 in {
   imports = [ ./hardware-configuration.nix ];
 
@@ -159,8 +166,8 @@ in {
         EDITOR = "nvim";
       };
       shellAliases = {
-        ls = "exa";
-        l = "exa -l -h -g --icons --grid --git --time-style=long-iso";
+        l = "exa -l -h -g --icons --git --time-style=long-iso";
+        ls = "exa -l -h -g --icons --git --time-style=long-iso --grid";
         ll = "exa -l -h -g --icons --grid --git --time-style=long-iso -a";
         cat = "bat";
         df = "duf";
@@ -230,6 +237,15 @@ in {
         key =
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@neodymium";
       };
+    };
+
+    programs.bat = {
+      enable = true;
+      themes = {
+        catppuccin =
+          builtins.readFile "${catppuccin-bat}/Catppuccin-mocha.tmTheme";
+      };
+      config.theme = "catppuccin";
     };
 
     programs.alacritty = {
