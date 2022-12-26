@@ -8,16 +8,34 @@
   networking = {
     hostName = name;
     domain = "fainsin.bzh";
-    firewall.allowedTCPPorts = [
-      22 # ssh
-      80 # http
-      443 # https
-    ];
+    firewall = {
+      allowedTCPPorts = [
+        22 # ssh
+        80 # http
+        443 # https
+      ];
+      allowedUDPPorts = [
+        53 # DNS (blocky)
+        5553 # wireguard
+      ];
+    };
   };
 
   services.fail2ban = {
     enable = true;
     maxretry = 5;
+  };
+
+  networking.wireguard.interfaces = {
+    wg0 = {
+      ips = [ "10.0.0.1/24" ];
+      listenPort = 5553;
+      privateKeyFile = "/root/wg-private";
+      peers = [{ # pixel
+        publicKey = "HS2q+PpPPwxqT1jCD7D4puqr4ZyaXV5TostavlYWBx0=";
+        allowedIPs = [ "10.0.0.2/32" ];
+      }];
+    };
   };
 
   services.blocky = {
