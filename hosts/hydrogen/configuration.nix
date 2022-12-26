@@ -15,8 +15,10 @@
         443 # https
       ];
       allowedUDPPorts = [
-        53 # DNS (blocky)
         5553 # wireguard
+      ];
+      interfaces."wg0".allowedUDPPorts = [
+        53 # dns
       ];
     };
   };
@@ -26,22 +28,30 @@
     maxretry = 5;
   };
 
+  networking.nat.enable = true;
+  networking.nat.internalInterfaces = [ "wg0" ];
   networking.wireguard.interfaces = {
     wg0 = {
       ips = [ "10.0.0.1/24" ];
       listenPort = 5553;
       privateKeyFile = "/root/wg-private";
-      peers = [{ # pixel
-        publicKey = "HS2q+PpPPwxqT1jCD7D4puqr4ZyaXV5TostavlYWBx0=";
-        allowedIPs = [ "10.0.0.2/32" ];
-      }];
+      peers = [
+        { # pixel
+          publicKey = "HS2q+PpPPwxqT1jCD7D4puqr4ZyaXV5TostavlYWBx0=";
+          allowedIPs = [ "10.0.0.2/32" ];
+        }
+        { # neodymium
+          publicKey = "IFeRvelEilNRLkhWgFKL9HrJ9XYsm+r4yvv23CigETk=";
+          allowedIPs = [ "10.0.0.3/32" ];
+        }
+      ];
     };
   };
 
   services.blocky = {
     enable = true;
     settings = {
-      upstream.default = [ "1.1.1.2" "1.0.0.2" ];
+      upstream.default = [ "208.67.222.222" "208.67.220.220" ];
       blocking = {
         refreshPeriod = "24h";
         clientGroupsBlock.default =

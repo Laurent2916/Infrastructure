@@ -33,6 +33,20 @@ in {
   networking.firewall.allowedTCPPorts = [ ];
   networking.firewall.allowedUDPPorts = [ ];
 
+  networking.wg-quick.interfaces = {
+    wg0 = {
+      address = [ "10.0.0.3/32" ];
+      dns = [ "10.0.0.1" ];
+      privateKeyFile = "/root/wireguard-keys/private";
+
+      peers = [{
+        publicKey = "y36/EpLUerwM6NSGsVDCkb37Wj/Z3CI0mPFGatVa0Ws=";
+        allowedIPs = [ "10.0.0.1/24" ];
+        endpoint = "fainsin.bzh:5553";
+      }];
+    };
+  };
+
   # use systemd-boot EFI boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
