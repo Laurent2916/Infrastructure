@@ -63,10 +63,7 @@
 
   security.acme = {
     acceptTerms = true;
-    certs = {
-      "fainsin.bzh".email = "acme@fainsin.bzh";
-      "laurent.fainsin.bzh".email = "acme@fainsin.bzh";
-    };
+    defaults.email = "acme@fainsin.bzh";
   };
 
   # This value determines the NixOS release from which the default
