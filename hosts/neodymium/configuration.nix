@@ -35,10 +35,9 @@ in {
 
   networking.wg-quick.interfaces = {
     wg0 = {
+      privateKeyFile = "/root/wireguard-keys/private";
       address = [ "10.0.0.3/32" ];
       dns = [ "10.0.0.1" ];
-      privateKeyFile = "/root/wireguard-keys/private";
-
       peers = [{
         publicKey = "y36/EpLUerwM6NSGsVDCkb37Wj/Z3CI0mPFGatVa0Ws=";
         allowedIPs = [ "10.0.0.1/24" ];
@@ -303,11 +302,12 @@ in {
         brettm12345.nixfmt-vscode
         arrterian.nix-env-selector
 
+        ms-vsliveshare.vsliveshare
         eamodio.gitlens
         github.copilot
 
-        editorconfig.editorconfig
         yzhang.markdown-all-in-one
+        editorconfig.editorconfig
 
         catppuccin.catppuccin-vsc
         file-icons.file-icons
@@ -610,6 +610,14 @@ in {
 
   # experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # optimizations
+  nix.settings.auto-optimise-store = true;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
