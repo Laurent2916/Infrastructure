@@ -8,6 +8,7 @@
   networking = {
     hostName = name;
     domain = "fainsin.bzh";
+    nameservers = [ "127.0.0.1" "1.1.1.1" "1.0.0.1" ];
     firewall = {
       allowedTCPPorts = [
         22 # ssh
@@ -52,6 +53,11 @@
     enable = true;
     settings = {
       upstream.default = [ "208.67.222.222" "208.67.220.220" ];
+      clientLookup.clients = {
+        hydrogen = [ "10.0.0.1" "127.0.0.1" ];
+        pixel5 = [ "10.0.0.2" ];
+        neodymium = [ "10.0.0.3" ];
+      };
       blocking = {
         refreshPeriod = "24h";
         clientGroupsBlock.default =
