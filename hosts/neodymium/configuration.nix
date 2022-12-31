@@ -33,6 +33,11 @@ in {
   networking.firewall.allowedTCPPorts = [ ];
   networking.firewall.allowedUDPPorts = [ ];
 
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
+  # wireguard vpn
   networking.wg-quick.interfaces = {
     wg0 = {
       privateKeyFile = "/root/wireguard-keys/private";
@@ -147,6 +152,8 @@ in {
       element-desktop
       libreoffice-fresh
     ];
+
+    services.mpris-proxy.enable = true;
 
     home.pointerCursor = {
       name = "Catppuccin-Mocha-Dark-Cursors";
