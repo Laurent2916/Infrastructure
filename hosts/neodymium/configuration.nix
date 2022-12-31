@@ -94,6 +94,8 @@ in {
     pulse.enable = true;
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
@@ -121,6 +123,7 @@ in {
       neovim
 
       dconf
+      xdg-utils
 
       baobab
       pavucontrol
@@ -131,7 +134,10 @@ in {
       waybar
       pamixer
       swayidle
+      swaylock
       wl-clipboard
+
+      nixfmt
 
       mpv
       feh
@@ -296,13 +302,14 @@ in {
 
     programs.vscode = {
       enable = true;
-      package = pkgs.vscodium;
+      package = pkgs.vscode;
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         brettm12345.nixfmt-vscode
         arrterian.nix-env-selector
 
         ms-vsliveshare.vsliveshare
+        ms-python.vscode-pylance
         eamodio.gitlens
         github.copilot
 
@@ -326,13 +333,10 @@ in {
         "workbench.colorTheme" = "Catppuccin Mocha";
         "workbench.editor.untitled.hint" = "hidden";
         "workbench.iconTheme" = "file-icons";
+        "gitlens.telemetry.enabled" = false;
+        "telemetry.telemetryLevel" = "off";
+        "editor.inlineSuggest.enabled" = true;
       };
-    };
-
-    programs.swaylock = {
-      settings = { };
-      # enable = true;
-      # package = pkgs.swaylock-effects;
     };
 
     wayland.windowManager.sway = {

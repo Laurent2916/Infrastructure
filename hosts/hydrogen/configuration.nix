@@ -8,7 +8,6 @@
   networking = {
     hostName = name;
     domain = "fainsin.bzh";
-    nameservers = [ "127.0.0.1" "1.1.1.1" "1.0.0.1" ];
     firewall = {
       allowedTCPPorts = [
         22 # ssh
