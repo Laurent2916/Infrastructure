@@ -76,6 +76,14 @@ in {
     };
   };
 
+  # logind configuration
+  services.logind = {
+    lidSwitch = "ignore";
+    extraConfig = ''
+      HandlePowerKey=suspend
+    '';
+  };
+
   # internationalisation
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "en_DK.UTF-8";
