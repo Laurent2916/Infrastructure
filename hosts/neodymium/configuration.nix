@@ -168,7 +168,7 @@ in {
     home.pointerCursor = {
       name = "Catppuccin-Mocha-Dark-Cursors";
       package = pkgs.catppuccin-cursors.mochaDark;
-      size = 32;
+      size = 20;
       gtk.enable = true;
       x11.enable = true;
     };
@@ -185,7 +185,7 @@ in {
         package = pkgs.papirus-icon-theme;
       };
       theme = {
-        name = "Catppuccin-Mocha-Standard-Blue-Dark";
+        name = "Catppuccin-Dark";
         package = pkgs.catppuccin-gtk;
       };
     };
@@ -391,7 +391,8 @@ in {
           names = [ "FiraCode" ];
           size = 10.0;
         };
-        bars = [{ command = "${pkgs.waybar}/bin/waybar"; }];
+        bars =
+          [{ command = "env GTK_THEME=adwaita ${pkgs.waybar}/bin/waybar"; }];
         gaps = {
           smartGaps = true;
           inner = 5;
