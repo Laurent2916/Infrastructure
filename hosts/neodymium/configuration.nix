@@ -627,6 +627,9 @@ in {
   # enable polkit
   security.polkit.enable = true;
 
+  # enable xdg autostart
+  security.pam.services.swaylock = { };
+
   # enable unfree
   nixpkgs.config.allowUnfree = true;
 
