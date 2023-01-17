@@ -288,7 +288,6 @@ in {
     programs.exa = { enable = true; };
     programs.zsh.shellAliases = {
       l = "exa -l -h -g --icons --git --time-style=long-iso";
-      ls = "exa -l -h -g --icons --git --time-style=long-iso --grid";
       ll = "exa -l -h -g --icons --grid --git --time-style=long-iso -a";
     };
 
@@ -627,7 +626,7 @@ in {
   # enable polkit
   security.polkit.enable = true;
 
-  # enable xdg autostart
+  # allow swaylock to use pam
   security.pam.services.swaylock = { };
 
   # enable unfree
