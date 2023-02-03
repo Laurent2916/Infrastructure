@@ -327,7 +327,6 @@ in {
         ms-vsliveshare.vsliveshare
         ms-python.vscode-pylance
         eamodio.gitlens
-        github.copilot
 
         yzhang.markdown-all-in-one
         editorconfig.editorconfig
@@ -352,6 +351,8 @@ in {
         "gitlens.telemetry.enabled" = false;
         "telemetry.telemetryLevel" = "off";
         "editor.inlineSuggest.enabled" = true;
+        "liveshare.presence" = true;
+        "github.copilot.enable" = { "*" = true; };
       };
     };
 
