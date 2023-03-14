@@ -3,7 +3,7 @@
 
   <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake.svg" width=100px>
 
-  Laureηt's Infrastructure
+  Laureηt's Infrastructure <br>
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px">
 
   <a href="https://github.com/zhaofengli/colmena">
