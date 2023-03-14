@@ -154,6 +154,9 @@ in {
 
       nixfmt
 
+      gnome.nautilus
+      jmtpfs
+
       mpv
       feh
       keepassxc
@@ -628,6 +631,9 @@ in {
     enableOnBoot = false;
     autoPrune.enable = true;
   };
+
+  # enable gnome virtual file system
+  services.gvfs.enable = true;
 
   # enable ssh agent
   programs.ssh.startAgent = true;
