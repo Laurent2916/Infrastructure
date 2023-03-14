@@ -124,7 +124,7 @@ in {
   users.users.laurent = {
     isNormalUser = true;
     initialPassword = "laurent";
-    extraGroups = [ "wheel" "video" ];
+    extraGroups = [ "wheel" "video" "docker" ];
     shell = pkgs.zsh;
   };
   home-manager.users.laurent = {
@@ -619,6 +619,14 @@ in {
         ];
       };
     };
+  };
+
+  # enable docker
+  virtualisation.docker = {
+    enable = true;
+    storageDriver = "btrfs";
+    enableOnBoot = false;
+    autoPrune.enable = true;
   };
 
   # enable ssh agent
