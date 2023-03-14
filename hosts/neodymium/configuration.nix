@@ -292,8 +292,9 @@ in {
 
     programs.exa = { enable = true; };
     programs.zsh.shellAliases = {
-      l = "exa -l -h -g --icons --git --time-style=long-iso";
-      ll = "exa -l -h -g --icons --grid --git --time-style=long-iso -a";
+      l =
+        "exa -lahg --icons --git --time-style=long-iso --group-directories-first --color=always";
+      ll = "l --grid";
     };
 
     programs.alacritty = {
