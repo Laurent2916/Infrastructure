@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    agenix = {
+      url = "github:yaxitech/ragenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,7 +17,7 @@
     webcord.url = "github:fufexan/webcord-flake";
   };
 
-  outputs = { nixpkgs, home-manager, webcord, ... }@inputs: {
+  outputs = { nixpkgs, agenix, home-manager, webcord, ... }@inputs: {
     # colmena
     colmena = {
       meta = {
@@ -27,6 +32,7 @@
         imports = [
           ./hosts/${name}/configuration.nix
           home-manager.nixosModules.home-manager
+          agenix.nixosModules.default
         ];
         home-manager = {
           useGlobalPkgs = true;

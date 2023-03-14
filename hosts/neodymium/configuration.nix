@@ -154,6 +154,8 @@ in {
 
       nixfmt
 
+      borgbackup
+
       gnome.nautilus
       jmtpfs
 
@@ -656,6 +658,45 @@ in {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
+  };
+
+  age.secrets.borgbackup = {
+    file = "/home/laurent/infrastructure/secrets/borgbackup.age";
+    owner = "laurent";
+    group = "users";
+  };
+  age.identityPaths = [ "/home/laurent/.ssh/id_ed25519" ];
+
+  services.borgbackup.jobs.home = {
+    paths = "/home/laurent/";
+    repo = "/mnt/home_backup";
+    exclude = [
+      # Largest cache dirs
+      ".cache"
+      ".compose-cache"
+      "*/cache"
+      "*/cache2" # firefox
+      "*/Cache"
+      "*/Code Cache"
+      ".config/Slack/logs"
+      ".config/Code/CachedData"
+      ".container-diff"
+      ".npm/_cacache"
+      # Work related dirs
+      "*/node_modules"
+      "*/bower_components"
+      "*/build"
+      "*/_build"
+      "*/.tox"
+      "*/venv"
+      "*/.venv"
+    ];
+    encryption = {
+      mode = "repokey";
+      passCommand = "cat ${config.age.secrets.borgbackup.path}";
+    };
+    compression = "auto,zstd";
+    startAt = [ ];
   };
 
   # This value determines the NixOS release from which the default
