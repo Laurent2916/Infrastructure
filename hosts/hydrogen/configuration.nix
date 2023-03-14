@@ -144,6 +144,25 @@
 
   environment.systemPackages = with pkgs; [ htop ];
 
+  services.gitea = {
+    enable = true;
+    domain = "git.fainsin.bzh";
+    rootUrl = "https://git.fainsin.bzh";
+    lfs.enable = true;
+    database.type = "postgres";
+    settings = {
+      service = {
+        "DEFAULT_KEEP_EMAIL_PRIVATE" = true;
+        "DISABLE_REGISTRATION" = true;
+      };
+      server = { "LANDING_PAGE" = "explore"; };
+      session = {
+        "PROVIDER" = "db";
+        "COOKIE_SECURE" = true;
+      };
+    };
+  };
+
   services.nginx = {
     enable = true;
 
@@ -170,6 +189,14 @@
         enableACME = true;
         forceSSL = true;
         root = "/srv/www/";
+      };
+      "git.fainsin.bzh" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://localhost:3000/";
+          proxyWebsockets = true;
+        };
       };
       default = {
         default = true;
