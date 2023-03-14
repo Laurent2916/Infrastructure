@@ -204,6 +204,7 @@ in {
         MANPAGER = "nvim +Man!";
         VISUAL = "nvim";
         EDITOR = "nvim";
+        WORDCHARS = "*?_-.[]~=&;!#$%^(){}<>";
       };
       # shellAliases = {
       #   cat = "bat";
