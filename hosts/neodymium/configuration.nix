@@ -156,6 +156,8 @@ in {
 
       borgbackup
 
+      atuin
+
       gnome.nautilus
       jmtpfs
 
@@ -229,6 +231,7 @@ in {
         bindkey '^H' backward-kill-word
         bindkey '5~' kill-word
         eval "$(direnv hook zsh)"
+        eval "$(atuin init zsh)"
       '';
       plugins = [
         {
