@@ -144,12 +144,22 @@
 
   environment.systemPackages = with pkgs; [ htop ];
 
+  age.secrets.gitea = {
+    file = ../../secrets/gitea.age;
+    owner = "gitea";
+    group = "gitea";
+  };
+  age.identityPaths = [ "/root/.ssh/id_ed25519" ];
+
   services.gitea = {
     enable = true;
     domain = "git.fainsin.bzh";
     rootUrl = "https://git.fainsin.bzh";
     lfs.enable = true;
-    database.type = "postgres";
+    database = {
+      type = "postgres";
+      passwordFile = config.age.secrets.gitea.path;
+    };
     settings = {
       service = {
         "DEFAULT_KEEP_EMAIL_PRIVATE" = true;

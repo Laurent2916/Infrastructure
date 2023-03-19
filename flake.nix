@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { nixpkgs, flake-utils, agenix, home-manager, webcord, ... }@inputs:
+  outputs = { nixpkgs, flake-utils, agenix, home-manager, webcord, ... }:
 
     # Provide colmena
     (flake-utils.lib.eachDefaultSystem (system:
@@ -33,7 +33,7 @@
             pkgs.colmena
             pkgs.nixfmt
             pkgs.git
-            inputs.agenix.packages.${system}.ragenix
+            agenix.packages.${system}.ragenix
           ];
         };
       })) // {
