@@ -102,6 +102,9 @@ in {
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
+  # udev
+  services.udev.packages = [ pkgs.android-udev-rules ];
+
   # audio
   services.pipewire = {
     enable = true;
@@ -124,7 +127,7 @@ in {
   users.users.laurent = {
     isNormalUser = true;
     initialPassword = "laurent";
-    extraGroups = [ "wheel" "video" "docker" ];
+    extraGroups = [ "wheel" "video" "docker" "adbusers" ];
     shell = pkgs.zsh;
   };
   home-manager.users.laurent = {
