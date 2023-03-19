@@ -28,7 +28,14 @@
     (flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
-        devShells.default = pkgs.mkShell { packages = [ pkgs.colmena ]; };
+        devShells.default = pkgs.mkShell {
+          packages = [
+            pkgs.colmena
+            pkgs.nixfmt
+            pkgs.git
+            inputs.agenix.packages.${system}.ragenix
+          ];
+        };
       })) // {
 
         # colmena
