@@ -195,8 +195,13 @@ in {
         package = pkgs.papirus-icon-theme;
       };
       theme = {
-        name = "Catppuccin-Dark";
-        package = pkgs.catppuccin-gtk;
+        name = "Catppuccin-Mocha-Compact-Blue-Dark";
+        package = pkgs.catppuccin-gtk.override {
+          accents = [ "blue" ];
+          size = "compact";
+          tweaks = [ "rimless" "normal" ];
+          variant = "mocha";
+        };
       };
     };
 

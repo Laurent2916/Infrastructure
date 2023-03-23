@@ -1,8 +1,8 @@
 {
   "recommendations": [
-    "arrterian.nix-env-selector",
     "editorconfig.editorconfig",
     "brettm12345.nixfmt-vscode",
     "bbenoist.Nix",
+    "mkhl.direnv",
   ]
 }
