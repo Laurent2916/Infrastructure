@@ -33,6 +33,7 @@
             pkgs.colmena
             pkgs.nixfmt
             pkgs.git
+            pkgs.update-nix-fetchgit
             agenix.packages.${system}.ragenix
           ];
         };

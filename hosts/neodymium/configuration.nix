@@ -6,14 +6,14 @@ let
     owner = "catppuccin";
     repo = "alacritty";
     rev = "3c808cbb4f9c87be43ba5241bc57373c793d2f17";
-    sha256 = "w9XVtEe7TqzxxGUCDUR9BFkzLZjG8XrplXJ3lX6f+x0=";
+    sha256 = "07gvkxz9axvjjplpmwf6k0nk6n84gm20s0k5qkqsqkmv8ysdbmf3";
   };
 
   catppuccin-discord = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "discord";
-    rev = "159aac939d8c18da2e184c6581f5e13896e11697";
-    sha256 = "sha256-cWpog52Ft4hqGh8sMWhiLUQp/XXipOPnSTG6LwUAGGA=";
+    rev = "7182b20c7b4fb88b576226009c9d6ac36998aa46";
+    sha256 = "03w1qx4gmjdzmzw3jpv51ikaqc2r196szjhb3gn95n90228gbwjf";
   };
 
   catppuccin-bat = pkgs.fetchFromGitHub {
@@ -258,8 +258,8 @@ in {
           src = pkgs.fetchFromGitHub {
             owner = "chisui";
             repo = "zsh-nix-shell";
-            rev = "v0.5.0";
-            sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
+            rev = "af6f8a266ea1875b9a3e86e14796cadbe1cfbf08";
+            sha256 = "1x6941n43j3fh1zd82v9gzr83d70gasf1s7rh6fzlby4ha20qf06";
           };
         }
       ];
