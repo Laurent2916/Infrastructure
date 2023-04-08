@@ -130,6 +130,7 @@ in {
     extraGroups = [ "wheel" "video" "docker" "adbusers" ];
     shell = pkgs.zsh;
   };
+  programs.zsh.enable = true;
   home-manager.users.laurent = {
     home.stateVersion = "22.11";
     home.packages = with pkgs; [
@@ -158,8 +159,6 @@ in {
       nixfmt
 
       borgbackup
-
-      atuin
 
       gnome.nautilus
       jmtpfs
@@ -238,8 +237,7 @@ in {
         bindkey "^[[1;3D" backward-word
         bindkey '^H' backward-kill-word
         bindkey '5~' kill-word
-        eval "$(direnv hook zsh)"
-        eval "$(atuin init zsh)"
+        # eval "$(atuin init zsh)"
       '';
       plugins = [
         {
@@ -265,8 +263,14 @@ in {
       ];
     };
 
+    programs.atuin = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     programs.direnv = { # TODO: use github:numtide/devshell ?
       enable = true;
+      enableZshIntegration = true;
       nix-direnv.enable = true;
     };
 
