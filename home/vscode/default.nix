@@ -1,0 +1,40 @@
+{ pkgs, ... }: {
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.nix
+      brettm12345.nixfmt-vscode
+
+      ms-vsliveshare.vsliveshare
+      ms-python.vscode-pylance
+      eamodio.gitlens
+
+      yzhang.markdown-all-in-one
+      editorconfig.editorconfig
+
+      catppuccin.catppuccin-vsc
+      file-icons.file-icons
+    ];
+    userSettings = {
+      "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
+      "editor.fontLigatures" = true;
+      "editor.formatOnSave" = true;
+      "git.autofetch" = true;
+      "git.confirmSync" = false;
+      "git.enableSmartCommit" = true;
+      "terminal.integrated.fontFamily" =
+        "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
+      "window.menuBarVisibility" = "toggle";
+      "window.zoomLevel" = -0.25;
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      "workbench.editor.untitled.hint" = "hidden";
+      "workbench.iconTheme" = "file-icons";
+      "gitlens.telemetry.enabled" = false;
+      "telemetry.telemetryLevel" = "off";
+      "editor.inlineSuggest.enabled" = true;
+      "liveshare.presence" = true;
+      "github.copilot.enable" = { "*" = true; };
+    };
+  };
+}
