@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   age.secrets.gitea = {
     file = ../../../../secrets/gitea.age;
     owner = "gitea";
@@ -8,6 +8,7 @@
 
   services.gitea = {
     enable = true;
+    package = pkgs.forgejo;
     domain = "git.fainsin.bzh";
     rootUrl = "https://git.fainsin.bzh";
     lfs.enable = true;
