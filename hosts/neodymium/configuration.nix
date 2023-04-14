@@ -107,7 +107,7 @@
   };
   programs.zsh.enable = true;
 
-  home-manager = { users.laurent = ../../home; };
+  home-manager = { users.laurent = ./home; };
 
   # enable docker
   virtualisation.docker = {

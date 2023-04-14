@@ -1,21 +1,17 @@
 { pkgs, ... }:
 let
-
   catppuccin-mako = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "mako";
     rev = "64ef71633528b50e5475755e50071584b54fa291";
     sha256 = "007zr906q7s31xgn9xw3jl8zdg5wapixva01qniclna1y0yxlqr7";
   };
-
 in {
-
   services.mako = {
     enable = true;
     defaultTimeout = 10000;
     extraConfig = builtins.readFile "${catppuccin-mako}/src/mocha";
   };
-
   wayland.windowManager.sway = {
     enable = true;
     config = rec {
