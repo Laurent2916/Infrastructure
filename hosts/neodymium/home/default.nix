@@ -11,5 +11,4 @@
     ./vscode
     ./wayland
   ];
-
 }
