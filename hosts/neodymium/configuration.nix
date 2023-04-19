@@ -34,13 +34,13 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # clean /tmp at each boot
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
 
   # use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # restrict nix command to sudoers
-  nix.allowedUsers = [ "@wheel" ];
+  nix.settings.allowed-users = [ "@wheel" ];
 
   # hardware
   hardware = {
