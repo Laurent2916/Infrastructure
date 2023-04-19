@@ -3,18 +3,20 @@
     enable = true;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
+      github.copilot
+      eamodio.gitlens
+      editorconfig.editorconfig
+      ms-vsliveshare.vsliveshare
+
+      yzhang.markdown-all-in-one
+      tamasfe.even-better-toml
+
+      mkhl.direnv
       bbenoist.nix
       brettm12345.nixfmt-vscode
 
-      ms-vsliveshare.vsliveshare
-      ms-python.vscode-pylance
-      eamodio.gitlens
-
-      yzhang.markdown-all-in-one
-      editorconfig.editorconfig
-
       catppuccin.catppuccin-vsc
-      file-icons.file-icons
+      catppuccin.catppuccin-vsc-icons
     ];
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
@@ -29,7 +31,7 @@
       "window.zoomLevel" = -0.25;
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.editor.untitled.hint" = "hidden";
-      "workbench.iconTheme" = "file-icons";
+      "workbench.iconTheme" = "catppuccin-mocha";
       "gitlens.telemetry.enabled" = false;
       "telemetry.telemetryLevel" = "off";
       "editor.inlineSuggest.enabled" = true;
