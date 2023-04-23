@@ -2,7 +2,7 @@
   networking = {
     firewall = {
       allowedUDPPorts = [
-        5553 # default wireguard port
+        5553 # wireguard
       ];
     };
 
