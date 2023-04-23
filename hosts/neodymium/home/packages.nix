@@ -10,7 +10,7 @@
     gnome.nautilus # file explorer
     grim # screenshot utils
     htop # replacement for top
-    jmtpfs
+    jmtpfs # for Android MTP
     keepassxc # password manager
     libreoffice-fresh # office suite
     logseq # second brain journalling
