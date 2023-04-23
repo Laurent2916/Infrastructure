@@ -1,1 +1,1 @@
-{ imports = [ ./gitea ./blocky ./wireguard ]; }
+{ imports = [ ./atuin ./blocky ./gitea ./wireguard ]; }
