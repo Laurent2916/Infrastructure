@@ -9,7 +9,7 @@ let
 in {
   services.mako = {
     enable = true;
-    defaultTimeout = 10000;
+    defaultTimeout = 5000;
     extraConfig = builtins.readFile "${catppuccin-mako}/src/mocha";
   };
   wayland.windowManager.sway = {
