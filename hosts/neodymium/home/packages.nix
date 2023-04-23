@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     baobab # disk utils
     borgbackup # backup
+    dconf # required by home-manager
     duf # replacement for df
     element-desktop # matrix client
     feh # image viewer
