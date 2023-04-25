@@ -22,7 +22,18 @@
         publicKey = "y36/EpLUerwM6NSGsVDCkb37Wj/Z3CI0mPFGatVa0Ws=";
         allowedIPs = [ "10.0.0.1/24" ];
         endpoint = "fainsin.bzh:5553";
+        persistentKeepalive = 30;
       }];
+    };
+  };
+  systemd.services.wg-quick-wg0 = {
+    serviceConfig = {
+      Type = lib.mkForce "simple";
+      Restart = "on-failure";
+      RestartSec = "10s";
+    };
+    unitConfig = {
+      StartLimitIntervalSec = 0; # ensure Restart= is always honoured
     };
   };
 
