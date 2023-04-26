@@ -6,7 +6,12 @@
       ];
     };
 
-    nat.internalInterfaces = [ "wg0" ];
+    nat = {
+      enable = true;
+      enableIPv6 = true;
+      externalInterface = "ens3";
+      internalInterfaces = [ "wg0" ];
+    };
 
     wireguard.interfaces = {
       wg0 = {
