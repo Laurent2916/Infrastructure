@@ -9,8 +9,6 @@
   services.gitea = {
     enable = true;
     package = pkgs.forgejo;
-    domain = "git.fainsin.bzh";
-    rootUrl = "https://git.fainsin.bzh";
     lfs.enable = true;
     database = {
       type = "postgres";
@@ -18,20 +16,24 @@
     };
     settings = {
       service = {
-        "DEFAULT_KEEP_EMAIL_PRIVATE" = true;
-        "DISABLE_REGISTRATION" = true;
+        DEFAULT_KEEP_EMAIL_PRIVATE = true;
+        DISABLE_REGISTRATION = true;
       };
-      server = { "LANDING_PAGE" = "explore"; };
+      server = {
+        LANDING_PAGE = "explore";
+        ROOT_URL = "https://git.fainsin.bzh";
+        DOMAIN = "git.fainsin.bzh";
+      };
       indexer = {
-        "REPO_INDEXER_ENABLED" = true;
-        "REPO_INDEXER_PATH" = "indexers/repos.bleve";
-        "UPDATE_BUFFER_LEN" = 20;
-        "MAX_FILE_SIZE" = 1048576;
-        "REPO_INDEXER_EXCLUDE" = "node_modules/**";
+        REPO_INDEXER_ENABLED = true;
+        REPO_INDEXER_PATH = "indexers/repos.bleve";
+        UPDATE_BUFFER_LEN = 20;
+        MAX_FILE_SIZE = 1048576;
+        REPO_INDEXER_EXCLUDE = "node_modules/**";
       };
       session = {
-        "PROVIDER" = "db";
-        "COOKIE_SECURE" = true;
+        PROVIDER = "db";
+        COOKIE_SECURE = true;
       };
     };
   };
