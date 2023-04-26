@@ -16,11 +16,11 @@
   networking.wg-quick.interfaces = {
     wg0 = {
       privateKeyFile = "/root/wireguard-keys/private";
-      address = [ "10.0.0.3/32" ];
+      address = [ "10.0.0.3/24" ];
       dns = [ "10.0.0.1" ];
       peers = [{
         publicKey = "y36/EpLUerwM6NSGsVDCkb37Wj/Z3CI0mPFGatVa0Ws=";
-        allowedIPs = [ "10.0.0.1/24" ];
+        allowedIPs = [ "0.0.0.0/0" "::0/0" ];
         endpoint = "fainsin.bzh:5553";
         persistentKeepalive = 30;
       }];
@@ -88,6 +88,8 @@
   };
 
   services.tlp.enable = true;
+
+  # programs.regreet = { enable = true; };
 
   # internationalisation
   time.timeZone = "Europe/Paris";
