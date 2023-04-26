@@ -16,7 +16,7 @@
   networking.wg-quick.interfaces = {
     wg0 = {
       privateKeyFile = "/root/wireguard-keys/private";
-      address = [ "10.0.0.3/24" ];
+      address = [ "10.0.0.3/24" "fd02:002:002::3/64" ];
       dns = [ "10.0.0.1" ];
       peers = [{
         publicKey = "y36/EpLUerwM6NSGsVDCkb37Wj/Z3CI0mPFGatVa0Ws=";
