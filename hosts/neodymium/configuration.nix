@@ -150,8 +150,12 @@
   # enable gnome virtual file system
   services.gvfs.enable = true;
 
-  # enable ssh agent
-  programs.ssh.startAgent = true;
+  # enable gpg agent
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "gnome3";
+  };
 
   # enable polkit
   security.polkit.enable = true;
