@@ -3,7 +3,7 @@
     enable = true;
     package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
-      github.copilot
+      # github.copilot
       eamodio.gitlens
       editorconfig.editorconfig
       ms-vsliveshare.vsliveshare
@@ -12,11 +12,10 @@
       tamasfe.even-better-toml
 
       mkhl.direnv
-      bbenoist.nix
-      brettm12345.nixfmt-vscode
+      jnoortheen.nix-ide
 
       catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons
+      # catppuccin.catppuccin-vsc-icons
     ];
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
@@ -37,6 +36,9 @@
       "editor.inlineSuggest.enabled" = true;
       "liveshare.presence" = true;
       "github.copilot.enable" = { "*" = true; };
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
+      "nix.serverSettings"."nil"."formatting"."command" = [ "nixfmt" ];
     };
   };
 }
