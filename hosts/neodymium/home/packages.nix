@@ -17,6 +17,7 @@
     logseq # second brain journalling
     mpv # video viewer
     neovim # text editor
+    nil # nix language server
     nixfmt # nix formatter
     pamixer # volume mixer cli
     pavucontrol # volume mixer
