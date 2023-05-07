@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "git+file:///home/laurent/Documents/nixpkgs?shallow=1";
     flake-utils.url = "github:numtide/flake-utils";
 
     lanzaboote = {
