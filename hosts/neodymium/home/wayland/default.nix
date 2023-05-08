@@ -14,6 +14,17 @@ in {
   };
   wayland.windowManager.sway = {
     enable = true;
+    package = (pkgs.swayfx.overrideAttrs (old: {
+      src = pkgs.fetchFromGitHub {
+        owner = "WillPower3309";
+        repo = "swayfx";
+        rev = "6e53c04abf34599a6c36d1fb57df26d641bee8a1";
+        sha256 = "sha256-dtAbtiRnY1GL9UuPE9iKwF2ZwxPqaOva196Pl8YARg0=";
+      };
+    }));
+    extraConfig = ''
+      blur enable
+    '';
     config = rec {
       modifier = "Mod4";
       terminal = "alacritty";
