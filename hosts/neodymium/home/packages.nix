@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, ... }: {
+{ pkgs, ... }: {
   nixpkgs.config.allowUnfree = false;
   services.mpris-proxy.enable = true;
   home.packages = with pkgs; [
