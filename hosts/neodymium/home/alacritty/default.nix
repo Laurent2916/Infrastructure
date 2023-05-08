@@ -11,7 +11,7 @@ in {
     enable = true;
     settings = {
       import = [ "${catppuccin-alacritty}/catppuccin-mocha.yml" ];
-      window.opacity = 0.825;
+      window.opacity = 0.6;
       font = {
         normal.family = "FiraCode Nerd Font Mono";
         size = 9.5;
