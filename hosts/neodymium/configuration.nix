@@ -89,7 +89,16 @@
 
   services.tlp.enable = true;
 
-  # programs.regreet = { enable = true; };
+  # greeter
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+        user = "greeter";
+      };
+    };
+  };
 
   # internationalisation
   time.timeZone = "Europe/Paris";
