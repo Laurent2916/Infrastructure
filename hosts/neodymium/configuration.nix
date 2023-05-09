@@ -70,6 +70,11 @@
   # restrict nix command to sudoers
   nix.settings.allowed-users = [ "@wheel" ];
 
+  # shorter timeout for systemd services
+  systemd.extraConfig = ''
+    DefaultTimeoutStopSec=10s
+  '';
+
   # hardware
   hardware = {
     enableRedistributableFirmware = true;
