@@ -1,8 +1,7 @@
 {
   "recommendations": [
     "editorconfig.editorconfig",
-    "brettm12345.nixfmt-vscode",
-    "bbenoist.Nix",
+    "jnoortheen.nix-ide",
     "mkhl.direnv",
   ]
 }
