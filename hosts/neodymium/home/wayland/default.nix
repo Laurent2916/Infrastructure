@@ -12,6 +12,7 @@ in {
     defaultTimeout = 5000;
     extraConfig = builtins.readFile "${catppuccin-mako}/src/mocha";
   };
+
   wayland.windowManager.sway = {
     enable = true;
     package = (pkgs.swayfx.overrideAttrs (old: {

@@ -37,11 +37,12 @@
       in {
         devShells.default = pkgs.mkShell {
           packages = [
-            pkgs.colmena
-            pkgs.nixfmt
-            pkgs.git
-            pkgs.update-nix-fetchgit
-            agenix.packages.${system}.ragenix
+            pkgs.colmena # remote deployment
+            pkgs.nixfmt # formatting
+            pkgs.git # version control
+            pkgs.update-nix-fetchgit # auto update fetchs
+            agenix.packages.${system}.ragenix # secrets
+            pkgs.sbctl # secure boot
           ];
         };
       })) // {
