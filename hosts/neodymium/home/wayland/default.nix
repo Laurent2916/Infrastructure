@@ -18,8 +18,8 @@ in {
       src = pkgs.fetchFromGitHub {
         owner = "WillPower3309";
         repo = "swayfx";
-        rev = "6e53c04abf34599a6c36d1fb57df26d641bee8a1";
-        sha256 = "sha256-dtAbtiRnY1GL9UuPE9iKwF2ZwxPqaOva196Pl8YARg0=";
+        rev = "2c4fe20456851b6b8dc14b6bdc0cf9bee527a9ee";
+        sha256 = "0p2fzsvadlcsbw3irmj49p6z62v8f8cm1wj746jbill95n9iif70";
       };
     }));
     extraConfig = ''

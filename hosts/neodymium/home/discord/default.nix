@@ -3,8 +3,8 @@ let
   catppuccin-discord = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "discord";
-    rev = "10a829f9c24a84ede8cedeed488a767369ac1ea7";
-    sha256 = "133404n08gzvjw07kaw4azzzp41hdl9k4wqsvn2786sgpbwlr2av";
+    rev = "3b6a4a2f69253dc7d5ea93317d7dce9a0ef24589";
+    sha256 = "0gzkbbm3q13a77xlsa9zlz846nb05wr9ksra1z1vsvcpqi21gs1s";
   };
 in {
   programs.webcord = {
