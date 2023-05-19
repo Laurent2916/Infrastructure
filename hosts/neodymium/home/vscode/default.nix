@@ -35,7 +35,12 @@
       "telemetry.telemetryLevel" = "off";
       "editor.inlineSuggest.enabled" = true;
       "liveshare.presence" = true;
-      "github.copilot.enable" = { "*" = true; };
+      "github.copilot.enable" = {
+        "*" = true;
+        "yaml" = false;
+        "plaintext" = false;
+        "markdown" = true;
+      };
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "nix.serverSettings"."nil"."formatting"."command" = [ "nixfmt" ];
