@@ -19,8 +19,8 @@ in {
       src = pkgs.fetchFromGitHub {
         owner = "WillPower3309";
         repo = "swayfx";
-        rev = "3c2e38be0356fa6feed3b28254f54efde54fe27d";
-        sha256 = "0gizdsqszhiqaywk1czbhc3v1f5hzmpdbj54gz6nc03lpmwp5ryw";
+        rev = "6e53c04abf34599a6c36d1fb57df26d641bee8a1";
+        sha256 = "sha256-dtAbtiRnY1GL9UuPE9iKwF2ZwxPqaOva196Pl8YARg0=";
       };
     }));
     extraConfig = ''
