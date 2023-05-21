@@ -29,6 +29,7 @@
     thunderbird # mail client
     tmux # terminal multiplexer
     waybar # wayland status bar
+    webcord-vencord # discord client
     wl-clipboard # clipboard utils
     x2goclient # remote desktop
     xdg-utils

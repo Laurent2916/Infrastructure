@@ -4,7 +4,6 @@
     ./packages.nix
 
     ./alacritty
-    ./discord
     ./firefox
     ./gtk
     ./shell
