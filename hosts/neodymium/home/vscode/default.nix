@@ -1,7 +1,16 @@
 { pkgs, ... }: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+    package = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs
+      (oldAttrs: {
+        src = (builtins.fetchTarball {
+          url =
+            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
+          sha256 = "1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv";
+        });
+        pname = "vscode-insiders";
+        version = "latest";
+      });
     extensions = with pkgs.vscode-extensions; [
       # github.copilot
       eamodio.gitlens
