@@ -5,14 +5,16 @@
       (oldAttrs: {
         src = (builtins.fetchTarball {
           url =
-            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
-          sha256 = "1nvmnf4w2894v21zcmh1xzcxzzilc10qsqhz2i5hqvrn2vcw0ivv";
+            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64#2023-05-26";
+          sha256 = "1cgrn4n6y348x0c7ndmn5vssvpj1sdk27bp91cayr27fb59lgmv9";
         });
         pname = "vscode-insiders";
         version = "latest";
       });
     extensions = with pkgs.vscode-extensions; [
-      # github.copilot
+      github.copilot
+      # github.copilot-chat
+
       eamodio.gitlens
       editorconfig.editorconfig
       ms-vsliveshare.vsliveshare
