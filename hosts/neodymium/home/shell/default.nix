@@ -97,8 +97,8 @@ in {
         src = pkgs.fetchFromGitHub {
           owner = "chisui";
           repo = "zsh-nix-shell";
-          rev = "aaef0d33d0cb8f88946d54d7a6c279083fa59681";
-          sha256 = "0c2i43c1dwd28n2jg0h54wxp4jwj2fzcgkalwkarsaaq5d0ld5r6";
+          rev = "df48366e858feec2f770b48a7d92b56eab613396";
+          sha256 = "149zh2rm59blr2q458a5irkfh82y3dwdich60s9670kl3cl5h2m1";
         };
       }
     ];
