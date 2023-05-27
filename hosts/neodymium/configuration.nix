@@ -30,7 +30,11 @@
   };
   programs.zsh.enable = true;
 
-  home-manager = { users.laurent = ./home; };
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.laurent = ./home;
+  };
 
   # enable gnome virtual file system
   services.gvfs.enable = true;

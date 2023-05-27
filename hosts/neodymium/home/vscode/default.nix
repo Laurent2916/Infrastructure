@@ -5,7 +5,7 @@
       (oldAttrs: {
         src = (builtins.fetchTarball {
           url =
-            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64#2023-05-26";
+            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
           sha256 = "1cgrn4n6y348x0c7ndmn5vssvpj1sdk27bp91cayr27fb59lgmv9";
         });
         pname = "vscode-insiders";

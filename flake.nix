@@ -26,13 +26,11 @@
 
   outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager, ... }:
 
-    # Provide colmena
     (flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
         devShells.default = pkgs.mkShell {
           packages = [
-            pkgs.colmena # remote deployment
             pkgs.nixfmt # formatting
             pkgs.git # version control
             pkgs.update-nix-fetchgit # auto update fetchs
@@ -42,45 +40,26 @@
         };
       })) // {
 
-        # colmena
-        colmena = {
-          meta = {
-            nixpkgs = import nixpkgs {
-              system = "x86_64-linux";
-              overlays = [ ];
-            };
-          };
+        # neodymium laptop
+        nixosConfigurations.neodymium = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/neodymium/configuration.nix
+            home-manager.nixosModules.home-manager
+            agenix.nixosModules.default
+            lanzaboote.nixosModules.lanzaboote
+          ];
+        };
 
-          # default config
-          defaults = { name, ... }: {
-            imports = [
-              ./hosts/${name}/configuration.nix
-              home-manager.nixosModules.home-manager
-              agenix.nixosModules.default
-              lanzaboote.nixosModules.lanzaboote
-            ];
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-            };
-          };
-
-          # personnal laptop
-          neodymium = { ... }: {
-            deployment = {
-              allowLocalDeployment = true;
-              targetHost = null;
-            };
-          };
-
-          # ovh vps
-          hydrogen = { ... }: {
-            deployment = {
-              targetHost = "178.62.253.235";
-              targetUser = "root";
-            };
-          };
+        # hydrogen vps
+        nixosConfigurations.hydrogen = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/hydrogen/configuration.nix
+            home-manager.nixosModules.home-manager
+            agenix.nixosModules.default
+            lanzaboote.nixosModules.lanzaboote
+          ];
         };
       };
-
 }

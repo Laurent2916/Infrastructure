@@ -1,6 +1,13 @@
-{ pkgs, ... }: {
-  nixpkgs.config.allowUnfree = false;
-  services.mpris-proxy.enable = true;
+{ pkgs, lib, ... }: {
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "vscode-insiders"
+      "vscode-extension-github-copilot"
+      "vscode-extension-ms-vsliveshare-vsliveshare"
+    ];
+
+  services.mpris-proxy.enable = true; # media keys
+
   home.packages = with pkgs; [
     baobab # disk utils
     borgbackup # backup
