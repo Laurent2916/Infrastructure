@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, hyprland, ... }: {
   imports = [ ./hardware-configuration.nix ./system ];
 
   # shorter timeout for systemd services
@@ -23,7 +23,7 @@
     # disable user creation/deletion
     mutableUsers = false;
 
-    # damn, who's this handsome guy?
+    # absolute gigachad
     users.laurent = {
       isNormalUser = true;
       initialPassword = "laurent";
@@ -36,6 +36,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    extraSpecialArgs = { inherit hyprland; };
     users.laurent = ./home;
   };
 
