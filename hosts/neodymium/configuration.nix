@@ -6,6 +6,9 @@
     DefaultTimeoutStopSec=10s
   '';
 
+  # enable thermald
+  services.thermald.enable = true;
+
   # udev
   services.udev.packages = [ pkgs.android-udev-rules ];
 

@@ -22,9 +22,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware.url = "github:nixos/nixos-hardware";
   };
 
-  outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager, ... }:
+  outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager
+    , nixos-hardware, ... }:
 
     (flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
@@ -48,6 +51,10 @@
             home-manager.nixosModules.home-manager
             agenix.nixosModules.default
             lanzaboote.nixosModules.lanzaboote
+            nixos-hardware.nixosModules.common-cpu-amd
+            nixos-hardware.nixosModules.common-gpu-nvidia-disable
+            nixos-hardware.nixosModules.common-pc-laptop
+            nixos-hardware.nixosModules.common-pc-laptop-ssd
           ];
         };
 
