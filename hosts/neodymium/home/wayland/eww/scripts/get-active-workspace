@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# print current active workspace id
+hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id'
+
+# print current active workspace id on workspace changes
+socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - |
+  stdbuf -o0 awk -F '>>|,' -e '/^workspace>>/ {print $2}' -e '/^focusedmon>>/ {print $3}'

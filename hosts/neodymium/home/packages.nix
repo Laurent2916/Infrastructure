@@ -9,6 +9,8 @@
   services.mpris-proxy.enable = true; # media keys
 
   home.packages = with pkgs; [
+    socat # socket cat
+    jq # json utils
     baobab # disk utils
     borgbackup # backup
     dconf # required by home-manager

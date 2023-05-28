@@ -24,10 +24,12 @@
     };
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
+
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager
-    , nixos-hardware, ... }:
+    , nixos-hardware, hyprland, ... }:
 
     (flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
@@ -49,6 +51,10 @@
           modules = [
             ./hosts/neodymium/configuration.nix
             home-manager.nixosModules.home-manager
+            {
+              home-manager.users.laurent.imports =
+                [ hyprland.homeManagerModules.default ];
+            }
             agenix.nixosModules.default
             lanzaboote.nixosModules.lanzaboote
             nixos-hardware.nixosModules.common-cpu-amd
