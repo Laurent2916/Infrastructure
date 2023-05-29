@@ -65,11 +65,6 @@ in {
       path = "$HOME/.zsh_history";
       extended = true;
     };
-    loginExtra = ''
-      if [[ "$(tty)" == "/dev/tty1" ]]; then
-        exec sway
-      fi
-    '';
     initExtra = ''
       bindkey -e
       bindkey "^[[1;5C" forward-word
