@@ -9,6 +9,7 @@
   services.mpris-proxy.enable = true; # media keys
 
   home.packages = with pkgs; [
+    swaybg # wayland background
     socat # socket cat
     jq # json utils
     baobab # disk utils
