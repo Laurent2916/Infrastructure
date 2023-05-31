@@ -12,7 +12,6 @@
     swaybg # wayland background
     socat # socket cat
     jq # json utils
-    baobab # disk utils
     borgbackup # backup
     dconf # required by home-manager
     duf # replacement for df
@@ -23,7 +22,6 @@
     htop # replacement for top
     jmtpfs # for Android MTP
     keepassxc # password manager
-    libreoffice-fresh # office suite
     logseq # second brain journalling
     mpv # video viewer
     neovim # text editor
@@ -38,10 +36,8 @@
     swaylock # wayland lockscreen
     thunderbird # mail client
     tmux # terminal multiplexer
-    waybar # wayland status bar
     webcord-vencord # discord client
     wl-clipboard # clipboard utils
-    x2goclient # remote desktop
     xdg-utils
   ];
 }
