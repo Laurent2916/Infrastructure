@@ -1,6 +1,6 @@
-# Ignore the direnv directory
+# direnv files
 .direnv
 
-# Ignore build outputs from performing a nix-build or `nix build` command
+# `nix build` outputs
 result
 result-*
