@@ -24,7 +24,7 @@
     keepassxc # password manager
     logseq # second brain journalling
     mpv # video viewer
-    neovim # text editor
+    micro # text editor
     nil # nix language server
     nixfmt # nix formatter
     pamixer # volume mixer cli

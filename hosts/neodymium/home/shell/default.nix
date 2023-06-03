@@ -55,9 +55,9 @@ in {
     enableSyntaxHighlighting = true;
     enableCompletion = true;
     sessionVariables = {
-      MANPAGER = "nvim +Man!";
-      VISUAL = "nvim";
-      EDITOR = "nvim";
+      MANPAGER = "micro";
+      VISUAL = "micro";
+      EDITOR = "micro";
       WORDCHARS = "*?_-.[]~=&;!#$%^(){}<>";
     };
     history = {
