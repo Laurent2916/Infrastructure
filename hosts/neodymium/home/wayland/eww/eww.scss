@@ -21,13 +21,12 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
   @for $i from 1 through 10 {
     &.entry-#{$i} {
       .text {
-        opacity: 0.3;
         padding: 0 5px;
         color: $crust;
-        background-color: nth($colors, $i);
+        background-color: mix(nth($colors, $i), #4E4365, 30%);
 
         &.active {
-          opacity: 1;
+          background-color: mix(nth($colors, $i), #4E4365, 100%);
         }
 
         &.empty {
@@ -36,34 +35,31 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
       }
 
       .seperator {
-        opacity: 0.3;
         font-size: 19px;
         margin-top: -1px;
 
-        &.active {
-          opacity: 1;
+        &.up {
+          color: mix(nth($colors, $i), #4E4365, 30%);
         }
 
-        &.up {
-
-          @if $i ==10 {
-            color: nth($colors, 10);
-          }
-
-          @else {
-            color: nth($colors, $i);
-          }
+        &.up.active {
+          color: mix(nth($colors, $i), #4E4365, 100%);
         }
 
         &.down {
           margin-left: -12px;
+          margin-right: -1px;
 
           @if $i ==10 {
             color: transparent;
           }
 
           @else {
-            color: nth($colors, $i + 1);
+            &.active {
+              color: mix(nth($colors, $i + 1), #4E4365, 100%);
+            }
+
+            color: mix(nth($colors, $i + 1), #4E4365, 30%);
           }
         }
       }
