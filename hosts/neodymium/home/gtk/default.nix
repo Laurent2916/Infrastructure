@@ -25,7 +25,6 @@
         size = "compact";
       };
     };
-
   };
 
   home.pointerCursor = {

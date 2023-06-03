@@ -23,10 +23,10 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
       .text {
         padding: 0 5px;
         color: $crust;
-        background-color: mix(nth($colors, $i), #4E4365, 30%);
+        background-color: mix(nth($colors, $i), $mantle, 30%);
 
         &.active {
-          background-color: mix(nth($colors, $i), #4E4365, 100%);
+          background-color: mix(nth($colors, $i), $mantle, 100%);
         }
 
         &.empty {
@@ -39,11 +39,11 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
         margin-top: -1px;
 
         &.up {
-          color: mix(nth($colors, $i), #4E4365, 30%);
+          color: mix(nth($colors, $i), $mantle, 30%);
         }
 
         &.up.active {
-          color: mix(nth($colors, $i), #4E4365, 100%);
+          color: mix(nth($colors, $i), $mantle, 100%);
         }
 
         &.down {
@@ -56,10 +56,10 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
 
           @else {
             &.active {
-              color: mix(nth($colors, $i + 1), #4E4365, 100%);
+              color: mix(nth($colors, $i + 1), $mantle, 100%);
             }
 
-            color: mix(nth($colors, $i + 1), #4E4365, 30%);
+            color: mix(nth($colors, $i + 1), $mantle, 30%);
           }
         }
       }
