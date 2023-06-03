@@ -4,12 +4,11 @@
     package = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs
       (oldAttrs: {
         src = (builtins.fetchTarball {
-          url =
-            "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
-          sha256 = "1cgrn4n6y348x0c7ndmn5vssvpj1sdk27bp91cayr27fb59lgmv9";
+          url = "https://update.code.visualstudio.com/latest/linux-x64/insider";
+          sha256 = "1f996x5i85zf0hpd7jx18zdqdp9nhxhf6zn83ai0njphz1dj354p";
         });
         pname = "vscode-insiders";
-        version = "latest";
+        version = "latest-2023-06-03";
       });
     extensions = with pkgs.vscode-extensions; [
       github.copilot
