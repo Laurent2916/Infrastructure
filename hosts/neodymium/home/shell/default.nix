@@ -7,6 +7,7 @@ let
     sha256 = "1g2r6j33f4zys853i1c5gnwcdbwb6xv5w6pazfdslxf69904lrg9";
   };
 in {
+
   programs.bat = {
     enable = true;
     themes = {
@@ -39,23 +40,25 @@ in {
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@neodymium";
     };
   };
+
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
   };
+
   programs.atuin = {
     enable = true;
     enableZshIntegration = true;
     settings = { sync_address = "https://atuin.fainsin.bzh"; };
   };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     enableCompletion = true;
     sessionVariables = {
-      MANPAGER = "micro";
       VISUAL = "micro";
       EDITOR = "micro";
       WORDCHARS = "*?_-.[]~=&;!#$%^(){}<>";
@@ -73,7 +76,6 @@ in {
       bindkey "^[[1;3D" backward-word
       bindkey '^H' backward-kill-word
       bindkey '5~' kill-word
-      # eval "$(atuin init zsh)"
     '';
     plugins = [
       {
@@ -98,4 +100,5 @@ in {
       }
     ];
   };
+
 }
