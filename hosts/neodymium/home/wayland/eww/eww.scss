@@ -1,31 +1,90 @@
 * {
-  all: unset; //Unsets everything so you can style everything from scratch
+  all: unset; // Unsets everything so you can style everything from scratch
+  font-family: "FiraCode Nerd Font";
 }
 
-//Global Styles
+// Global Styles
+
+@import "mocha.scss";
+
 .bar {
-  background-color: #3a3a3a;
-  color: #b0b4bc;
-  padding: 10px;
+  background-color: $mantle;
+  color: $text;
+}
+
+// Workspace Styles
+
+$colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $green, $teal;
+
+.workspace {
+
+  @for $i from 1 through 10 {
+    &.entry-#{$i} {
+      .text {
+        opacity: 0.3;
+        padding: 0 5px;
+        color: $crust;
+        background-color: nth($colors, $i);
+
+        &.active {
+          opacity: 1;
+        }
+
+        &.empty {
+          color: transparent;
+        }
+      }
+
+      .seperator {
+        opacity: 0.3;
+        font-size: 19px;
+        margin-top: -1px;
+
+        &.active {
+          opacity: 1;
+        }
+
+        &.up {
+
+          @if $i ==10 {
+            color: nth($colors, 10);
+          }
+
+          @else {
+            color: nth($colors, $i);
+          }
+        }
+
+        &.down {
+          margin-left: -12px;
+
+          @if $i ==10 {
+            color: transparent;
+          }
+
+          @else {
+            color: nth($colors, $i + 1);
+          }
+        }
+      }
+    }
+  }
 }
 
 // Styles on classes (see eww.yuck for more information)
 
 .sidestuff slider {
   all: unset;
-  color: #ffd5cd;
 }
 
 .metric scale trough highlight {
   all: unset;
-  background-color: #D35D6E;
-  color: #000000;
+  background-color: $blue;
   border-radius: 10px;
 }
 
 .metric scale trough {
   all: unset;
-  background-color: #4e4e4e;
   border-radius: 50px;
   min-height: 3px;
   min-width: 50px;
@@ -35,21 +94,17 @@
 
 .metric scale trough highlight {
   all: unset;
-  background-color: #D35D6E;
+  background-color: #5d96d3;
   color: #000000;
   border-radius: 10px;
 }
 
 .metric scale trough {
   all: unset;
-  background-color: #4e4e4e;
+  background-color: $surface0;
   border-radius: 50px;
   min-height: 3px;
   min-width: 50px;
   margin-left: 10px;
   margin-right: 20px;
-}
-
-.workspace-entry.active {
-  color: #D35D6E;
 }
