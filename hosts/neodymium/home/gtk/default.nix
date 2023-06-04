@@ -9,7 +9,7 @@
     };
 
     iconTheme = {
-      name = "Catppuccino-Mocha-Dark";
+      name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "mocha";
         accent = "blue";
