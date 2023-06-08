@@ -60,10 +60,15 @@
   )
 )
 
-(deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces")
-(deflisten active_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace")
+(deflisten workspaces
+  :initial "[]" "bash ~/.config/eww/scripts/get-workspaces"
+)
+(deflisten active_workspace
+  :initial "1" "bash ~/.config/eww/scripts/get-active-workspace"
+)
 (defwidget workspaces []
-  (eventbox :class "workspaces-widget"
+  (eventbox
+    :class "workspaces-widget"
     (box
       :space-evenly false
       (label
