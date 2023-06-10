@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
     swaybg # wayland background
     socat # socket cat
-    jq # json utils
+    jaq # (fast) json utils
     borgbackup # backup
     dconf # required by home-manager
     duf # replacement for df
