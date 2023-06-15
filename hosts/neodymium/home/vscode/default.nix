@@ -5,10 +5,10 @@
       (oldAttrs: {
         src = (builtins.fetchTarball {
           url = "https://update.code.visualstudio.com/latest/linux-x64/insider";
-          sha256 = "1f996x5i85zf0hpd7jx18zdqdp9nhxhf6zn83ai0njphz1dj354p";
+          sha256 = "0billj5bzapc1x4c7f9lz3z2bav3az2nj5asxpgfqmjb0xdsdfnp";
         });
         pname = "vscode-insiders";
-        version = "latest-2023-06-03";
+        version = "latest";
       });
     extensions = with pkgs.vscode-extensions; [
       github.copilot
