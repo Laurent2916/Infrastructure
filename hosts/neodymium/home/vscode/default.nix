@@ -12,7 +12,7 @@
       });
     extensions = with pkgs.vscode-extensions; [
       github.copilot
-      # github.copilot-chat
+      github.copilot-chat
 
       eamodio.gitlens
       editorconfig.editorconfig
@@ -25,7 +25,7 @@
       jnoortheen.nix-ide
 
       catppuccin.catppuccin-vsc
-      # catppuccin.catppuccin-vsc-icons
+      catppuccin.catppuccin-vsc-icons
     ];
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
