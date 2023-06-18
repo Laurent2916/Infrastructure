@@ -5,6 +5,7 @@
     extensions = with pkgs.vscode-extensions; [
       github.copilot
       github.copilot-chat
+      github.vscode-pull-request-github
 
       eamodio.gitlens
       editorconfig.editorconfig
