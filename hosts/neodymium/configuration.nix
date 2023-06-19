@@ -1,16 +1,10 @@
-{ pkgs, hyprland, ... }: {
-  imports = [ ./hardware-configuration.nix ./system ];
+{ pkgs, ... }: {
+  imports = [ ./system ];
 
   # shorter timeout for systemd services
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=10s
   '';
-
-  # enable thermald
-  services.thermald.enable = true;
-
-  # udev
-  services.udev.packages = [ pkgs.android-udev-rules ];
 
   services.dbus.enable = true;
   xdg.portal = {
@@ -19,26 +13,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
   };
 
-  users = {
-    # disable user creation/deletion
-    mutableUsers = false;
-
-    # absolute gigachad
-    users.laurent = {
-      isNormalUser = true;
-      initialPassword = "laurent";
-      extraGroups = [ "wheel" "video" "docker" "adbusers" ];
-      shell = pkgs.zsh;
-    };
-  };
   programs.zsh.enable = true;
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = { inherit hyprland; };
-    users.laurent = ./home;
-  };
 
   # enable gnome virtual file system
   services.gvfs.enable = true;
@@ -49,5 +24,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.05"; # Did you read the comment?
 }

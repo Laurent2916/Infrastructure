@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./adb
     ./age
     ./audio
     ./boot
@@ -12,5 +13,6 @@
     ./networking
     ./nix
     ./security
+    ./users
   ];
 }

@@ -19,10 +19,16 @@
   # tlp, power management
   services.tlp.enable = true;
 
+  # thermald, controls temperature
+  services.thermald.enable = true;
+
   # bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
   # backlight intensity
   programs.light.enable = true;
+
+  # paritions and filesystems
+  imports = [ ./partitions.nix ];
 }

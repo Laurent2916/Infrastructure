@@ -15,9 +15,6 @@
     options = "--delete-older-than 30d";
   };
 
-  # enable unfree
-  nixpkgs.config.allowUnfree = true;
-
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
     trusted-public-keys =
