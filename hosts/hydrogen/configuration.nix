@@ -1,66 +1,11 @@
-{ modulesPath, pkgs, lib, ... }: {
+{ modulesPath, lib, ... }: {
   imports =
     lib.optional (builtins.pathExists ./do-userdata.nix) ./do-userdata.nix ++ [
       (modulesPath + "/virtualisation/digital-ocean-config.nix")
 
       ./services
+      ./system
     ];
-
-  networking = {
-    hostName = "hydrogen";
-    domain = "fainsin.bzh";
-    firewall = {
-      allowedTCPPorts = [
-        22 # ssh
-        80 # http
-        443 # https
-      ];
-    };
-  };
-
-  services.fail2ban = {
-    enable = true;
-    maxretry = 5;
-  };
-
-  users.mutableUsers = false;
-  users.users.root.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu"
-  ];
-
-  environment.systemPackages = with pkgs; [ htop ];
-
-  services.nginx = {
-    enable = true;
-
-    recommendedTlsSettings = true;
-    recommendedOptimisation = true;
-    recommendedGzipSettings = true;
-    recommendedProxySettings = true;
-
-    virtualHosts = {
-      "fainsin.bzh" = {
-        enableACME = true;
-        forceSSL = true;
-        locations."/".return =
-          ''301 "$scheme://laurent.fainsin.bzh$request_uri"'';
-      };
-      "laurent.fainsin.bzh" = {
-        enableACME = true;
-        forceSSL = true;
-        root = "/srv/www/";
-      };
-      default = {
-        default = true;
-        locations."/".return = ''301 "$scheme://fainsin.bzh" '';
-      };
-    };
-  };
-
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "acme@fainsin.bzh";
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -68,5 +13,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.05"; # Did you read the comment?
 }
