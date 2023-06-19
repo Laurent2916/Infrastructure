@@ -1,11 +1,4 @@
-{ pkgs, lib, ... }: {
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "vscode-insiders"
-      "vscode-extension-github-copilot"
-      "vscode-extension-ms-vsliveshare-vsliveshare"
-    ];
-
+{ pkgs, ... }: {
   services.mpris-proxy.enable = true; # media keys
 
   home.packages = with pkgs; [
