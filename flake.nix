@@ -50,7 +50,7 @@
           system = "x86_64-linux";
           specialArgs = attrs;
           modules = [
-            ./hosts/neodymium/configuration.nix
+            ./hosts/neodymium
             home-manager.nixosModules.home-manager
             agenix.nixosModules.default
             lanzaboote.nixosModules.lanzaboote
@@ -65,7 +65,7 @@
         nixosConfigurations.hydrogen = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/hydrogen/configuration.nix
+            ./hosts/hydrogen
             home-manager.nixosModules.home-manager
             agenix.nixosModules.default
             lanzaboote.nixosModules.lanzaboote
