@@ -1,5 +1,5 @@
 { hyprland, ... }: {
-  config.home.stateVersion = "22.11";
+  config.home.stateVersion = "23.05";
   imports = [
     hyprland.homeManagerModules.default
 
