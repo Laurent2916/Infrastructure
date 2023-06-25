@@ -12,6 +12,7 @@
           import ./projet-systemes-algorithmes-repartis.nix pkgs;
         "/projet-intelligence-artificielle-multimedia/" =
           import ./projet-intelligence-artificielle-multimedia.nix pkgs;
+        "/TP-calcul-parallele/" = import ./TP-calcul-parallele.nix pkgs;
       };
     };
   };
