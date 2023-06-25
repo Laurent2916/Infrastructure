@@ -8,5 +8,5 @@
     recommendedProxySettings = true;
   };
 
-  imports = [ ./n7 ./personal-websites.nix ./resume.nix ];
+  imports = [ ./laurent ./n7 ];
 }
