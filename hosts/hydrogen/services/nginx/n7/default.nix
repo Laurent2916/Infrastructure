@@ -10,6 +10,8 @@
         "/projet-audionumerique/" = import ./projet-audionumerique.nix pkgs;
         "/projet-systemes-algorithmes-repartis/" =
           import ./projet-systemes-algorithmes-repartis.nix pkgs;
+        "/projet-intelligence-artificielle-multimedia/" =
+          import ./projet-intelligence-artificielle-multimedia.nix pkgs;
       };
     };
   };
