@@ -15,6 +15,7 @@
         "/TP-calcul-parallele/" = import ./TP-calcul-parallele.nix pkgs;
         "/projet-probleme-inverse-3D/" =
           import ./projet-probleme-inverse-3D.nix pkgs;
+        "/projet-long/" = import ./projet-long.nix pkgs;
       };
     };
   };
