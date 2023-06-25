@@ -2,10 +2,9 @@
 let
   pages = pkgs.fetchgit {
     url = "https://git.fainsin.bzh/Laurent/resume";
-    branchName = "pages";
     fetchLFS = true; # https://github.com/go-gitea/gitea/issues/4773
-    rev = "c912f223da5440d63e23e6346a672e537dca088f";
-    sha256 = "sha256-Ay4JKKcYC5NGlordvIRL8TWmtuEEv7r3XVYbL4W9RR4=";
+    rev = "57134888a29bc56e4ca3a2507d4e3b728619948f"; # pages
+    sha256 = "sha256-i4VwSFB5XoI5ySfGx4sCeZDWqAJ9p53OCy9ewlOCWFU=";
   };
 in {
   services.nginx.virtualHosts = {
