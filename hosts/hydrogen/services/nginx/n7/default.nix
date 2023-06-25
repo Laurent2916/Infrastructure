@@ -13,6 +13,8 @@
         "/projet-intelligence-artificielle-multimedia/" =
           import ./projet-intelligence-artificielle-multimedia.nix pkgs;
         "/TP-calcul-parallele/" = import ./TP-calcul-parallele.nix pkgs;
+        "/projet-probleme-inverse-3D/" =
+          import ./projet-probleme-inverse-3D.nix pkgs;
       };
     };
   };
