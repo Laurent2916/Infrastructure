@@ -7,5 +7,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-  imports = [ ./networking ./packages ./users ];
+  imports = [ ./networking ./packages ./ssh ./users ];
 }
