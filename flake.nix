@@ -38,7 +38,7 @@
           packages = [
             pkgs.nixfmt # formatting
             pkgs.git # version control
-            pkgs.update-nix-fetchgit # auto update fetchs
+            # pkgs.update-nix-fetchgit # auto update fetchs
             agenix.packages.${system}.ragenix # secrets
             pkgs.sbctl # secure boot
           ];
