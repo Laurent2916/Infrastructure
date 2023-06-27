@@ -20,6 +20,9 @@
         "/projet-probleme-inverse-3D/" = # #
           import ./projet-probleme-inverse-3D.nix pkgs;
 
+        "/projet-modelisation-geometrique/" = # #
+          import ./projet-modelisation-geometrique.nix pkgs;
+
         "/projet-long/" = # #
           import ./projet-long.nix pkgs;
 
