@@ -26,6 +26,9 @@
         "/projet-long/" = # #
           import ./projet-long.nix pkgs;
 
+        "/projet-oral-japonais/" = # #
+          import ./projet-oral-japonais.nix pkgs;
+
       } // {
 
         "/TP-calcul-parallele/" = # #
