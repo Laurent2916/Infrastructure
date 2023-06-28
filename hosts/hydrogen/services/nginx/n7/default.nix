@@ -29,6 +29,9 @@
         "/projet-oral-japonais/" = # #
           import ./projet-oral-japonais.nix pkgs;
 
+        "/projet-oral-anglais/" = # #
+          import ./projet-oral-anglais.nix pkgs;
+
       } // {
 
         "/TP-calcul-parallele/" = # #
