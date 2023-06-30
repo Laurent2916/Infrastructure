@@ -40,6 +40,9 @@
         "/TP-reinforcement-learning/" = # #
           import ./TP-reinforcement-learning.nix pkgs;
 
+        "/TP-traitement-audio-visuel/" = # #
+          import ./TP-traitement-audio-visuel.nix pkgs;
+
       };
     };
   };
