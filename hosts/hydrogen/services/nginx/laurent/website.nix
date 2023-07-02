@@ -4,8 +4,8 @@ let
     url = "https://git.fainsin.bzh/Laurent/personal-website";
     branchName = "pages";
     fetchLFS = true; # https://github.com/go-gitea/gitea/issues/4773
-    rev = "61ec0c0ad73d21584323eebe38685d60c8851a8d"; # pages
-    sha256 = "sha256-dEv36TU3fteObO7cXizh1cHmO+Zxs6LTzbw4plMsp4U=";
+    rev = "e29fd08e173268303d47bffbad370ade68ef35d9"; # pages
+    sha256 = "sha256-wrHAF+p0Nmly6b24CUbTNUC56r+kakKmBQvOVZqNThY=";
   };
 in {
   services.nginx.virtualHosts = {
