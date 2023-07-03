@@ -5,7 +5,9 @@
       forceSSL = true;
 
       locations = {
+
         "/".return = "301 $scheme://git.fainsin.bzh/ENSEEIHT";
+
       } // {
 
         "/projet-audionumerique/" = # #

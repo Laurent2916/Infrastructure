@@ -44,6 +44,8 @@
       "nix.serverSettings"."nil"."formatting"."command" = [ "nixfmt" ];
       "julia.enableTelemetry" = false;
       "julia.symbolCacheDownload" = true;
+      "terminal.integrated.commandsToSkipShell" =
+        [ "language-julia.interrupt" ];
     };
   };
 }
