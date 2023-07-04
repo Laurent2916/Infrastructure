@@ -3,8 +3,8 @@ let
   pages = pkgs.fetchgit {
     url =
       "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
-    rev = "a32c0ec1d010ee8f183fed35169a8e6a92282e28"; # pages
-    sha256 = "1lrlnqnglkmqspvaphv9wz7d9wl26jkx2pn45b5793xds0w32vsk";
+    rev = "8d7708db070170f6f3b276c5ea6f2f1b38e57ee5"; # pages
+    sha256 = "07cmnxmhb4l2chb8h9y45jnm10fqlmlq9d7zwllgk6l3gc0m3rdp";
   };
 in {
   alias = "${pages}/";

@@ -3,7 +3,7 @@ let
   pages = pkgs.fetchgit {
     url = "https://git.fainsin.bzh/ENSEEIHT/projet-long";
     rev = "8290710fa7461c486dc727966c8eaa2234ae2e7d"; # pages
-    sha256 = "sha256-Gb/v0YKuxd2F+xOLFNIZcIHWVmzqmbr3QOEc2xwEjPc=";
+    sha256 = "1xwc0hfdn77183vvm6gadibdd0bh379192qkzf2xvidfhb8yzgqr";
   };
 in {
   alias = "${pages}/";

@@ -5,7 +5,7 @@ let
     branchName = "pages";
     fetchLFS = true; # https://github.com/go-gitea/gitea/issues/4773
     rev = "e29fd08e173268303d47bffbad370ade68ef35d9"; # pages
-    sha256 = "sha256-wrHAF+p0Nmly6b24CUbTNUC56r+kakKmBQvOVZqNThY=";
+    sha256 = "05jfind5bkhb0nk44sm4pzmbjh1msd30kf5xx5r6jdklx8bw1cf2";
   };
 in {
   services.nginx.virtualHosts = {
