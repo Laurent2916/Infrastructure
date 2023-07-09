@@ -30,4 +30,9 @@
       "vscode-extension-github-copilot-chat"
       "vscode-extension-ms-vsliveshare-vsliveshare"
     ];
+
+  system.activationScripts.nvd-report-changes = ''
+    PATH=$PATH:${lib.makeBinPath [ pkgs.nvd pkgs.nix ]}
+    nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
+  '';
 }
