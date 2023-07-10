@@ -30,4 +30,15 @@
     compression = "auto,zstd";
     startAt = [ ];
   };
+  services.borgbackup.jobs.keepass = {
+    paths = "/home/laurent/Documents/db_mdp.kdbx";
+    repo = "ssh://root@fainsin.bzh:624/srv/backup/keepass";
+    user = "laurent";
+    encryption = {
+      mode = "repokey";
+      passCommand = "cat ${config.age.secrets.borgbackup.path}";
+    };
+    compression = "auto,zstd";
+    startAt = "daily";
+  };
 }
