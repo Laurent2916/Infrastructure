@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ lib, pkgs, ... }: {
   # restrict nix command to sudoers
   nix.settings.allowed-users = [ "@wheel" ];
 
