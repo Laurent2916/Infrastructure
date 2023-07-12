@@ -1,1 +1,1 @@
-{ pkgs, ... }: { environment.systemPackages = with pkgs; [ htop ]; }
+{ pkgs, ... }: { environment.systemPackages = with pkgs; [ htop borgbackup ]; }
