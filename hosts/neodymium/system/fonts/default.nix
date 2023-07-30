@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     # https://notofonts.github.io/
     noto-fonts # standard characters
     noto-fonts-lgc-plus # latin, greek, and cyrillic
