@@ -2,26 +2,28 @@
   description = "Laureηt's infrastructure";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "git+file:///home/laurent/Documents/nixpkgs?shallow=1";
-
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+      # url = "git+file:///home/laurent/Documents/nixpkgs?shallow=1";
+    };
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     agenix = {
       url = "github:yaxitech/ragenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
+      # inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.flake-utils.follows = "flake-utils";
     };
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-utils.url = "github:numtide/flake-utils";
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
