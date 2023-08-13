@@ -1,7 +1,10 @@
 { pkgs, ... }: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+    package = pkgs.vscode.overrideAttrs (oldAttrs: {
+      runtimeDependencies = oldAttrs.runtimeDependencies ++ [ pkgs.libsecret ];
+    });
+
     extensions = with pkgs.vscode-extensions; [
       github.copilot
       github.copilot-chat
