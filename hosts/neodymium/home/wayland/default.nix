@@ -3,8 +3,8 @@ let
   catppuccin-mako = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "mako";
-    rev = "64ef71633528b50e5475755e50071584b54fa291";
-    sha256 = "007zr906q7s31xgn9xw3jl8zdg5wapixva01qniclna1y0yxlqr7";
+    rev = "9dd088aa5f4529a3dd4d9760415e340664cb86df";
+    sha256 = "097x9jrkzvml6ngnhxwkzzl1l2awwv73yli1mhmpw83c0n8xck4x";
   };
 in {
 
