@@ -14,20 +14,23 @@
 
     agenix = {
       url = "github:yaxitech/ragenix";
-      # inputs.nixpkgs.follows = "nixpkgs";
-      # inputs.flake-utils.follows = "flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
 
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
+    nixos-hardware = { url = "github:nixos/nixos-hardware"; };
 
-    nixos-hardware.url = "github:nixos/nixos-hardware";
-
-    hyprland.url = "github:hyprwm/Hyprland";
+    flake-utils = { url = "github:numtide/flake-utils"; };
   };
 
   nixConfig = {
