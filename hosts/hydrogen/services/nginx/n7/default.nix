@@ -34,6 +34,9 @@
         "/projet-oral-anglais/" = # #
           import ./projet-oral-anglais.nix pkgs;
 
+        "/projet-fin-etude/" = # #
+          import ./projet-fin-etude.nix pkgs;
+
       } // {
 
         "/TP-calcul-parallele/" = # #
