@@ -2,8 +2,8 @@
 let
   pages = pkgs.fetchgit {
     url = "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport";
-    rev = "193636d2f49e3b190606f1f8f70a9ebe29c7630e"; # pages
-    sha256 = "0pjl7c8b2i1g6i4wkcwcsg98a19cssl7l979zhlss778rzn9gdxc";
+    rev = "7347b714b35910dc1f128a8df2ade953bdad38ec"; # pages
+    sha256 = "sha256-bGnkdyVGoIO1HNIr3pCaBJ74Q3LsSlGqY56JEgLP4fY=";
   };
 in {
   alias = "${pages}/";
