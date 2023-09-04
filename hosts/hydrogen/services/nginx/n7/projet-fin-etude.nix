@@ -8,4 +8,5 @@ let
 in {
   alias = "${pages}/";
   index = "index.html";
+  tryFiles = "$uri $uri/ /projet-fin-etude/index.html";
 }

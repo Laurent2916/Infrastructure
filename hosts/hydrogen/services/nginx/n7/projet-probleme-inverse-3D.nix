@@ -8,4 +8,5 @@ let
 in {
   alias = "${pages}/";
   index = "index.html";
+  tryFiles = "$uri $uri/ /projet-probleme-inverse-3D/index.html";
 }
