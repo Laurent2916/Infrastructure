@@ -1,5 +1,15 @@
+# error handler
+handle_error() {
+  echo "Upgrade failed."
+  read -p "Press Enter to exit..."
+  exit 1
+}
+
 # stop on error
 set -euxo pipefail
+
+# trap any errors and call handle_error
+trap 'handle_error "$BASH_COMMAND"' ERR
 
 # update lock file
 nix flake update
@@ -12,3 +22,5 @@ nixos-rebuild switch -L --flake .#hydrogen --target-host hydrogen
 git add flake.lock
 git commit -m "⬆️ nix flake update"
 git push
+
+echo "Upgrade successful"
