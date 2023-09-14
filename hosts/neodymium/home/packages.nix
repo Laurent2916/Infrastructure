@@ -2,9 +2,6 @@
   services.mpris-proxy.enable = true; # media keys
 
   home.packages = with pkgs; [
-    swaybg # wayland background
-    socat # socket cat
-    jaq # (fast) json utils
     borgbackup # backup
     dconf # required by home-manager
     duf # replacement for df
@@ -13,11 +10,12 @@
     gnome.nautilus # file explorer
     grim # screenshot utils
     htop # replacement for top
+    jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager
     logseq # second brain journalling
-    mpv # video viewer
     micro # text editor
+    mpv # video viewer
     nil # nix language server
     nixfmt # nix formatter
     pamixer # volume mixer cli
@@ -25,6 +23,8 @@
     pwgen # password generator
     rsync # better scp
     slurp # region selector
+    socat # socket cat
+    swaybg # wayland background
     swayidle # wayland idle hooks
     swaylock # wayland lockscreen
     thunderbird # mail client
