@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     borgbackup # backup
     dconf # required by home-manager
+    distrobox # podman wrapper
     duf # replacement for df
     element-desktop # matrix client
     feh # image viewer
