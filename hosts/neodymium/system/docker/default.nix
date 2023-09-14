@@ -1,9 +1,8 @@
 { ... }: {
-  virtualisation.docker = {
+  virtualisation.podman = {
     enable = true;
 
-    storageDriver = "btrfs";
-    enableOnBoot = false;
+    dockerCompat = true;
     autoPrune.enable = true;
   };
 }
