@@ -43,7 +43,7 @@
   };
 
   outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager
-    , nixos-hardware, ... }@attrs:
+    , nixos-hardware, ... }@inputs:
 
     (flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
@@ -62,7 +62,7 @@
         # neodymium laptop
         nixosConfigurations.neodymium = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = attrs;
+          specialArgs = inputs;
           modules = [
             ./hosts/neodymium
             home-manager.nixosModules.home-manager

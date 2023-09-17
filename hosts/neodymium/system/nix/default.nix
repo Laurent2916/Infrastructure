@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, nixpkgs, ... }: {
   # restrict nix command to sudoers
   nix.settings.allowed-users = [ "@wheel" ];
 
@@ -24,6 +24,9 @@
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
   };
+
+  # pin nixpkgs registry
+  nix.registry.nixpkgs.flake = nixpkgs;
 
   # list of allowed unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:
