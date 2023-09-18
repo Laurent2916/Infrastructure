@@ -10,6 +10,7 @@
       "*/cache2" # firefox
       "*/Cache"
       "*/Code Cache"
+      "*/blob_storage"
       ".config/Slack/logs"
       ".config/Code/CachedData"
       ".container-diff"
