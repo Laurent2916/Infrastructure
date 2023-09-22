@@ -14,7 +14,7 @@
     jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager
-    logseq # second brain journalling
+    obsidian # second brain journalling
     micro # text editor
     mpv # video viewer
     nil # nix language server

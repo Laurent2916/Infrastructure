@@ -31,6 +31,7 @@
   # list of allowed unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      "obsidian"
       "vscode"
       "vscode-extension-github-copilot"
       "vscode-extension-github-copilot-chat"
