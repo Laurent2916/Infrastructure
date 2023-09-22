@@ -1,3 +1,12 @@
 { ... }: {
-  imports = [ ./acme ./atuin ./blocky ./fail2ban ./gitea ./nginx ./wireguard ];
+  imports = [
+    ./acme
+    ./atuin
+    ./blocky
+    ./changedetection
+    ./fail2ban
+    ./gitea
+    ./nginx
+    ./wireguard
+  ];
 }
