@@ -5,6 +5,7 @@
     borgbackup # backup
     dconf # required by home-manager
     distrobox # podman wrapper
+    podman-compose # "docker" compose
     duf # replacement for df
     element-desktop # matrix client
     feh # image viewer
