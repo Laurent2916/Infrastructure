@@ -8,11 +8,7 @@ let
   };
 in {
 
-  programs.eww = {
-    enable = true;
-    package = pkgs.eww-wayland;
-    configDir = ./eww;
-  };
+  imports = [ ./hyprland ./eww ];
 
   services.mako = {
     enable = true;
@@ -20,10 +16,61 @@ in {
     extraConfig = builtins.readFile "${catppuccin-mako}/src/mocha";
   };
 
-  wayland.windowManager.hyprland = {
+  services.swayidle = {
     enable = true;
-    recommendedEnvironment = true;
-    extraConfig = builtins.readFile ./hyprland.conf;
+    systemdTarget = "hyprland-session.target";
+    events = [
+      {
+        event = "after-resume";
+        command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on";
+      }
+      {
+        event = "before-sleep";
+        command = "${pkgs.swaylock-effects}/bin/swaylock -f";
+      }
+    ];
+    timeouts = [
+      {
+        timeout = 120;
+        command = "${pkgs.swaylock-effects}/bin/swaylock -f --grace 3";
+      }
+      {
+        timeout = 150;
+        command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
+      }
+      {
+        timeout = 300;
+        command = "${pkgs.systemd}/bin/systemctl suspend";
+      }
+    ];
+  };
+
+  programs.swaylock = {
+    enable = true;
+    package = pkgs.swaylock-effects;
+    settings = {
+      image = "/home/laurent/Pictures/wallpapers/kai-oberhauser-unsplash.jpg";
+
+      clock = true;
+      timestr = "%T";
+      datestr = "%F";
+
+      indicator = true;
+      indicator-radius = 100;
+      indicator-thickness = 7;
+
+      effect-blur = "7x5";
+      effect-vignette = "0.5:0.5";
+
+      ring-color = "bb00cc";
+      key-hl-color = "880033";
+
+      line-color = "00000000";
+      inside-color = "00000088";
+      separator-color = "00000000";
+
+      text-color = "fffffff";
+    };
   };
 
 }
