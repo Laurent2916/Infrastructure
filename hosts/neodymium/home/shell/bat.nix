@@ -10,8 +10,10 @@ in {
   programs.bat = {
     enable = true;
     themes = {
-      catppuccin =
-        builtins.readFile "${catppuccin-bat}/Catppuccin-mocha.tmTheme";
+      catppuccin = {
+        src = catppuccin-bat;
+        file = "Catppuccin-mocha.tmTheme";
+      };
     };
     config.theme = "catppuccin";
     extraPackages = with pkgs.bat-extras; [ batman ];
