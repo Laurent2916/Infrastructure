@@ -28,6 +28,7 @@
       "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
+      "gitmoji.showEmojiCode" = true;
       "terminal.integrated.fontFamily" =
         "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "window.menuBarVisibility" = "toggle";
