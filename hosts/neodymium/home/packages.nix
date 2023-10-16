@@ -11,7 +11,6 @@
     feh # image viewer
     gnome.nautilus # file explorer
     grim # screenshot utils
-    htop # replacement for top
     jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager
@@ -26,13 +25,11 @@
     rsync # better scp
     slurp # region selector
     socat # socket cat
-    swaybg # wayland background
-    swayidle # wayland idle hooks
-    swaylock # wayland lockscreen
     thunderbird # mail client
     tmux # terminal multiplexer
     webcord-vencord # discord client
     wl-clipboard # clipboard utils
     xdg-utils
+    sysz # better systemctl
   ];
 }
