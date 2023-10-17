@@ -22,6 +22,7 @@ in {
       main = {
         line-height = 15;
         lines = 10;
+        layer = "overlay";
       };
       colors = {
         background = "1E1E2EEE";
