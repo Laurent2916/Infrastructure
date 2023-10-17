@@ -23,6 +23,7 @@ in {
         line-height = 15;
         lines = 10;
         layer = "overlay";
+        icon-theme = "Papirus-Dark";
       };
       colors = {
         background = "1E1E2EEE";
