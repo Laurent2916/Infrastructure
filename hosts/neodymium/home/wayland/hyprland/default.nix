@@ -10,6 +10,7 @@
       exec-once=element-desktop
       exec-once=thunderbird
       exec-once=webcord
+      exec-once=wl-paste --watch cliphist store
       exec-once=gnome-keyring-daemon --start --components=secrets
     '' + builtins.readFile ./hyprland.conf;
   };
