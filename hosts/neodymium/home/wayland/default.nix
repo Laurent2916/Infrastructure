@@ -16,6 +16,24 @@ in {
     extraConfig = builtins.readFile "${catppuccin-mako}/src/mocha";
   };
 
+  programs.fuzzel = {
+    enable = true;
+    settings = {
+      main = {
+        line-height = 15;
+        lines = 10;
+      };
+      colors = {
+        background = "1E1E2EEE";
+        text = "7F849CFF";
+        match = "89B4FAFF";
+        selection = "45475AFF";
+        selection-text = "CDD6F4FF";
+        selection-match = "89B4FAFF";
+      };
+    };
+  };
+
   services.swayidle = {
     enable = true;
     systemdTarget = "hyprland-session.target";
