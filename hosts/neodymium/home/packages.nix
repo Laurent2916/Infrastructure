@@ -28,6 +28,7 @@
     thunderbird # mail client
     tmux # terminal multiplexer
     webcord-vencord # discord client
+    cliphist # clipboard manager
     wl-clipboard # clipboard utils
     xdg-utils
     sysz # better systemctl
