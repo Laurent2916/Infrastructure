@@ -35,31 +35,35 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
       }
 
       .seperator {
-        font-size: 19px;
-        margin-top: -1px;
+        font-size: 21px;
 
         &.up {
+          margin-top: -1px;
+          margin-bottom: -2px;
           color: mix(nth($colors, $i), $mantle, 30%);
-        }
 
-        &.up.active {
-          color: mix(nth($colors, $i), $mantle, 100%);
+          &.active {
+            color: mix(nth($colors, $i), $mantle, 100%);
+          }
         }
 
         &.down {
           margin-left: -12px;
           margin-right: -1px;
 
+          margin-bottom: -1px;
+          margin-top: -2px;
+
           @if $i ==10 {
             color: transparent;
           }
 
           @else {
+            color: mix(nth($colors, $i + 1), $mantle, 30%);
+
             &.active {
               color: mix(nth($colors, $i + 1), $mantle, 100%);
             }
-
-            color: mix(nth($colors, $i + 1), $mantle, 30%);
           }
         }
       }
@@ -71,6 +75,13 @@ $colors: $rosewater, $flamingo, $pink, $mauve, $red, $maroon, $peach, $yellow, $
 
 .sidestuff slider {
   all: unset;
+}
+
+checkbutton {
+  all: unset;
+  margin: 4 20px;
+  border-radius: 50%;
+  background-color: $surface0;
 }
 
 .metric scale trough highlight {
