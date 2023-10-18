@@ -1,11 +1,9 @@
-#!/bin/bash
-
 EMPTY=$(seq 1 10 | jaq -nRc '[inputs | (. | tostring)] | {(.[]): 0}')
 
 # function to get workspaces infos and their window count
 spaces (){
   ACTIVES=$(hyprctl workspaces -j | jaq -c 'map({key: .id | tostring, value: .windows}) | from_entries')
-  echo $EMPTY $ACTIVES | jaq -src 'add | to_entries | map({id: (.key | tostring), windows: .value})'
+  echo $EMPTY $ACTIVES | jaq -src 'add | to_entries | map({id: (.key | tostring), windows: .value}) | sort_by(.id | tonumber)'
 }
 
 # print workspaces infos
