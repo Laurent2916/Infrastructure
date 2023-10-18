@@ -82,14 +82,26 @@ in {
       effect-blur = "7x5";
       effect-vignette = "0.5:0.5";
 
-      ring-color = "bb00cc";
-      key-hl-color = "880033";
+      text-color = "CDD6F4";
+      text-clear-color = "CDD6F4";
+      text-caps-lock-color = "CDD6F4";
+      text-ver-color = "CDD6F4";
+      text-wrong-color = "CDD6F4";
 
-      line-color = "00000000";
-      inside-color = "00000088";
-      separator-color = "00000000";
+      inside-color = "1E1E2EEE";
+      inside-clear-color = "1E1E2EEE";
+      inside-caps-lock-color = "1E1E2EEE";
+      inside-ver-color = "1E1E2EEE";
+      inside-wrong-color = "1E1E2EEE";
 
-      text-color = "fffffff";
+      ring-color = "CBA6F7";
+      ring-clear-color = "FAB387";
+      ring-caps-lock-color = "F5C2E7";
+      ring-ver-color = "89B4Fa";
+      ring-wrong-color = "F38BA8";
+
+      key-hl-color = "A6E3A1";
+      bs-hl-color = "F38BA8";
     };
   };
 
