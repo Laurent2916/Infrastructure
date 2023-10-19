@@ -22,7 +22,7 @@ in {
     };
     default = {
       default = true;
-      locations."/".return = ''301 "$scheme://fainsin.bzh" '';
+      locations."/".return = ''301 "$scheme://laurent.fainsin.bzh" '';
     };
   };
 }
