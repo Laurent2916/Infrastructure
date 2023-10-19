@@ -34,7 +34,7 @@
       "window.menuBarVisibility" = "toggle";
       "window.zoomLevel" = -0.25;
       "workbench.colorTheme" = "Catppuccin Mocha";
-      "workbench.editor.untitled.hint" = "hidden";
+      "workbench.editor.empty.hint" = "hidden";
       "workbench.iconTheme" = "catppuccin-mocha";
       "gitlens.telemetry.enabled" = false;
       "telemetry.telemetryLevel" = "off";
