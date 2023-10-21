@@ -2,6 +2,14 @@
   services.mpris-proxy.enable = true; # media keys
 
   home.packages = with pkgs; [
+    (bemoji.overrideAttrs (oldAttrs: {
+      src = pkgs.fetchFromGitHub {
+        owner = "marty-oehme";
+        repo = "bemoji";
+        rev = "74af60c3f7d5be24dd584214dcec7ed4b71a926c";
+        hash = "sha256-Yw5TAC/j1njctamXN4OrD+sl4tVOuWu1qL7d0B5gBWw=";
+      };
+    }))
     borgbackup # backup
     dconf # required by home-manager
     distrobox # podman wrapper
