@@ -5,6 +5,9 @@
   # experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # limit number of cores when building
+  nix.settings.max-jobs = 6;
+
   # optimizations
   nix.settings.auto-optimise-store = true;
 
