@@ -7,6 +7,8 @@
       # url = "git+file:///home/laurent/Documents/nixpkgs?shallow=1";
     };
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       # inputs.nixpkgs.follows = "nixpkgs";
@@ -23,14 +25,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs";
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+
+    resume = {
+      url = "git+https://git.fainsin.bzh/Laurent/resume";
+      inputs.flake-utils.follows = "flake-utils";
     };
-
-    nixos-hardware = { url = "github:nixos/nixos-hardware"; };
-
-    flake-utils = { url = "github:numtide/flake-utils"; };
   };
 
   nixConfig = {
@@ -76,8 +78,12 @@
         };
 
         # hydrogen vps
-        nixosConfigurations.hydrogen = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.hydrogen = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            inherit system;
+          };
           modules = [
             ./hosts/hydrogen
             home-manager.nixosModules.home-manager
