@@ -29,10 +29,7 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    resume = {
-      url = "git+https://git.fainsin.bzh/Laurent/resume";
-      inputs.flake-utils.follows = "flake-utils";
-    };
+    resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
   };
 
   nixConfig = {
