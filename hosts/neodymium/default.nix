@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./system ];
+  imports = [ ./system ./services ];
 
   # shorter timeout for systemd services
   systemd.extraConfig = ''
