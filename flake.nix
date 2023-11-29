@@ -1,17 +1,21 @@
 {
   description = "Laureηt's infrastructure";
 
+  # TODO: setup flake-parts à la place de flake-utils
+  # TODO: setup le formatter comme sioodmy
+  # TODO: rekey les secrets + changer la key de hydrogen
+  # TODO: luks encrypt hydrogen (dropbear ?)
+  # TODO: dégager btfrs de neodymium, ext4 ftw
+  # TODO: setup disko sur neodymium
+
   inputs = {
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
       # url = "git+file:///home/laurent/Documents/nixpkgs?shallow=1";
     };
-
-    flake-utils.url = "github:numtide/flake-utils";
-
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote";
-      # inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     agenix = {
@@ -19,17 +23,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    flake-utils.url = "github:numtide/flake-utils";
+    lanzaboote.url = "github:nix-community/lanzaboote";
     hyprland.url = "github:hyprwm/Hyprland";
-
     nixos-hardware.url = "github:nixos/nixos-hardware";
+    disko.url = "github:nix-community/disko";
+    nixos-anywhere.url = "github:nix-community/nixos-anywhere";
 
     resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
+    projet-intelligence-artificielle-multimedia.url =
+      "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
   };
 
   nixConfig = {
@@ -42,7 +45,7 @@
   };
 
   outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager
-    , nixos-hardware, ... }@inputs:
+    , nixos-hardware, disko, ... }@inputs:
 
     (flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
@@ -84,6 +87,7 @@
           modules = [
             ./hosts/hydrogen
             home-manager.nixosModules.home-manager
+            disko.nixosModules.default
             agenix.nixosModules.default
             lanzaboote.nixosModules.lanzaboote
           ];
