@@ -1,1 +1,6 @@
-{ ... }: { services.openssh.ports = [ 624 ]; }
+{ ... }: {
+  services.openssh = {
+    enable = true;
+    ports = [ 642 ];
+  };
+}
