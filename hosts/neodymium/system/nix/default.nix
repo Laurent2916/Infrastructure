@@ -41,6 +41,7 @@
       "vscode-extension-ms-vsliveshare-vsliveshare"
     ];
 
+  # print diff between two generations
   system.activationScripts.nvd-report-changes = ''
     PATH=$PATH:${lib.makeBinPath [ pkgs.nvd pkgs.nix ]}
     nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
