@@ -23,6 +23,7 @@
       "*/.tox"
       "*/venv"
       "*/.venv"
+      "*/.direnv"
     ];
     encryption = {
       mode = "repokey";
