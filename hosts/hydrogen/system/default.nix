@@ -1,4 +1,4 @@
-{ ... }: {
+{ modulesPath, ... }: {
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -7,5 +7,13 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-  imports = [ ./networking ./packages ./ssh ./users ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+    (modulesPath + "/profiles/qemu-guest.nix")
+    ./disko
+    ./networking
+    ./packages
+    ./ssh
+    ./users
+  ];
 }
