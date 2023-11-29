@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, system, pkgs, ... }: {
   services.nginx.virtualHosts = {
     "n7.laurent.fainsin.bzh" = {
       enableACME = true;
@@ -17,7 +17,9 @@
           import ./projet-systemes-algorithmes-repartis.nix pkgs;
 
         "/projet-intelligence-artificielle-multimedia/" = # #
-          import ./projet-intelligence-artificielle-multimedia.nix pkgs;
+          import ./projet-intelligence-artificielle-multimedia.nix {
+            inherit inputs system;
+          };
 
         "/projet-probleme-inverse-3D/" = # #
           import ./projet-probleme-inverse-3D.nix pkgs;
