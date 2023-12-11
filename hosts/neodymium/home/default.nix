@@ -12,5 +12,6 @@
     ./shell
     ./vscode
     ./wayland
+    ./xdg
   ];
 }
