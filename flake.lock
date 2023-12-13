@@ -263,6 +263,24 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
+        "lastModified": 1701473968,
+        "narHash": "sha256-YcVE5emp1qQ8ieHUnxt1wCZCC3ZfAS+SRRWZ2TMda7E=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "34fed993f1674c8d06d58b37ce1e0fe5eebcb9f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_4": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_2"
+      },
+      "locked": {
         "lastModified": 1696343447,
         "narHash": "sha256-B2xAZKLkkeRFG5XcHHSXXcP7To9Xzr59KXeZiRf4vdQ=",
         "owner": "hercules-ci",
@@ -398,11 +416,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1702467096,
-        "narHash": "sha256-LyI/3QlvhbUy/i9ncdGLWfuI65lm+ffillYxZ2Q8we4=",
+        "lastModified": 1702476903,
+        "narHash": "sha256-rzewhikIDI9WkkVQsxCDNVff6ZVdKb1IjkvKjErtYzU=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "55cb565e6de201a09bc5a7fb91a9a87448cea321",
+        "rev": "b2e5a80e2ff1fcbf8164a45c5ef8ebffbb511fae",
         "type": "github"
       },
       "original": {
@@ -558,6 +576,24 @@
     "nixpkgs-lib": {
       "locked": {
         "dir": "lib",
+        "lastModified": 1701253981,
+        "narHash": "sha256-ztaDIyZ7HrTAfEEUt9AtTDNoCYxUdSd6NrRHaYOIxtk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e92039b55bcd58469325ded85d4f58dd5a4eaf58",
+        "type": "github"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_2": {
+      "locked": {
+        "dir": "lib",
         "lastModified": 1696019113,
         "narHash": "sha256-X3+DKYWJm93DRSdC5M6K5hLqzSya9BjibtBsuARoPco=",
         "owner": "NixOS",
@@ -655,6 +691,22 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1702312524,
+        "narHash": "sha256-gkZJRDBUCpTPBvQk25G0B7vfbpEYM5s5OZqghkjZsnE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a9bf124c46ef298113270b1f84a164865987a91c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1700794826,
         "narHash": "sha256-RyJTnTNKhO0yqRpDISk03I/4A67/dp96YRxc86YOPgU=",
         "owner": "NixOS",
@@ -669,7 +721,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1700612854,
         "narHash": "sha256-yrQ8osMD+vDLGFX7pcwsY/Qr5PUd6OmDMYJZzZi0+zc=",
@@ -685,7 +737,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_8": {
+    "nixpkgs_9": {
       "locked": {
         "lastModified": 1698318101,
         "narHash": "sha256-gUihHt3yPD7bVqg+k/UVHgngyaJ3DMEBchbymBMvK1E=",
@@ -732,10 +784,29 @@
         "type": "github"
       }
     },
+    "projet-audionumerique": {
+      "inputs": {
+        "flake-parts": "flake-parts_3",
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1702478973,
+        "narHash": "sha256-1HVWuzIsC9ycoC0Wy5iKk5dZ6c/pN2HuprCAhq6ijUU=",
+        "ref": "refs/heads/master",
+        "rev": "77706a8d0f1550d14db45ff03e8ea826e2b9a445",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique"
+      }
+    },
     "projet-intelligence-artificielle-multimedia": {
       "inputs": {
         "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1701038653,
@@ -754,7 +825,7 @@
     "resume": {
       "inputs": {
         "flake-utils": "flake-utils_4",
-        "nixpkgs": "nixpkgs_7",
+        "nixpkgs": "nixpkgs_8",
         "typst": "typst"
       },
       "locked": {
@@ -782,6 +853,7 @@
         "nixos-anywhere": "nixos-anywhere",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_5",
+        "projet-audionumerique": "projet-audionumerique",
         "projet-intelligence-artificielle-multimedia": "projet-intelligence-artificielle-multimedia",
         "resume": "resume"
       }
@@ -950,8 +1022,8 @@
     "typst": {
       "inputs": {
         "crane": "crane_3",
-        "flake-parts": "flake-parts_3",
-        "nixpkgs": "nixpkgs_8",
+        "flake-parts": "flake-parts_4",
+        "nixpkgs": "nixpkgs_9",
         "systems": "systems_6"
       },
       "locked": {

@@ -11,7 +11,7 @@
       } // {
 
         "/projet-audionumerique/" = # #
-          import ./projet-audionumerique.nix pkgs;
+          import ./projet-audionumerique.nix { inherit inputs system; };
 
         "/projet-systemes-algorithmes-repartis/" = # #
           import ./projet-systemes-algorithmes-repartis.nix pkgs;
