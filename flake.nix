@@ -35,6 +35,8 @@
       "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
     projet-audionumerique.url =
       "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
+    projet-oral-japonais.url =
+      "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
   };
 
   nixConfig = {
