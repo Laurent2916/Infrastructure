@@ -149,11 +149,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1702562713,
-        "narHash": "sha256-CVMJAT+PdMir/0dV5nylkDxhqc1Lt4O1c3602InUxUA=",
+        "lastModified": 1702563877,
+        "narHash": "sha256-7x2vXhN8HeKsTK8fhoeZgSXRMlMx1GjQvh7ittgXHOo=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "bb75ad0b1d5a63884586517920b9a189721fc54d",
+        "rev": "4c4634bbcb299248efe300b37d1624649fd59477",
         "type": "github"
       },
       "original": {
@@ -315,6 +315,24 @@
     "flake-parts_6": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib_4"
+      },
+      "locked": {
+        "lastModified": 1701473968,
+        "narHash": "sha256-YcVE5emp1qQ8ieHUnxt1wCZCC3ZfAS+SRRWZ2TMda7E=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "34fed993f1674c8d06d58b37ce1e0fe5eebcb9f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_7": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_5"
       },
       "locked": {
         "lastModified": 1696343447,
@@ -648,6 +666,24 @@
     "nixpkgs-lib_4": {
       "locked": {
         "dir": "lib",
+        "lastModified": 1701253981,
+        "narHash": "sha256-ztaDIyZ7HrTAfEEUt9AtTDNoCYxUdSd6NrRHaYOIxtk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e92039b55bcd58469325ded85d4f58dd5a4eaf58",
+        "type": "github"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_5": {
+      "locked": {
+        "dir": "lib",
         "lastModified": 1696019113,
         "narHash": "sha256-X3+DKYWJm93DRSdC5M6K5hLqzSya9BjibtBsuARoPco=",
         "owner": "NixOS",
@@ -680,6 +716,22 @@
       }
     },
     "nixpkgs_10": {
+      "locked": {
+        "lastModified": 1700612854,
+        "narHash": "sha256-yrQ8osMD+vDLGFX7pcwsY/Qr5PUd6OmDMYJZzZi0+zc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "19cbff58383a4ae384dea4d1d0c823d72b49d614",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_11": {
       "locked": {
         "lastModified": 1698318101,
         "narHash": "sha256-gUihHt3yPD7bVqg+k/UVHgngyaJ3DMEBchbymBMvK1E=",
@@ -809,11 +861,11 @@
     },
     "nixpkgs_9": {
       "locked": {
-        "lastModified": 1700612854,
-        "narHash": "sha256-yrQ8osMD+vDLGFX7pcwsY/Qr5PUd6OmDMYJZzZi0+zc=",
+        "lastModified": 1702312524,
+        "narHash": "sha256-gkZJRDBUCpTPBvQk25G0B7vfbpEYM5s5OZqghkjZsnE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "19cbff58383a4ae384dea4d1d0c823d72b49d614",
+        "rev": "a9bf124c46ef298113270b1f84a164865987a91c",
         "type": "github"
       },
       "original": {
@@ -879,11 +931,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1702562960,
-        "narHash": "sha256-xMUcPURcDdn8wQ7lxAN7hXvrL7jauLezurw4RpVtlGA=",
+        "lastModified": 1702567767,
+        "narHash": "sha256-K7nMUx52ihQfcvJrfIXVycLlv772ct/yXO6pJjwILOk=",
         "ref": "refs/heads/master",
-        "rev": "88987bbb5b14e8cb6cfba13e955e45a4f4836426",
-        "revCount": 22,
+        "rev": "ce97769dd888a5e70306b47e607c0c7ff77b0a37",
+        "revCount": 23,
         "type": "git",
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
       },
@@ -892,17 +944,36 @@
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
       }
     },
-    "projet-oral-japonais": {
+    "projet-oral-anglais": {
       "inputs": {
         "flake-parts": "flake-parts_5",
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1702487764,
-        "narHash": "sha256-uz3lAmDbE/TrsLf+O4lbNqrL0TJITSSSxiYmKhR0hJY=",
+        "lastModified": 1702566510,
+        "narHash": "sha256-pdOZgqcjsh2APfZ17DiyoRNxqEURqeIn8IDgiYaVsvY=",
         "ref": "refs/heads/main",
-        "rev": "aa9e770ba38bdfad35009ea54105b65a3aa13ea2",
-        "revCount": 1,
+        "rev": "fa24cd91bed037b0b7ba9f8894996f732fa38717",
+        "revCount": 3,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais"
+      }
+    },
+    "projet-oral-japonais": {
+      "inputs": {
+        "flake-parts": "flake-parts_6",
+        "nixpkgs": "nixpkgs_9"
+      },
+      "locked": {
+        "lastModified": 1702567061,
+        "narHash": "sha256-MG24exLdpF2B3D9FhiqrlZtcBuHe/8hltScmAQT0Bks=",
+        "ref": "refs/heads/main",
+        "rev": "7ac66f4e8e2ccd19098b8f97452c2be1f47f2b9e",
+        "revCount": 2,
         "type": "git",
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais"
       },
@@ -914,7 +985,7 @@
     "resume": {
       "inputs": {
         "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_9",
+        "nixpkgs": "nixpkgs_10",
         "typst": "typst"
       },
       "locked": {
@@ -944,6 +1015,7 @@
         "nixpkgs": "nixpkgs_5",
         "projet-audionumerique": "projet-audionumerique",
         "projet-intelligence-artificielle-multimedia": "projet-intelligence-artificielle-multimedia",
+        "projet-oral-anglais": "projet-oral-anglais",
         "projet-oral-japonais": "projet-oral-japonais",
         "resume": "resume"
       }
@@ -1097,8 +1169,8 @@
     "typst": {
       "inputs": {
         "crane": "crane_3",
-        "flake-parts": "flake-parts_6",
-        "nixpkgs": "nixpkgs_10",
+        "flake-parts": "flake-parts_7",
+        "nixpkgs": "nixpkgs_11",
         "systems": "systems_5"
       },
       "locked": {

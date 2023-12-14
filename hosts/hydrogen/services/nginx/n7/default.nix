@@ -34,7 +34,7 @@
           import ./projet-oral-japonais.nix { inherit inputs system; };
 
         "/projet-oral-anglais/" = # #
-          import ./projet-oral-anglais.nix pkgs;
+          import ./projet-oral-anglais.nix { inherit inputs system; };
 
         "/projet-fin-etude/" = # #
           import ./projet-fin-etude.nix pkgs;

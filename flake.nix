@@ -37,6 +37,8 @@
       "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
     projet-oral-japonais.url =
       "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
+    projet-oral-anglais.url =
+      "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
   };
 
   nixConfig = {
