@@ -6,7 +6,7 @@
     extraSpecialArgs = {
       inherit inputs;
     };
-    users.laurent = ./neodymium/home;
+    users.laurent = ../home;
   };
 in {
   # neodymium laptop
