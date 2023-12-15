@@ -12,7 +12,9 @@ in {
   # neodymium laptop
   neodymium = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
-    specialArgs = inputs;
+    specialArgs = {
+      inherit inputs;
+    };
     modules = [
       ./neodymium
       inputs.home-manager.nixosModules.home-manager

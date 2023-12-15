@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  nixpkgs,
+  inputs,
   ...
 }: {
   # restrict nix command to sudoers
@@ -25,7 +25,7 @@
   };
 
   # pin nixpkgs registry
-  nix.registry.nixpkgs.flake = nixpkgs;
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
   # list of allowed unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:

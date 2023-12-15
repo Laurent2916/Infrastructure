@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  nixpkgs,
+  inputs,
   ...
 }: {
   # optimizations
@@ -18,7 +18,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # pin nixpkgs registry
-  nix.registry.nixpkgs.flake = nixpkgs;
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
   # print diff between two generations
   system.activationScripts.nvd-report-changes = ''
