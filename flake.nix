@@ -27,7 +27,6 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
     disko.url = "github:nix-community/disko";
     nixos-anywhere.url = "github:nix-community/nixos-anywhere";
-    # atuin.url = "github:atuinsh/atuin";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
@@ -42,24 +41,19 @@
   nixConfig = {
     extra-substituters = [
       "https://nix-community.cachix.org"
-      "https://pre-commit-hooks.cachix.org"
+      # "https://pre-commit-hooks.cachix.org"
       "https://hyprland.cachix.org"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
+      # "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
   outputs = {
-    nixpkgs,
     agenix,
     flake-parts,
-    lanzaboote,
-    home-manager,
-    nixos-hardware,
-    disko,
     pre-commit-hooks,
     treefmt-nix,
     ...
@@ -107,38 +101,6 @@
         };
       };
 
-      flake.nixosConfigurations = {
-        # neodymium laptop
-        neodymium = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = inputs;
-          modules = [
-            ./hosts/neodymium
-            home-manager.nixosModules.home-manager
-            agenix.nixosModules.default
-            lanzaboote.nixosModules.lanzaboote
-            nixos-hardware.nixosModules.common-cpu-amd
-            nixos-hardware.nixosModules.common-gpu-nvidia-disable
-            nixos-hardware.nixosModules.common-pc-laptop
-            nixos-hardware.nixosModules.common-pc-laptop-ssd
-          ];
-        };
-
-        # hydrogen vps
-        hydrogen = nixpkgs.lib.nixosSystem rec {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-            inherit system;
-          };
-          modules = [
-            ./hosts/hydrogen
-            home-manager.nixosModules.home-manager
-            disko.nixosModules.default
-            agenix.nixosModules.default
-            lanzaboote.nixosModules.lanzaboote
-          ];
-        };
-      };
+      flake.nixosConfigurations = import ./hosts {inherit inputs;};
     };
 }

@@ -1,7 +1,7 @@
-{hyprland, ...}: {
+{inputs, ...}: {
   config.home.stateVersion = "23.05";
   imports = [
-    hyprland.homeManagerModules.default
+    inputs.hyprland.homeManagerModules.default
 
     ./packages.nix
 
