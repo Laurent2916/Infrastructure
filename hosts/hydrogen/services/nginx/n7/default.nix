@@ -42,7 +42,7 @@
       } // {
 
         "/TP-calcul-parallele/" = # #
-          import ./TP-calcul-parallele.nix pkgs;
+          import ./TP-calcul-parallele.nix { inherit inputs system; };
 
         "/TP-reinforcement-learning/" = # #
           import ./TP-reinforcement-learning.nix pkgs;
