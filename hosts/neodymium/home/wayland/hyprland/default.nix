@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
-    recommendedEnvironment = true;
 
     extraConfig = ''
       exec-once=env XDG_CACHE_HOME=/tmp eww open bar
