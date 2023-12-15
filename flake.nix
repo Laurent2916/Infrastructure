@@ -1,7 +1,6 @@
 {
   description = "Laureηt's infrastructure";
 
-  # TODO: setup flake-parts à la place de flake-utils
   # TODO: setup le formatter comme sioodmy
   # TODO: rekey les secrets + changer la key de hydrogen
   # TODO: luks encrypt hydrogen (dropbear ?)
@@ -21,59 +20,96 @@
     agenix = {
       url = "github:yaxitech/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     lanzaboote.url = "github:nix-community/lanzaboote";
     hyprland.url = "github:hyprwm/Hyprland";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     disko.url = "github:nix-community/disko";
     nixos-anywhere.url = "github:nix-community/nixos-anywhere";
+    # atuin.url = "github:atuinsh/atuin";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
 
     resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
-    projet-intelligence-artificielle-multimedia.url =
-      "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
-    projet-audionumerique.url =
-      "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
-    projet-oral-japonais.url =
-      "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
-    projet-oral-anglais.url =
-      "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
-    TP-calcul-parallele.url =
-      "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
+    projet-intelligence-artificielle-multimedia.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
+    projet-audionumerique.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
+    projet-oral-japonais.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
+    projet-oral-anglais.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
+    TP-calcul-parallele.url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
   };
 
   nixConfig = {
     extra-substituters = [
-      #
       "https://nix-community.cachix.org"
+      "https://pre-commit-hooks.cachix.org"
       "https://hyprland.cachix.org"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
-  outputs = { nixpkgs, flake-utils, lanzaboote, agenix, home-manager
-    , nixos-hardware, disko, ... }@inputs:
+  outputs = {
+    nixpkgs,
+    agenix,
+    flake-parts,
+    lanzaboote,
+    home-manager,
+    nixos-hardware,
+    disko,
+    pre-commit-hooks,
+    treefmt-nix,
+    ...
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux" "aarch64-linux"];
 
-    (flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system};
-      in {
+      imports = [
+        flake-parts.flakeModules.easyOverlay
+        pre-commit-hooks.flakeModule
+        treefmt-nix.flakeModule
+      ];
+
+      perSystem = {
+        pkgs,
+        system,
+        ...
+      }: rec {
+        formatter = pkgs.alejandra;
+
+        treefmt = {
+          projectRootFile = "flake.nix";
+          programs = {
+            alejandra.enable = true;
+            deadnix.enable = true;
+          };
+        };
+
+        pre-commit = {
+          settings.excludes = ["flake.lock"];
+          settings.hooks = {
+            alejandra.enable = true;
+            deadnix.enable = true;
+          };
+        };
+
         devShells.default = pkgs.mkShell {
           packages = [
-            pkgs.nixfmt # formatting
+            formatter # defined above
             pkgs.git # version control
             pkgs.update-nix-fetchgit # auto update fetchs
             agenix.packages.${system}.ragenix # secrets
             pkgs.sbctl # secure boot
           ];
         };
-      })) // {
+      };
 
+      flake.nixosConfigurations = {
         # neodymium laptop
-        nixosConfigurations.neodymium = nixpkgs.lib.nixosSystem {
+        neodymium = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = inputs;
           modules = [
@@ -89,7 +125,7 @@
         };
 
         # hydrogen vps
-        nixosConfigurations.hydrogen = nixpkgs.lib.nixosSystem rec {
+        hydrogen = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
@@ -104,4 +140,5 @@
           ];
         };
       };
+    };
 }
