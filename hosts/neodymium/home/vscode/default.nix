@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
@@ -29,8 +29,7 @@
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
       "gitmoji.showEmojiCode" = true;
-      "terminal.integrated.fontFamily" =
-        "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
+      "terminal.integrated.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "window.menuBarVisibility" = "toggle";
       "window.zoomLevel" = -0.25;
       "workbench.colorTheme" = "Catppuccin Mocha";
@@ -40,14 +39,12 @@
       "telemetry.telemetryLevel" = "off";
       "editor.inlineSuggest.enabled" = true;
       "liveshare.presence" = true;
-      "github.copilot.enable" = { "markdown" = true; };
+      "github.copilot.enable" = {"markdown" = true;};
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
-      "nix.serverSettings"."nil"."formatting"."command" = [ "nixfmt" ];
       "julia.enableTelemetry" = false;
       "julia.symbolCacheDownload" = true;
-      "terminal.integrated.commandsToSkipShell" =
-        [ "language-julia.interrupt" ];
+      "terminal.integrated.commandsToSkipShell" = ["language-julia.interrupt"];
     };
   };
 }

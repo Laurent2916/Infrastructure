@@ -1,1 +1,3 @@
-{ ... }: { services.changedetection-io.enable = true; }
+{...}: {
+  services.changedetection-io.enable = true;
+}

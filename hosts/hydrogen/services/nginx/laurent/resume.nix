@@ -1,4 +1,8 @@
-{ inputs, system, ... }: {
+{
+  inputs,
+  system,
+  ...
+}: {
   services.nginx.virtualHosts = {
     "resume.laurent.fainsin.bzh" = {
       enableACME = true;

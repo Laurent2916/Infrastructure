@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   pages = pkgs.fetchgit {
     url = "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport";
     rev = "32fe5c7ec6d67241951fdaf001e3da1c41b29dcf"; # pages

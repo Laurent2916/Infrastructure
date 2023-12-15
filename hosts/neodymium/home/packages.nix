@@ -1,8 +1,8 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   services.mpris-proxy.enable = true; # media keys
 
   home.packages = with pkgs; [
-    (bemoji.overrideAttrs (oldAttrs: {
+    (bemoji.overrideAttrs (_: {
       src = pkgs.fetchFromGitHub {
         owner = "marty-oehme";
         repo = "bemoji";

@@ -1,3 +1,8 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ btop borgbackup gitMinimal sysz ];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    btop
+    borgbackup
+    gitMinimal
+    sysz
+  ];
 }

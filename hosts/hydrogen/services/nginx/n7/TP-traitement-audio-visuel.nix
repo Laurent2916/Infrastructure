@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   pages = pkgs.fetchFromGitea {
     domain = "git.fainsin.bzh";
     owner = "ENSEEIHT";

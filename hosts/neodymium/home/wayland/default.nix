@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   catppuccin-mako = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "mako";
@@ -7,8 +6,12 @@ let
     sha256 = "097x9jrkzvml6ngnhxwkzzl1l2awwv73yli1mhmpw83c0n8xck4x";
   };
 in {
+  # TODO: split some stuff here
 
-  imports = [ ./hyprland ./eww ];
+  imports = [
+    ./hyprland
+    ./eww
+  ];
 
   services.mako = {
     enable = true;
@@ -104,5 +107,4 @@ in {
       bs-hl-color = "F38BA8";
     };
   };
-
 }

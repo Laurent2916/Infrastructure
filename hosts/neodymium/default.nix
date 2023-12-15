@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  imports = [ ./system ./services ];
+{pkgs, ...}: {
+  imports = [./system ./services];
 
   # shorter timeout for systemd services
   systemd.extraConfig = ''
@@ -10,7 +10,10 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
+    ];
   };
 
   programs.zsh.enable = true;

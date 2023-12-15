@@ -1,5 +1,4 @@
-{ ... }: {
-
+{...}: {
   services.atuin = {
     enable = true;
     openRegistration = false;
@@ -11,9 +10,8 @@
       "atuin.fainsin.bzh" = {
         forceSSL = true;
         enableACME = true;
-        locations."/" = { proxyPass = "http://127.0.0.1:8888"; };
+        locations."/".proxyPass = "http://127.0.0.1:8888";
       };
     };
   };
-
 }

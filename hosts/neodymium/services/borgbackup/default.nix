@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   services.borgbackup.jobs.home = {
     paths = "/home/laurent/";
     repo = "/mnt/home_backup";
@@ -30,7 +30,7 @@
       passCommand = "cat ${config.age.secrets.borgbackup.path}";
     };
     compression = "auto,zstd";
-    startAt = [ ];
+    startAt = [];
   };
   services.borgbackup.jobs.keepass = {
     paths = "/home/laurent/Documents/db_mdp.kdbx";

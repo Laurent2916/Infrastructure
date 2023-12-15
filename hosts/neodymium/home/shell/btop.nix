@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   catppuccin-btop = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "btop";
@@ -7,7 +6,6 @@ let
     sha256 = "sha256-jodJl4f2T9ViNqsY9fk8IV62CrpC5hy7WK3aRpu70Cs=";
   };
 in {
-
   xdg.configFile."btop/themes".source = "${catppuccin-btop}/themes";
 
   programs.btop = {
@@ -21,6 +19,5 @@ in {
     };
   };
 
-  programs.zsh.shellAliases = { htop = "btop"; };
-
+  programs.zsh.shellAliases = {htop = "btop";};
 }

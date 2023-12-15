@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   catppuccin-bat = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "bat";
@@ -16,7 +15,7 @@ in {
       };
     };
     config.theme = "catppuccin";
-    extraPackages = with pkgs.bat-extras; [ batman ];
+    extraPackages = with pkgs.bat-extras; [batman];
   };
   programs.zsh.shellAliases = {
     cat = "bat";

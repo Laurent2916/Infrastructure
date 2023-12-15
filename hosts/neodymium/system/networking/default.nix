@@ -1,9 +1,9 @@
-{ lib, ... }: {
+{lib, ...}: {
   # the name of the machine
   networking.hostName = "neodymium";
 
   # domain name servers, use clouflare family
-  networking.nameservers = [ "1.1.1.2" "1.0.0.2" ];
+  networking.nameservers = ["1.1.1.2" "1.0.0.2"];
 
   # use networkManager, see nmcli
   networking.networkmanager.enable = true;
@@ -12,8 +12,8 @@
   networking.firewall = {
     enable = true;
 
-    allowedTCPPorts = [ ];
-    allowedUDPPorts = [ ];
+    allowedTCPPorts = [];
+    allowedUDPPorts = [];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

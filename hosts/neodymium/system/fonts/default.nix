@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   fonts.packages = with pkgs; [
     # https://notofonts.github.io/
     noto-fonts # standard characters
@@ -11,6 +11,6 @@
     fira-code-symbols # unicode ligature glyphs
 
     # https://github.com/ryanoasis/nerd-fonts
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override {fonts = ["FiraCode"];})
   ];
 }

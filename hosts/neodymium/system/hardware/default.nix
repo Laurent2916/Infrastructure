@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   # hardware
   hardware = {
     enableRedistributableFirmware = true;
@@ -30,5 +30,7 @@
   programs.light.enable = true;
 
   # paritions and filesystems
-  imports = [ ./partitions.nix ];
+  imports = [
+    ./partitions.nix
+  ];
 }

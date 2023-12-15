@@ -1,4 +1,8 @@
-{ pkgs, hyprland, ... }: {
+{
+  pkgs,
+  hyprland,
+  ...
+}: {
   # disable user creation/deletion
   users.mutableUsers = false;
 
@@ -6,7 +10,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit hyprland; };
+    extraSpecialArgs = {inherit hyprland;};
   };
 
   # configure users
@@ -15,7 +19,7 @@
     users.laurent = {
       isNormalUser = true;
       initialPassword = "laurent";
-      extraGroups = [ "wheel" "video" "docker" ];
+      extraGroups = ["wheel" "video" "docker"];
       shell = pkgs.zsh;
     };
   };

@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   services.nginx = {
     enable = true;
 
@@ -11,5 +11,8 @@
     # clientMaxBodySize = "0";
   };
 
-  imports = [ ./laurent ./n7 ];
+  imports = [
+    ./laurent
+    ./n7
+  ];
 }

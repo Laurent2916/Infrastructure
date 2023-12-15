@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   # enable polkit
   security.polkit.enable = true;
 
@@ -13,5 +13,5 @@
   services.gnome.gnome-keyring.enable = true;
 
   # allow swaylock to use pam
-  security.pam.services.swaylock = { };
+  security.pam.services.swaylock = {};
 }

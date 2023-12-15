@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   # FRANCE 🇫🇷 🥖 🥐
   time.timeZone = "Europe/Paris";
 

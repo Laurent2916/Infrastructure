@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   catppuccin-alacritty = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "alacritty";
@@ -10,7 +9,7 @@ in {
   programs.alacritty = {
     enable = true;
     settings = {
-      import = [ "${catppuccin-alacritty}/catppuccin-mocha.yml" ];
+      import = ["${catppuccin-alacritty}/catppuccin-mocha.yml"];
       window.opacity = 0.85;
       font = {
         normal.family = "FiraCode Nerd Font Mono";

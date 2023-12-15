@@ -1,9 +1,15 @@
-{ lib, pkgs, nixpkgs, ... }: {
+{
+  lib,
+  pkgs,
+  nixpkgs,
+  ...
+}: {
   # restrict nix command to sudoers
-  nix.settings.allowed-users = [ "@wheel" ];
+  nix.settings.allowed-users = ["root" "@wheel"];
+  nix.settings.trusted-users = ["root" "@wheel"];
 
   # experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # limit number of cores when building
   nix.settings.max-jobs = 6;
@@ -16,16 +22,6 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
-  };
-
-  # binary caches
-  nix.settings = {
-    substituters =
-      [ "https://hyprland.cachix.org" "https://nix-community.cachix.org" ];
-    trusted-public-keys = [
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    ];
   };
 
   # pin nixpkgs registry
@@ -43,7 +39,7 @@
 
   # print diff between two generations
   system.activationScripts.nvd-report-changes = ''
-    PATH=$PATH:${lib.makeBinPath [ pkgs.nvd pkgs.nix ]}
+    PATH=$PATH:${lib.makeBinPath [pkgs.nvd pkgs.nix]}
     nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
   '';
 }

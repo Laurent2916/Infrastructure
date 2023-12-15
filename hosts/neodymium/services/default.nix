@@ -1,1 +1,6 @@
-{ ... }: { imports = [ ./borgbackup ./greetd ]; }
+{...}: {
+  imports = [
+    ./borgbackup
+    ./greetd
+  ];
+}

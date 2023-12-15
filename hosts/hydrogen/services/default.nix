@@ -1,1 +1,9 @@
-{ ... }: { imports = [ ./acme ./atuin ./changedetection ./gitea ./nginx ]; }
+{...}: {
+  imports = [
+    ./acme
+    ./atuin
+    ./changedetection
+    ./gitea
+    ./nginx
+  ];
+}

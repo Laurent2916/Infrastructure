@@ -1,1 +1,6 @@
-{ ... }: { imports = [ ./resume.nix ./website.nix ]; }
+{...}: {
+  imports = [
+    ./resume.nix
+    ./website.nix
+  ];
+}

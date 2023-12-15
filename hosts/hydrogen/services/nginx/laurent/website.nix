@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   pages = pkgs.fetchgit {
     url = "https://git.fainsin.bzh/Laurent/personal-website";
     branchName = "pages";
@@ -17,8 +16,7 @@ in {
     "fainsin.bzh" = {
       enableACME = true;
       forceSSL = true;
-      locations."/".return =
-        ''301 "$scheme://laurent.fainsin.bzh$request_uri"'';
+      locations."/".return = ''301 "$scheme://laurent.fainsin.bzh$request_uri"'';
     };
     default = {
       default = true;
