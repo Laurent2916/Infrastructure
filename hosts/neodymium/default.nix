@@ -13,9 +13,15 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
+
+    config = {
+      common.default = ["wlr" "gtk"];
+      hyprland.default = ["hyprland"];
+    };
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-hyprland
     ];
   };
 

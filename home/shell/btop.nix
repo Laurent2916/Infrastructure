@@ -19,5 +19,5 @@ in {
     };
   };
 
-  programs.zsh.shellAliases = {htop = "btop";};
+  programs.zsh.shellAliases.htop = "btop";
 }
