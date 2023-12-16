@@ -1,7 +1,6 @@
 {
   description = "Laureηt's infrastructure";
 
-  # TODO: setup le formatter comme sioodmy
   # TODO: rekey les secrets + changer la key de hydrogen
   # TODO: luks encrypt hydrogen (dropbear ?)
   # TODO: dégager btfrs de neodymium, ext4 ftw
@@ -27,7 +26,6 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
     disko.url = "github:nix-community/disko";
     nixos-anywhere.url = "github:nix-community/nixos-anywhere";
-    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
     resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
@@ -41,12 +39,10 @@
   nixConfig = {
     extra-substituters = [
       "https://nix-community.cachix.org"
-      # "https://pre-commit-hooks.cachix.org"
       "https://hyprland.cachix.org"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      # "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
@@ -54,7 +50,6 @@
   outputs = {
     agenix,
     flake-parts,
-    pre-commit-hooks,
     treefmt-nix,
     ...
   } @ inputs:
@@ -63,7 +58,6 @@
 
       imports = [
         flake-parts.flakeModules.easyOverlay
-        pre-commit-hooks.flakeModule
         treefmt-nix.flakeModule
       ];
 
@@ -77,14 +71,6 @@
         treefmt = {
           projectRootFile = "flake.nix";
           programs = {
-            alejandra.enable = true;
-            deadnix.enable = true;
-          };
-        };
-
-        pre-commit = {
-          settings.excludes = ["flake.lock"];
-          settings.hooks = {
             alejandra.enable = true;
             deadnix.enable = true;
           };
