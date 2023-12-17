@@ -251,6 +251,23 @@
         "type": "github"
       }
     },
+    "flake-parts_10": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_8"
+      },
+      "locked": {
+        "lastModified": 1696343447,
+        "narHash": "sha256-B2xAZKLkkeRFG5XcHHSXXcP7To9Xzr59KXeZiRf4vdQ=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "c9afaba3dfa4085dbd2ccb38dfade5141e33d9d4",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-parts",
+        "type": "indirect"
+      }
+    },
     "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib_2"
@@ -388,16 +405,17 @@
         "nixpkgs-lib": "nixpkgs-lib_7"
       },
       "locked": {
-        "lastModified": 1696343447,
-        "narHash": "sha256-B2xAZKLkkeRFG5XcHHSXXcP7To9Xzr59KXeZiRf4vdQ=",
+        "lastModified": 1701473968,
+        "narHash": "sha256-YcVE5emp1qQ8ieHUnxt1wCZCC3ZfAS+SRRWZ2TMda7E=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "c9afaba3dfa4085dbd2ccb38dfade5141e33d9d4",
+        "rev": "34fed993f1674c8d06d58b37ce1e0fe5eebcb9f5",
         "type": "github"
       },
       "original": {
-        "id": "flake-parts",
-        "type": "indirect"
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
       }
     },
     "flake-utils": {
@@ -773,6 +791,24 @@
     "nixpkgs-lib_7": {
       "locked": {
         "dir": "lib",
+        "lastModified": 1701253981,
+        "narHash": "sha256-ztaDIyZ7HrTAfEEUt9AtTDNoCYxUdSd6NrRHaYOIxtk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e92039b55bcd58469325ded85d4f58dd5a4eaf58",
+        "type": "github"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_8": {
+      "locked": {
+        "dir": "lib",
         "lastModified": 1696019113,
         "narHash": "sha256-X3+DKYWJm93DRSdC5M6K5hLqzSya9BjibtBsuARoPco=",
         "owner": "NixOS",
@@ -822,6 +858,22 @@
     },
     "nixpkgs_11": {
       "locked": {
+        "lastModified": 1702312524,
+        "narHash": "sha256-gkZJRDBUCpTPBvQk25G0B7vfbpEYM5s5OZqghkjZsnE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a9bf124c46ef298113270b1f84a164865987a91c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_12": {
+      "locked": {
         "lastModified": 1700612854,
         "narHash": "sha256-yrQ8osMD+vDLGFX7pcwsY/Qr5PUd6OmDMYJZzZi0+zc=",
         "owner": "NixOS",
@@ -836,7 +888,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_12": {
+    "nixpkgs_13": {
       "locked": {
         "lastModified": 1698318101,
         "narHash": "sha256-gUihHt3yPD7bVqg+k/UVHgngyaJ3DMEBchbymBMvK1E=",
@@ -852,7 +904,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_13": {
+    "nixpkgs_14": {
       "locked": {
         "lastModified": 1695644571,
         "narHash": "sha256-asS9dCCdlt1lPq0DLwkVBbVoEKuEuz+Zi3DG7pR/RxA=",
@@ -1065,10 +1117,29 @@
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
       }
     },
-    "projet-oral-anglais": {
+    "projet-modelisation-geometrique": {
       "inputs": {
         "flake-parts": "flake-parts_7",
         "nixpkgs": "nixpkgs_9"
+      },
+      "locked": {
+        "lastModified": 1702826219,
+        "narHash": "sha256-/nihRUVd4s5U98sjkqQ8qHDM15se+BBT0XXV7gvT6u0=",
+        "ref": "refs/heads/master",
+        "rev": "0a0a108b4ff551af2f23a858c1fc75bcf6d9370b",
+        "revCount": 59,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique"
+      }
+    },
+    "projet-oral-anglais": {
+      "inputs": {
+        "flake-parts": "flake-parts_8",
+        "nixpkgs": "nixpkgs_10"
       },
       "locked": {
         "lastModified": 1702566510,
@@ -1086,8 +1157,8 @@
     },
     "projet-oral-japonais": {
       "inputs": {
-        "flake-parts": "flake-parts_8",
-        "nixpkgs": "nixpkgs_10"
+        "flake-parts": "flake-parts_9",
+        "nixpkgs": "nixpkgs_11"
       },
       "locked": {
         "lastModified": 1702567061,
@@ -1106,7 +1177,7 @@
     "resume": {
       "inputs": {
         "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_11",
+        "nixpkgs": "nixpkgs_12",
         "typst": "typst"
       },
       "locked": {
@@ -1137,6 +1208,7 @@
         "nixpkgs": "nixpkgs_6",
         "projet-audionumerique": "projet-audionumerique",
         "projet-intelligence-artificielle-multimedia": "projet-intelligence-artificielle-multimedia",
+        "projet-modelisation-geometrique": "projet-modelisation-geometrique",
         "projet-oral-anglais": "projet-oral-anglais",
         "projet-oral-japonais": "projet-oral-japonais",
         "resume": "resume",
@@ -1291,7 +1363,7 @@
     },
     "treefmt-nix_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_13"
+        "nixpkgs": "nixpkgs_14"
       },
       "locked": {
         "lastModified": 1702461037,
@@ -1310,8 +1382,8 @@
     "typst": {
       "inputs": {
         "crane": "crane_3",
-        "flake-parts": "flake-parts_9",
-        "nixpkgs": "nixpkgs_12",
+        "flake-parts": "flake-parts_10",
+        "nixpkgs": "nixpkgs_13",
         "systems": "systems_5"
       },
       "locked": {
