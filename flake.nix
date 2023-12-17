@@ -31,6 +31,7 @@
     resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
     projet-intelligence-artificielle-multimedia.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
     projet-modelisation-geometrique.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique";
+    projet-systemes-algorithmes-repartis.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis";
     projet-audionumerique.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
     projet-oral-japonais.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
     projet-oral-anglais.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";

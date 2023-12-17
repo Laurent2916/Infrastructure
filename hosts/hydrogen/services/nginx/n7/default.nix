@@ -15,7 +15,7 @@
         }
         // {
           "/projet-audionumerique/" = import ./projet-audionumerique.nix {inherit inputs system;};
-          "/projet-systemes-algorithmes-repartis/" = import ./projet-systemes-algorithmes-repartis.nix pkgs;
+          "/projet-systemes-algorithmes-repartis/" = import ./projet-systemes-algorithmes-repartis.nix {inherit inputs system;};
           "/projet-intelligence-artificielle-multimedia/" = import ./projet-intelligence-artificielle-multimedia.nix {inherit inputs system;};
           "/projet-probleme-inverse-3D/" = import ./projet-probleme-inverse-3D.nix pkgs;
           "/projet-modelisation-geometrique/" = import ./projet-modelisation-geometrique.nix {inherit inputs system;};
