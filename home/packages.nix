@@ -15,7 +15,6 @@
     distrobox # podman wrapper
     podman-compose # "docker" compose
     duf # replacement for df
-    element-desktop # matrix client
     feh # image viewer
     gnome.nautilus # file explorer
     grim # screenshot utils
@@ -26,7 +25,7 @@
     micro # text editor
     mpv # video viewer
     nil # nix language server
-    nixfmt # nix formatter
+    alejandra # nix formatter
     pamixer # volume mixer cli
     pavucontrol # volume mixer
     pwgen # password generator
@@ -35,7 +34,6 @@
     socat # socket cat
     thunderbird # mail client
     tmux # terminal multiplexer
-    webcord-vencord # discord client
     cliphist # clipboard manager
     wl-clipboard # clipboard utils
     xdg-utils
