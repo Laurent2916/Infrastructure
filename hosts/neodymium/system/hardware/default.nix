@@ -29,7 +29,7 @@
   # backlight intensity
   programs.light.enable = true;
 
-  # paritions and filesystems
+  # partitions and filesystems
   imports = [
     ./partitions.nix
   ];
