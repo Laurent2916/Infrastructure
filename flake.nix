@@ -15,6 +15,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    systems.url = "github:nix-systems/default-linux";
 
     agenix = {
       url = "github:yaxitech/ragenix";
@@ -56,7 +57,7 @@
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = ["x86_64-linux" "aarch64-linux"];
+      systems = import inputs.systems;
 
       imports = [
         flake-parts.flakeModules.easyOverlay
