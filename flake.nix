@@ -29,6 +29,13 @@
     nixos-anywhere.url = "github:nix-community/nixos-anywhere";
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
+    # home assets
+    wallpaper = {
+      url = "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28";
+      flake = false;
+    };
+
+    # hydrogen nginx sites
     resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
     projet-intelligence-artificielle-multimedia.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
     projet-modelisation-geometrique.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique";

@@ -1,11 +1,15 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
 
     extraConfig =
       ''
         exec-once=env XDG_CACHE_HOME=/tmp eww open bar
-        exec-once=${pkgs.swaybg}/bin/swaybg -i ~/Pictures/wallpapers/kai-oberhauser-unsplash.jpg
+        exec-once=${pkgs.swaybg}/bin/swaybg -i ${inputs.wallpaper}
         exec-once=mako
         exec-once=thunderbird
         exec-once=wl-paste --watch cliphist store
