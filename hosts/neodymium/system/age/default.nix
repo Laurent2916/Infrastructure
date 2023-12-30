@@ -1,6 +1,6 @@
 {...}: {
   age.secrets.borgbackup = {
-    file = "/home/laurent/infrastructure/secrets/borgbackup.age";
+    file = ../../../../secrets/borgbackup.age;
     owner = "laurent";
     group = "users";
   };
