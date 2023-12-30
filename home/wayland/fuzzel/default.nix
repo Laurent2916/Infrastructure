@@ -1,6 +1,7 @@
 {...}: {
   programs.fuzzel = {
     enable = true;
+
     settings = {
       main = {
         line-height = 15;

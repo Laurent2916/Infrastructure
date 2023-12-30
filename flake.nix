@@ -34,6 +34,22 @@
       url = "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28";
       flake = false;
     };
+    catppuccin-alacritty = {
+      url = "github:catppuccin/alacritty/yaml";
+      flake = false;
+    };
+    catppuccin-bat = {
+      url = "github:catppuccin/bat";
+      flake = false;
+    };
+    catppuccin-btop = {
+      url = "github:catppuccin/btop";
+      flake = false;
+    };
+    catppuccin-mako = {
+      url = "github:catppuccin/mako";
+      flake = false;
+    };
 
     # hydrogen nginx sites
     resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
