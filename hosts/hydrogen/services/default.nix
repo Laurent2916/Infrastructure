@@ -4,5 +4,6 @@
     ./atuin
     ./gitea
     ./nginx
+    ./ssh
   ];
 }
