@@ -106,9 +106,8 @@
           packages = [
             formatter # defined above
             pkgs.git # version control
-            pkgs.update-nix-fetchgit # auto update fetchs
             agenix.packages.${system}.ragenix # secrets
-            pkgs.sbctl # secure boot
+            pkgs.sbctl # secure boot utils
           ];
         };
       };
