@@ -7,6 +7,7 @@
   # TODO: setup disko sur neodymium
 
   inputs = {
+    # core stuff
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
       # url = "git+file:///home/laurent/Documents/nixpkgs?shallow=1";
@@ -15,19 +16,44 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    systems.url = "github:nix-systems/default-linux";
+    systems = {
+      url = "github:nix-systems/default-linux";
+    };
 
+    # modules
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
     agenix = {
+      # TODO: replace by classic agenix
       url = "github:yaxitech/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    lanzaboote.url = "github:nix-community/lanzaboote";
-    hyprland.url = "github:hyprwm/Hyprland";
-    nixos-hardware.url = "github:nixos/nixos-hardware";
-    disko.url = "github:nix-community/disko";
-    nixos-anywhere.url = "github:nix-community/nixos-anywhere";
-    treefmt-nix.url = "github:numtide/treefmt-nix";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-anywhere = {
+      url = "github:nix-community/nixos-anywhere";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      # inputs.nixpkgs.follows = "nixpkgs";  # leads to recompilations
+    };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      # inputs.nixpkgs.follows = "nixpkgs"; # leads to recompilations
+    };
+    nixos-hardware = {
+      url = "github:nixos/nixos-hardware";
+    };
 
     # home assets
     wallpaper = {
@@ -52,14 +78,54 @@
     };
 
     # hydrogen nginx sites
-    resume.url = "git+https://git.fainsin.bzh/Laurent/resume";
-    projet-intelligence-artificielle-multimedia.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
-    projet-modelisation-geometrique.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique";
-    projet-systemes-algorithmes-repartis.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis";
-    projet-audionumerique.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
-    projet-oral-japonais.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
-    projet-oral-anglais.url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
-    TP-calcul-parallele.url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
+    resume = {
+      url = "git+https://git.fainsin.bzh/Laurent/resume";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    projet-intelligence-artificielle-multimedia = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    projet-modelisation-geometrique = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    projet-systemes-algorithmes-repartis = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    projet-audionumerique = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    projet-oral-japonais = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    projet-oral-anglais = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
+    TP-calcul-parallele = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
   };
 
   nixConfig = {
