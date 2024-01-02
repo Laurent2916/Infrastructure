@@ -126,6 +126,12 @@
       inputs.flake-parts.follows = "flake-parts";
       inputs.systems.follows = "systems";
     };
+    TP-reinforcement-learning = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
   };
 
   nixConfig = {

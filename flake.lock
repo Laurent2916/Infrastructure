@@ -26,6 +26,32 @@
         "url": "https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele"
       }
     },
+    "TP-reinforcement-learning": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704193318,
+        "narHash": "sha256-Sp2rNrb/LJVU+kjsGPwu30521x5zS2X0xNi0BerE/To=",
+        "ref": "refs/heads/master",
+        "rev": "e5623592cca97b6e7f78c6c2e5986febe01f99b0",
+        "revCount": 3,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning"
+      }
+    },
     "agenix": {
       "inputs": {
         "agenix": "agenix_2",
@@ -855,6 +881,7 @@
     "root": {
       "inputs": {
         "TP-calcul-parallele": "TP-calcul-parallele",
+        "TP-reinforcement-learning": "TP-reinforcement-learning",
         "agenix": "agenix",
         "catppuccin-alacritty": "catppuccin-alacritty",
         "catppuccin-bat": "catppuccin-bat",
