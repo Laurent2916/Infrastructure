@@ -1,5 +1,5 @@
 {...}: {
-  network = {
+  networking = {
     # the name of the machine
     hostName = "neodymium";
 
