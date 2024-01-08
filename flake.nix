@@ -61,7 +61,7 @@
       flake = false;
     };
     catppuccin-alacritty = {
-      url = "github:catppuccin/alacritty/yaml";
+      url = "github:catppuccin/alacritty";
       flake = false;
     };
     catppuccin-bat = {
