@@ -6,12 +6,16 @@
 }: {
   # optimizations
   nix.settings.auto-optimise-store = true;
+  nix.optimise = {
+    automatic = true;
+    dates = "daily";
+  };
 
   # garbage collection
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+    dates = "daily";
+    options = "--delete-older-than 14d";
   };
 
   # experimental features
