@@ -8,7 +8,9 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
   imports = [
+    # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/installer/scan/not-detected.nix
     (modulesPath + "/installer/scan/not-detected.nix")
+    # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/profiles/qemu-guest.nix
     (modulesPath + "/profiles/qemu-guest.nix")
 
     ./boot
