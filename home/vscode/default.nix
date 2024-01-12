@@ -4,22 +4,20 @@
     package = pkgs.vscode;
 
     extensions = with pkgs.vscode-extensions; [
-      github.copilot
-      github.copilot-chat
-      github.vscode-pull-request-github
-
-      eamodio.gitlens
-      editorconfig.editorconfig
-      ms-vsliveshare.vsliveshare
-
-      yzhang.markdown-all-in-one
-      tamasfe.even-better-toml
-
-      mkhl.direnv
-      jnoortheen.nix-ide
-
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
+      eamodio.gitlens
+      editorconfig.editorconfig
+      github.copilot
+      gitHub.copilot-chat
+      github.vscode-pull-request-github
+      jnoortheen.nix-ide
+      kamadorueda.alejandra
+      mkhl.direnv
+      ms-vsliveshare.vsliveshare
+      seatonjiang.gitmoji-vscode
+      tamasfe.even-better-toml
+      yzhang.markdown-all-in-one
     ];
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
