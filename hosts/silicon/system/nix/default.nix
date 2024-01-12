@@ -18,13 +18,13 @@
   nix.settings.auto-optimise-store = true;
   nix.optimise = {
     automatic = true;
-    dates = "daily";
+    dates = "12:00";
   };
 
   # garbage collection
   nix.gc = {
     automatic = true;
-    dates = "daily";
+    dates = "12:00";
     options = "--delete-older-than 30d";
   };
 

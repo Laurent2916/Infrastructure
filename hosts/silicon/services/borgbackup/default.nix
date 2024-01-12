@@ -41,6 +41,6 @@
       passCommand = "cat ${config.age.secrets.borgbackup.path}";
     };
     compression = "auto,zstd";
-    startAt = "daily";
+    startAt = "12:00";
   };
 }
