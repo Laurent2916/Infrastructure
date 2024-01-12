@@ -15,8 +15,8 @@ trap 'handle_error "$BASH_COMMAND"' ERR
 nix flake update
 
 # update systems
-sudo nixos-rebuild switch -L --flake .#neodymium
-nixos-rebuild switch -L --flake .#hydrogen --target-host hydrogen
+sudo nixos-rebuild switch -L --flake .#silicium
+nixos-rebuild switch -L --flake .#cesium --target-host cesium
 
 # commit and push lock file
 git add flake.lock

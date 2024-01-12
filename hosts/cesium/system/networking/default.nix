@@ -1,7 +1,7 @@
 {...}: {
   networking = {
     # the name of the machine
-    hostName = "hydrogen";
+    hostName = "cesium";
 
     # the domain used for the machine
     domain = "fainsin.bzh";

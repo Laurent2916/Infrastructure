@@ -1,10 +1,9 @@
 {
   description = "Laureηt's infrastructure";
 
-  # TODO: rekey les secrets + changer la key de hydrogen
-  # TODO: luks encrypt hydrogen (dropbear ?)
-  # TODO: dégager btfrs de neodymium, ext4 ftw
-  # TODO: setup disko sur neodymium
+  # TODO: rekey les secrets + changer la key de cesium
+  # TODO: luks encrypt cesium (dropbear ?)
+  # TODO: setup disko sur silicium
 
   inputs = {
     # core stuff
@@ -77,7 +76,7 @@
       flake = false;
     };
 
-    # hydrogen nginx sites
+    # cesium nginx sites
     resume = {
       url = "git+https://git.fainsin.bzh/Laurent/resume";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -9,14 +9,19 @@
     users.laurent = ../home;
   };
 in {
-  # neodymium laptop
-  neodymium = nixpkgs.lib.nixosSystem {
+  # naming convention based on the periodic table
+  # NAS would be neodymium
+  # desktop would be neon
+  # smartphone would be lithium
+
+  # personal laptop
+  silicium = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
     };
     modules = [
-      ./neodymium
+      ./silicium
       inputs.home-manager.nixosModules.home-manager
       inputs.agenix.nixosModules.default
       inputs.lanzaboote.nixosModules.lanzaboote
@@ -28,15 +33,34 @@ in {
     ];
   };
 
-  # hydrogen vps
-  hydrogen = nixpkgs.lib.nixosSystem rec {
+  # # work laptop
+  # aurum = nixpkgs.lib.nixosSystem {
+  #   system = "x86_64-linux";
+  #   specialArgs = {
+  #     inherit inputs;
+  #   };
+  #   modules = [
+  #     ./aurum
+  #     inputs.home-manager.nixosModules.home-manager
+  #     inputs.agenix.nixosModules.default
+  #     # inputs.lanzaboote.nixosModules.lanzaboote
+  #     # inputs.nixos-hardware.nixosModules.common-cpu-amd
+  #     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia-disable
+  #     # inputs.nixos-hardware.nixosModules.common-pc-laptop
+  #     # inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+  #     {inherit home-manager;}
+  #   ];
+  # };
+
+  # vps
+  cesium = nixpkgs.lib.nixosSystem rec {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
       inherit system;
     };
     modules = [
-      ./hydrogen
+      ./cesium
       inputs.home-manager.nixosModules.home-manager
       inputs.disko.nixosModules.default
       inputs.agenix.nixosModules.default

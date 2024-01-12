@@ -1,7 +1,7 @@
 {...}: {
   networking = {
     # the name of the machine
-    hostName = "neodymium";
+    hostName = "silicium";
 
     # domain name servers, use clouflare family
     nameservers = ["1.1.1.2" "1.0.0.2"];
