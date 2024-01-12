@@ -53,6 +53,9 @@
     nixos-hardware = {
       url = "github:nixos/nixos-hardware";
     };
+    impermanence = {
+      url = "github:nix-community/impermanence";
+    };
 
     # home assets
     wallpaper = {
