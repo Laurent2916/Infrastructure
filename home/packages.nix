@@ -12,8 +12,8 @@
     }))
     borgbackup # backup
     dconf # required by home-manager
-    distrobox # podman wrapper
-    podman-compose # "docker" compose
+    distrobox # docker utils
+    docker-compose # docker compose
     duf # replacement for df
     feh # image viewer
     gnome.nautilus # file explorer

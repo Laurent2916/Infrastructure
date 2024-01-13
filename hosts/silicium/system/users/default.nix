@@ -7,7 +7,7 @@
     users.laurent = {
       isNormalUser = true;
       initialPassword = "laurent";
-      extraGroups = ["wheel" "video" "docker"];
+      extraGroups = ["wheel" "video"];
       shell = pkgs.zsh;
     };
   };

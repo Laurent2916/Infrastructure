@@ -1,11 +1,12 @@
 {...}: {
-  virtualisation.podman = {
+  virtualisation.docker = {
     enable = true;
 
-    dockerCompat = true;
-    dockerSocket.enable = true;
-    defaultNetwork.settings.dns_enabled =
-      true; # required by networks in compose
+    storageDriver = "btrfs";
+    enableOnBoot = false;
     autoPrune.enable = true;
   };
+
+  # docker users
+  users.users.laurent.extraGroups = ["docker"];
 }
