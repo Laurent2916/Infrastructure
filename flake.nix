@@ -1,7 +1,6 @@
 {
   description = "Laureηt's infrastructure";
 
-  # TODO: rekey les secrets + changer la key de cesium
   # TODO: luks encrypt cesium (dropbear ?)
   # TODO: setup disko sur silicium
 
