@@ -25,9 +25,10 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
     agenix = {
-      # TODO: replace by classic agenix
-      url = "github:yaxitech/ragenix";
+      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+      inputs.systems.follows = "systems";
     };
     disko = {
       url = "github:nix-community/disko";
@@ -180,7 +181,7 @@
           packages = [
             formatter # defined above
             pkgs.git # version control
-            agenix.packages.${system}.ragenix # secrets
+            agenix.packages.${system}.agenix # secrets
             pkgs.sbctl # secure boot utils
           ];
         };
