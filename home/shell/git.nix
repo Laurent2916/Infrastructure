@@ -1,9 +1,9 @@
-{config, ...}: let
+{osConfig, ...}: let
   sign_key =
     {
       "silicium" = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@silicium";
     }
-    ."${config.networking.hostName}";
+    ."${osConfig.networking.hostName}";
 in {
   programs.git = {
     enable = true;
