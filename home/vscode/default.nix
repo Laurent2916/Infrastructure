@@ -9,7 +9,7 @@
       eamodio.gitlens
       editorconfig.editorconfig
       github.copilot
-      gitHub.copilot-chat
+      github.copilot-chat
       github.vscode-pull-request-github
       jnoortheen.nix-ide
       kamadorueda.alejandra
