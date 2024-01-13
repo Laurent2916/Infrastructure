@@ -10,7 +10,9 @@
         hash = "sha256-Yw5TAC/j1njctamXN4OrD+sl4tVOuWu1qL7d0B5gBWw=";
       };
     }))
+    alejandra # nix formatter
     borgbackup # backup
+    cliphist # clipboard manager
     dconf # required by home-manager
     distrobox # docker utils
     docker-compose # docker compose
@@ -21,22 +23,21 @@
     jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager
-    obsidian # second brain journalling
     micro # text editor
     mpv # video viewer
     nil # nix language server
-    alejandra # nix formatter
+    obsidian # second brain journalling
     pamixer # volume mixer cli
     pavucontrol # volume mixer
+    playerctl # media keys
     pwgen # password generator
     rsync # better scp
     slurp # region selector
     socat # socket cat
+    sysz # better systemctl
     thunderbird # mail client
     tmux # terminal multiplexer
-    cliphist # clipboard manager
     wl-clipboard # clipboard utils
     xdg-utils
-    sysz # better systemctl
   ];
 }
