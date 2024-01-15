@@ -33,24 +33,22 @@ in {
     ];
   };
 
-  # # work laptop
-  # aurum = nixpkgs.lib.nixosSystem {
-  #   system = "x86_64-linux";
-  #   specialArgs = {
-  #     inherit inputs;
-  #   };
-  #   modules = [
-  #     ./aurum
-  #     inputs.home-manager.nixosModules.home-manager
-  #     inputs.agenix.nixosModules.default
-  #     # inputs.lanzaboote.nixosModules.lanzaboote
-  #     # inputs.nixos-hardware.nixosModules.common-cpu-amd
-  #     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia-disable
-  #     # inputs.nixos-hardware.nixosModules.common-pc-laptop
-  #     # inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
-  #     {inherit home-manager;}
-  #   ];
-  # };
+  # work laptop
+  aurum = nixpkgs.lib.nixosSystem {
+    system = "x86_64-linux";
+    specialArgs = {
+      inherit inputs;
+    };
+    modules = [
+      ./aurum
+      inputs.home-manager.nixosModules.home-manager
+      inputs.disko.nixosModules.default
+      # inputs.lanzaboote.nixosModules.lanzaboote
+      # inputs.impermanence.nixosModules.impermanence
+      # inputs.nixos-hardware.nixosModules.dell-xps-13-something
+      {inherit home-manager;}
+    ];
+  };
 
   # vps
   cesium = nixpkgs.lib.nixosSystem rec {
