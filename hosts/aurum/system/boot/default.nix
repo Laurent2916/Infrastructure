@@ -7,6 +7,9 @@
   boot.supportedFilesystems = ["ntfs"];
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # tmp, will be replaced by lanzaboot
+  boot.loader.systemd-boot.enable = true;
+
   # clean /tmp at each boot
   boot.tmp.cleanOnBoot = true;
 
@@ -17,8 +20,8 @@
   #   ./lanzaboot.nix
   # ];
 
-  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
+  boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd" "v4l2loopback"];
-  boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
+  boot.kernelModules = ["kvm-intel"];
+  boot.extraModulePackages = [];
 }
