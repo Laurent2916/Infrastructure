@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: {
   # support for mounting windaube partitions
@@ -15,6 +16,10 @@
 
   # use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.intel.updateMicrocode =
+    lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # imports = [
   #   ./lanzaboot.nix
