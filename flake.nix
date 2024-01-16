@@ -7,8 +7,8 @@
   inputs = {
     # core stuff
     nixpkgs = {
-      # url = "github:NixOS/nixpkgs/nixos-unstable";
-      url = "git+file:///home/laurent/Documents/github.com/NixOS/nixpkgs?shallow=1";
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+      # url = "git+file:///home/laurent/Documents/github.com/NixOS/nixpkgs?shallow=1";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
