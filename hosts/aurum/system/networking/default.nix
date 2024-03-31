@@ -1,18 +1,17 @@
 {...}: {
-  networking = {
-    # the name of the machine
-    hostName = "aurum";
+  # the name of the machine
+  networking.hostName = "aurum";
 
-    # domain name servers, use clouflare family
-    nameservers = ["1.1.1.2" "1.0.0.2"];
+  # domain name servers, use clouflare family
+  networking.nameservers = ["1.1.1.2" "1.0.0.2"];
 
-    # use networkManager, see nmcli
-    networkmanager.enable = true;
+  # firewall
+  networking.firewall.enable = true;
 
-    # firewall
-    firewall.enable = true;
+  # https://github.com/StevenBlack/hosts
+  networking.stevenblack.enable = true;
 
-    # https://github.com/StevenBlack/hosts
-    stevenblack.enable = true;
-  };
+  # use networkManager, see nmcli
+  networking.networkmanager.enable = true;
+  users.users.laurent.extraGroups = ["networkmanager"];
 }
