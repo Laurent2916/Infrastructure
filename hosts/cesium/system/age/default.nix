@@ -1,7 +1,7 @@
 {...}: {
   age.secrets.gitea = {
     file = ../../../../secrets/gitea.age;
-    owner = "gitea";
-    group = "gitea";
+    owner = "forgejo";
+    group = "forgejo";
   };
 }
