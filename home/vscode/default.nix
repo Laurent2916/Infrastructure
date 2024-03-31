@@ -29,7 +29,7 @@
       "gitmoji.showEmojiCode" = true;
       "terminal.integrated.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "window.menuBarVisibility" = "toggle";
-      "window.zoomLevel" = -0.25;
+      "window.zoomLevel" = -0.5;
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.editor.empty.hint" = "hidden";
       "workbench.iconTheme" = "catppuccin-mocha";
@@ -43,6 +43,8 @@
       "julia.enableTelemetry" = false;
       "julia.symbolCacheDownload" = true;
       "terminal.integrated.commandsToSkipShell" = ["language-julia.interrupt"];
+      "diffEditor.ignoreTrimWhitespace" = false;
+      "editor.rulers" = [120];
     };
   };
 }
