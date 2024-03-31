@@ -8,7 +8,7 @@
 
     extraConfig =
       ''
-        exec-once=env XDG_CACHE_HOME=/tmp ${pkgs.eww-wayland}/bin/eww open bar
+        exec-once=env XDG_CACHE_HOME=/tmp ${pkgs.eww}/bin/eww open bar
         exec-once=${pkgs.swaybg}/bin/swaybg -i ${inputs.wallpaper}
         exec-once=${pkgs.mako}/bin/mako
         exec-once=${pkgs.thunderbird}/bin/thunderbird
