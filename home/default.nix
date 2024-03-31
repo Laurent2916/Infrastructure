@@ -8,6 +8,7 @@
     ./alacritty
     ./firefox
     ./gtk
+    ./mpv
     ./shell
     ./vscode
     ./wayland
