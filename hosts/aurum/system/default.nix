@@ -10,7 +10,7 @@
   imports = [
     ./audio
     ./boot
-    ./disko
+    # ./disko
     ./docker
     ./fonts
     ./hardware

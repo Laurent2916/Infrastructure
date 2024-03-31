@@ -8,7 +8,7 @@
           type = "gpt";
           partitions = {
             esp = {
-              size = "512MiB";
+              size = "512M";
               type = "EF00";
               content = {
                 type = "filesystem";
@@ -27,25 +27,40 @@
                 settings.allowDiscards = true;
                 passwordFile = "/tmp/secret.key";
                 content = {
-                  type = "btrfs";
-                  extraArgs = ["-f"];
-                  subvolumes = {
-                    "@persistent" = {
-                      mountpoint = "/persistent";
-                      mountOptions = ["compress=zstd" "noatime"];
-                    };
-                    "@nix" = {
-                      mountpoint = "/nix";
-                      mountOptions = ["compress=zstd" "noatime"];
-                    };
-                    "@swap" = {
-                      mountpoint = "/.swapvol";
-                      swap.swapfile.size = "10G";
-                    };
-                  };
+                  type = "lvm_pv";
+                  vg = "pool";
                 };
               };
             };
+          };
+        };
+      };
+    };
+    lvm_vg = {
+      pool = {
+        type = "lvm_vg";
+        lvs = {
+          root = {
+            size = "100M";
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              mountpoint = "/";
+              mountOptions = [
+                "defaults"
+              ];
+            };
+          };
+          home = {
+            size = "10M";
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              mountpoint = "/home";
+            };
+          };
+          raw = {
+            size = "10M";
           };
         };
       };
