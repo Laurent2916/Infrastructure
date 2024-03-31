@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   # enable polkit
   security.polkit.enable = true;
 
@@ -6,11 +6,14 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryFlavor = "gnome3";
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
 
   # secrets keyring
   services.gnome.gnome-keyring.enable = true;
+
+  # RealtimeKit system
+  security.rtkit.enable = true;
 
   # allow swaylock to use pam
   security.pam.services.swaylock = {};
