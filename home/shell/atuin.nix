@@ -1,8 +1,10 @@
 {...}: {
   programs.atuin = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
+
     settings = {
+      enter_accept = false;
       sync_address = "https://atuin.fainsin.bzh";
     };
   };

@@ -11,5 +11,5 @@
     };
   };
 
-  programs.zsh.shellAliases.htop = "btop";
+  programs.fish.shellAliases.htop = "btop";
 }

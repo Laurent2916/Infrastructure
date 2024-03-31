@@ -16,7 +16,7 @@
     extraPackages = with pkgs.bat-extras; [batman];
   };
 
-  programs.zsh.shellAliases = {
+  programs.fish.shellAliases = {
     cat = "bat";
     man = "batman";
   };
