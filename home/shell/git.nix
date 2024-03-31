@@ -1,6 +1,7 @@
 {osConfig, ...}: let
   sign_key =
     {
+      "aurum" = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIItSJTtS7tO0Wz/WgHAFb3xuNFZpm8SOvr/o8uR83zzy laurent@aurum";
       "silicium" = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINTvwXCT99s1EwOCeGQ28jyCAH/RBoLZza9k5I7wWdEu laurent@silicium";
     }
     ."${osConfig.networking.hostName}";
@@ -29,6 +30,7 @@ in {
 
     extraConfig = {
       merge.conflictstyle = "diff3";
+      gpg.format = "ssh";
     };
   };
 }
