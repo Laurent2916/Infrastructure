@@ -6,7 +6,6 @@
     ./packages.nix
 
     ./alacritty
-    ./chromium
     ./firefox
     ./gtk
     ./shell
