@@ -2,7 +2,7 @@
   imports = [
     ./acme
     ./atuin
-    ./gatus
+    # ./gatus
     ./gitea
     ./nginx
     ./ssh
