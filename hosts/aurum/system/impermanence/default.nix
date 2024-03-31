@@ -16,7 +16,7 @@
     users.laurent = {
       directories = [
         "Documents"
-        ".librewolf"
+        ".mozilla"
         ".thunderbird"
         ".local/share/direnv"
         ".local/share/keyrings"

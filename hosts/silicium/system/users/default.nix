@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   # disable user creation/deletion
   users.mutableUsers = false;
 
@@ -8,7 +8,6 @@
       isNormalUser = true;
       initialPassword = "laurent";
       extraGroups = ["wheel" "video"];
-      shell = pkgs.zsh;
     };
   };
 }
