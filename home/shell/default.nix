@@ -6,6 +6,9 @@
     ./direnv.nix
     ./exa.nix
     ./git.nix
-    ./zsh.nix
+    ./micro.nix
+    # ./ssh.nix
+    ./tmux.nix
+    ./fish.nix
   ];
 }

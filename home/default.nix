@@ -10,6 +10,7 @@
     ./gtk
     ./mpv
     ./shell
+    ./thunderbird
     ./vscode
     ./wayland
     ./xdg

@@ -17,14 +17,12 @@
     distrobox # docker utils
     docker-compose # docker compose
     duf # replacement for df
-    feh # image viewer
     gnome.nautilus # file explorer
+    gnome.seahorse # key manager
     grim # screenshot utils
     jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager
-    micro # text editor
-    mpv # video viewer
     nil # nix language server
     obsidian # second brain journalling
     pamixer # volume mixer cli
@@ -35,8 +33,6 @@
     slurp # region selector
     socat # socket cat
     sysz # better systemctl
-    thunderbird # mail client
-    tmux # terminal multiplexer
     wl-clipboard # clipboard utils
     xdg-utils
   ];
