@@ -25,8 +25,6 @@
     ];
   };
 
-  programs.zsh.enable = true;
-
   # enable gnome virtual file system
   services.gvfs.enable = true;
 }
