@@ -3,16 +3,16 @@
     enable = true;
 
     defaultApplications = {
-      # librewolf
-      "text/html" = "librewolf.desktop";
-      "x-scheme-handler/http" = "librewolf.desktop";
-      "x-scheme-handler/https" = "librewolf.desktop";
-      "x-scheme-handler/about" = "librewolf.desktop";
-      "x-scheme-handler/unknown" = "librewolf.desktop";
-      "application/pdf" = "librewolf.desktop";
-      "image/png" = "librewolf.desktop";
-      "image/jpeg" = "librewolf.desktop";
-      "image/gif" = "librewolf.desktop";
+      # firefox
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
+      "application/pdf" = "firefox.desktop";
+      "image/png" = "firefox.desktop";
+      "image/jpeg" = "firefox.desktop";
+      "image/gif" = "firefox.desktop";
 
       # vscode
       "text/plain" = "code.desktop";
