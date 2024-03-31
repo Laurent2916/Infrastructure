@@ -78,6 +78,10 @@
       url = "github:catppuccin/mako";
       flake = false;
     };
+    catppuccin-fish = {
+      url = "github:catppuccin/fish";
+      flake = false;
+    };
 
     # cesium nginx sites
     resume = {
