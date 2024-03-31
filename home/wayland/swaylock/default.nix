@@ -1,10 +1,14 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
 
     settings = {
-      image = "/home/laurent/Pictures/wallpapers/kai-oberhauser-unsplash.jpg";
+      image = "${inputs.wallpaper}";
 
       clock = true;
       timestr = "%T";
