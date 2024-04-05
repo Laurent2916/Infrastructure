@@ -29,7 +29,7 @@
       "gitmoji.showEmojiCode" = true;
       "terminal.integrated.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "window.menuBarVisibility" = "toggle";
-      "window.zoomLevel" = -0.5;
+      "window.zoomLevel" = -0.75;
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.editor.empty.hint" = "hidden";
       "workbench.iconTheme" = "catppuccin-mocha";
