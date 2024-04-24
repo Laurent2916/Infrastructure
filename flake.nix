@@ -184,8 +184,8 @@
           packages = [
             formatter # defined above
             pkgs.git # version control
-            agenix.packages.${system}.agenix # secrets
             pkgs.sbctl # secure boot utils
+            agenix.packages.${system}.agenix # secrets
           ];
         };
       };
