@@ -24,7 +24,6 @@
     jmtpfs # for Android MTP
     keepassxc # password manager
     nil # nix language server
-    obsidian # second brain journalling
     pamixer # volume mixer cli
     pavucontrol # volume mixer
     playerctl # media keys
