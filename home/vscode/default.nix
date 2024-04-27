@@ -45,6 +45,7 @@
       "terminal.integrated.commandsToSkipShell" = ["language-julia.interrupt"];
       "diffEditor.ignoreTrimWhitespace" = false;
       "editor.rulers" = [120];
+      "remote.SSH.useExecServer" = false;
     };
   };
 }
