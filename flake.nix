@@ -47,7 +47,8 @@
       # inputs.nixpkgs.follows = "nixpkgs";  # leads to recompilations
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      # url = "github:hyprwm/Hyprland";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
       # inputs.nixpkgs.follows = "nixpkgs"; # leads to recompilations
     };
     nixos-hardware = {
