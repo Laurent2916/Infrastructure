@@ -18,6 +18,7 @@
       seatonjiang.gitmoji-vscode
       tamasfe.even-better-toml
       yzhang.markdown-all-in-one
+      usernamehw.errorlens
     ];
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
@@ -38,6 +39,7 @@
       "editor.inlineSuggest.enabled" = true;
       "liveshare.presence" = true;
       "github.copilot.enable" = {"markdown" = true;};
+      "github.copilot.editor.enableAutoCompletions" = true;
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "julia.enableTelemetry" = false;
@@ -46,6 +48,7 @@
       "diffEditor.ignoreTrimWhitespace" = false;
       "editor.rulers" = [120];
       "remote.SSH.useExecServer" = false;
+      "python.analysis.typeCheckingMode" = "strict";
     };
   };
 }
