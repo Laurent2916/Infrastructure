@@ -3,9 +3,10 @@
     enable = true;
     systemdTarget = "hyprland-session.target";
 
-    profiles = {
-      office = {
-        outputs = [
+    settings = [
+      {
+        profile.name = "office";
+        profile.outputs = [
           {
             criteria = "DP-3";
             status = "enable";
@@ -15,15 +16,16 @@
             status = "disable";
           }
         ];
-      };
-      home = {
-        outputs = [
+      }
+      {
+        profile.name = "home";
+        profile.outputs = [
           {
             criteria = "eDP-1";
             status = "enable";
           }
         ];
-      };
-    };
+      }
+    ];
   };
 }
