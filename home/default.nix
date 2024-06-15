@@ -5,16 +5,22 @@
     inputs.hyprland.homeManagerModules.default
     inputs.catppuccin.homeManagerModules.catppuccin
 
-    ./packages.nix
-    ./catppuccin
-
-    ./alacritty
-    ./firefox
-    ./gtk
+    ./applications
+    ./desktop
     ./shell
-    ./thunderbird
-    ./vscode
-    ./wayland
-    ./xdg
+
+    ./packages.nix
   ];
+
+  config.catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "blue";
+  };
+
+  # catppuccin = {
+  #   enable = true;
+  #   flavor = "mocha";
+  #   accent = "blue";
+  # };
 }
