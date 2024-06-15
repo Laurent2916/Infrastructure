@@ -17,10 +17,4 @@
     flavor = "mocha";
     accent = "blue";
   };
-
-  # catppuccin = {
-  #   enable = true;
-  #   flavor = "mocha";
-  #   accent = "blue";
-  # };
 }
