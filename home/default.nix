@@ -1,9 +1,12 @@
 {inputs, ...}: {
-  config.home.stateVersion = "23.05";
+  config.home.stateVersion = "24.05";
+
   imports = [
     inputs.hyprland.homeManagerModules.default
+    inputs.catppuccin.homeManagerModules.catppuccin
 
     ./packages.nix
+    ./catppuccin
 
     ./alacritty
     ./firefox

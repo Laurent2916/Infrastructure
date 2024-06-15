@@ -6,6 +6,7 @@
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
+    catppuccin.enable = false;
 
     settings = {
       image = "${inputs.wallpaper}";

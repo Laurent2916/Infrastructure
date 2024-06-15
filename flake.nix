@@ -59,30 +59,13 @@
       url = "github:nix-community/impermanence";
     };
 
-    # home assets
+    # home stuff
     wallpaper = {
       url = "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28";
       flake = false;
     };
-    catppuccin-alacritty = {
-      url = "github:catppuccin/alacritty";
-      flake = false;
-    };
-    catppuccin-bat = {
-      url = "github:catppuccin/bat";
-      flake = false;
-    };
-    catppuccin-btop = {
-      url = "github:catppuccin/btop";
-      flake = false;
-    };
-    catppuccin-mako = {
-      url = "github:catppuccin/mako";
-      flake = false;
-    };
-    catppuccin-fish = {
-      url = "github:catppuccin/fish";
-      flake = false;
+    catppuccin = {
+      url = "github:catppuccin/nix";
     };
 
     # cesium nginx sites

@@ -1,6 +1,4 @@
-{inputs, ...}: {
-  xdg.configFile."fish/themes".source = "${inputs.catppuccin-fish}/themes";
-
+{...}: {
   programs.fish = {
     enable = true;
 

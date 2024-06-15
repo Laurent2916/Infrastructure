@@ -8,30 +8,11 @@
       size = 10;
     };
 
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "blue";
-      };
+    catppuccin = {
+      enable = true;
+      size = "compact";
+      tweaks = ["rimless" "normal"];
+      cursor.accent = "dark";
     };
-
-    theme = {
-      name = "Catppuccin-Mocha-Compact-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        tweaks = ["rimless" "normal"];
-        accents = ["blue"];
-        variant = "mocha";
-        size = "compact";
-      };
-    };
-  };
-
-  home.pointerCursor = {
-    name = "Catppuccin-Mocha-Dark-Cursors";
-    package = pkgs.catppuccin-cursors.mochaDark;
-    size = 20;
-    gtk.enable = true;
-    x11.enable = true;
   };
 }

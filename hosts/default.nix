@@ -41,6 +41,7 @@ in {
     };
     modules = [
       ./aurum
+      inputs.catppuccin.nixosModules.catppuccin
       inputs.home-manager.nixosModules.home-manager
       # inputs.disko.nixosModules.default
       # inputs.lanzaboote.nixosModules.lanzaboote

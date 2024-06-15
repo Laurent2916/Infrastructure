@@ -79,83 +79,18 @@
         "type": "github"
       }
     },
-    "catppuccin-alacritty": {
-      "flake": false,
+    "catppuccin": {
       "locked": {
-        "lastModified": 1712663324,
-        "narHash": "sha256-Pi1Hicv3wPALGgqurdTzXEzJNx7vVh+8B9tlqhRpR2Y=",
+        "lastModified": 1718339789,
+        "narHash": "sha256-Q3fgY7huFE+uaw7BNsAl1x+FvjDAi3EDWPnlALJt5pM=",
         "owner": "catppuccin",
-        "repo": "alacritty",
-        "rev": "94800165c13998b600a9da9d29c330de9f28618e",
+        "repo": "nix",
+        "rev": "73e06d5bd7ed34bdd0168030893ef8364fdc1d4a",
         "type": "github"
       },
       "original": {
         "owner": "catppuccin",
-        "repo": "alacritty",
-        "type": "github"
-      }
-    },
-    "catppuccin-bat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1714038927,
-        "narHash": "sha256-Q5B4NDrfCIK3UAMs94vdXnR42k4AXCqZz6sRn8bzmf4=",
-        "owner": "catppuccin",
-        "repo": "bat",
-        "rev": "d714cc1d358ea51bfc02550dabab693f70cccea0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "bat",
-        "type": "github"
-      }
-    },
-    "catppuccin-btop": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1715687124,
-        "narHash": "sha256-UXeTypc15MhjgGUiCrDUZ40m32yH2o1N+rcrEgY6sME=",
-        "owner": "catppuccin",
-        "repo": "btop",
-        "rev": "21b8d5956a8b07fa52519e3267fb3a2d2e693d17",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "btop",
-        "type": "github"
-      }
-    },
-    "catppuccin-fish": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1715687686,
-        "narHash": "sha256-shQxlyoauXJACoZWtRUbRMxmm10R8vOigXwjxBhG8ng=",
-        "owner": "catppuccin",
-        "repo": "fish",
-        "rev": "a3b9eb5eaf2171ba1359fe98f20d226c016568cf",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "fish",
-        "type": "github"
-      }
-    },
-    "catppuccin-mako": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1691845483,
-        "narHash": "sha256-nUzWkQVsIH4rrCFSP87mXAka6P+Td2ifNbTuP7NM/SQ=",
-        "owner": "catppuccin",
-        "repo": "mako",
-        "rev": "9dd088aa5f4529a3dd4d9760415e340664cb86df",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "mako",
+        "repo": "nix",
         "type": "github"
       }
     },
@@ -939,11 +874,7 @@
         "TP-calcul-parallele": "TP-calcul-parallele",
         "TP-reinforcement-learning": "TP-reinforcement-learning",
         "agenix": "agenix",
-        "catppuccin-alacritty": "catppuccin-alacritty",
-        "catppuccin-bat": "catppuccin-bat",
-        "catppuccin-btop": "catppuccin-btop",
-        "catppuccin-fish": "catppuccin-fish",
-        "catppuccin-mako": "catppuccin-mako",
+        "catppuccin": "catppuccin",
         "disko": "disko",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
