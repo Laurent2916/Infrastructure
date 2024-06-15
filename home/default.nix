@@ -11,7 +11,6 @@
     ./alacritty
     ./firefox
     ./gtk
-    ./mpv
     ./shell
     ./thunderbird
     ./vscode
