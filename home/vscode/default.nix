@@ -21,9 +21,13 @@
       usernamehw.errorlens
     ];
     userSettings = {
+      "editor.formatOnSave" = true;
+      "editor.formatOnPaste" = true;
+      "files.insertFinalNewline" = true;
+      "files.trimTrailingWhitespace" = true;
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "editor.fontLigatures" = true;
-      "editor.formatOnSave" = true;
+      "editor.rulers" = [120];
       "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
@@ -46,9 +50,23 @@
       "julia.symbolCacheDownload" = true;
       "terminal.integrated.commandsToSkipShell" = ["language-julia.interrupt"];
       "diffEditor.ignoreTrimWhitespace" = false;
-      "editor.rulers" = [120];
       "remote.SSH.useExecServer" = false;
       "python.analysis.typeCheckingMode" = "strict";
+      "files.exclude" = {
+        # defaults
+        "**/.git" = true;
+        "**/.svn" = true;
+        "**/.hg" = true;
+        "**/CVS" = true;
+        "**/.DS_Store" = true;
+        "**/Thumbs.db" = true;
+        # annoying
+        "**/__pycache__" = true;
+        "**/.mypy_cache" = true;
+        "**/.ruff_cache" = true;
+        "**/*.egg-info" = true;
+        "**/.direnv" = true;
+      };
     };
   };
 }
