@@ -33,6 +33,7 @@
       "git.enableSmartCommit" = true;
       "gitmoji.showEmojiCode" = true;
       "terminal.integrated.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
+      "terminal.integrated.scrollback" = 100000;
       "window.menuBarVisibility" = "toggle";
       "window.zoomLevel" = -0.75;
       "workbench.colorTheme" = "Catppuccin Mocha";
@@ -52,6 +53,10 @@
       "diffEditor.ignoreTrimWhitespace" = false;
       "remote.SSH.useExecServer" = false;
       "python.analysis.typeCheckingMode" = "strict";
+      "python.analysis.inlayHints.functionReturnTypes" = true;
+      "python.analysis.inlayHints.pytestParameters" = true;
+      "python.analysis.inlayHints.callArgumentNames" = "partial";
+      "python.analysis.inlayHints.variableTypes" = true;
       "files.exclude" = {
         # defaults
         "**/.git" = true;
@@ -64,6 +69,7 @@
         "**/__pycache__" = true;
         "**/.mypy_cache" = true;
         "**/.ruff_cache" = true;
+        "**/.pytest_cache" = true;
         "**/*.egg-info" = true;
         "**/.direnv" = true;
       };
