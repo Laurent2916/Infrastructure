@@ -12,7 +12,10 @@
       enable = true;
       size = "compact";
       tweaks = ["rimless" "normal"];
-      cursor.accent = "dark";
+      cursor = {
+        enable = true;
+        accent = "dark";
+      };
     };
   };
 }

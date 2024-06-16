@@ -33,12 +33,6 @@
     ./partitions.nix
   ];
 
-  # tests, temporary or move this shit to nixos-hardware public repo
-  # services.thermald.enable = lib.mkDefault true;
-
-  # Includes the Wi-Fi and Bluetooth firmware for the QCA6390. ??????
-  # hardware.enableRedistributableFirmware = true;
-
   # enable finger print sensor.
   # this has to be configured with `sudo fprintd-enroll <username>`.
   services.fprintd.enable = true;
@@ -48,8 +42,7 @@
   # Allows for updating firmware via `fwupdmgr`.
   services.fwupd.enable = true;
 
-  # webcam bullshit fuck you intel
-  # bugged my power down ? try to uninstall ? doesn't work anyway
+  # webcam
   # hardware.firmware = [
   #   pkgs.ivsc-firmware
   # ];

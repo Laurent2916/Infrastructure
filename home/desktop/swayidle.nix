@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }: let
   hyprland_pkg = inputs.hyprland.packages."${pkgs.system}".hyprland;
@@ -15,13 +16,13 @@ in {
       }
       {
         event = "before-sleep";
-        command = "${pkgs.swaylock-effects}/bin/swaylock -f";
+        command = "${lib.getExe pkgs.swaylock-effects} -f";
       }
     ];
     timeouts = [
       {
         timeout = 120;
-        command = "${pkgs.swaylock-effects}/bin/swaylock -f --grace 3";
+        command = "${lib.getExe pkgs.swaylock-effects} -f --grace 3";
       }
       {
         timeout = 150;
