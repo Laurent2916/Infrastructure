@@ -7,7 +7,7 @@
     ./exa.nix
     ./git.nix
     ./micro.nix
-    # ./ssh.nix
+    ./ssh.nix
     ./mpv.nix
     ./tmux.nix
     ./fish.nix
