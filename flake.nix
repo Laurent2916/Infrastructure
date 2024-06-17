@@ -65,7 +65,7 @@
       flake = false;
     };
     catppuccin = {
-      url = "github:Laurent2916/nix";
+      url = "github:catppuccin/nix";
     };
 
     # cesium nginx sites
