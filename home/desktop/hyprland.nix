@@ -83,11 +83,6 @@ in {
         no_gaps_when_only = true;
       };
 
-      # https://wiki.hyprland.org/Configuring/Master-Layout/
-      master = {
-        new_is_master = false;
-      };
-
       # https://wiki.hyprland.org/Configuring/Variables/#gestures
       gestures = {
         workspace_swipe = false;
