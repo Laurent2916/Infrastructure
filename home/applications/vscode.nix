@@ -19,6 +19,7 @@
       tamasfe.even-better-toml
       yzhang.markdown-all-in-one
       usernamehw.errorlens
+      charliermarsh.ruff
     ];
     userSettings = {
       "editor.formatOnSave" = true;
@@ -57,6 +58,13 @@
       "python.analysis.inlayHints.pytestParameters" = true;
       "python.analysis.inlayHints.callArgumentNames" = "partial";
       "python.analysis.inlayHints.variableTypes" = true;
+      "[python]" = {
+        "editor.defaultFormatter" = "charliermarsh.ruff";
+        "editor.codeActionsOnSave" = {
+          "source.organizeImports" = "always";
+          "source.fixAll" = "always";
+        };
+      };
       "files.exclude" = {
         # defaults
         "**/.git" = true;
