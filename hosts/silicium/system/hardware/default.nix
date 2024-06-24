@@ -2,10 +2,7 @@
   # hardware
   hardware = {
     enableRedistributableFirmware = true;
-    opengl = {
-      enable = true;
-      driSupport = true;
-    };
+    graphics.enable = true;
   };
 
   # logind configuration
