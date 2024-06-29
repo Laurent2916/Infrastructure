@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.fuzzel = {
     enable = true;
 
@@ -7,7 +7,7 @@
         line-height = 15;
         lines = 10;
         layer = "overlay";
-        icon-theme = "Papirus-Dark";
+        icon-theme = config.gtk.iconTheme.name;
       };
       colors = {
         background = "1E1E2EEE";
