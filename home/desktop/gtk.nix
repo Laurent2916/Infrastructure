@@ -12,6 +12,9 @@
       enable = true;
       size = "compact";
       tweaks = ["rimless" "normal"];
+      icon = {
+        enable = true;
+      };
       cursor = {
         enable = true;
         accent = "dark";
