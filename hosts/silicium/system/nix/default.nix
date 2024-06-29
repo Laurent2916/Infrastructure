@@ -37,7 +37,6 @@
       "vscode"
       "vscode-extension-github-copilot"
       "vscode-extension-github-copilot-chat"
-      "vscode-extension-ms-vsliveshare-vsliveshare"
     ];
 
   # print diff between two generations

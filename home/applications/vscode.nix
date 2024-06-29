@@ -14,7 +14,6 @@
       jnoortheen.nix-ide
       kamadorueda.alejandra
       mkhl.direnv
-      ms-vsliveshare.vsliveshare
       seatonjiang.gitmoji-vscode
       tamasfe.even-better-toml
       yzhang.markdown-all-in-one
@@ -43,7 +42,6 @@
       "gitlens.telemetry.enabled" = false;
       "telemetry.telemetryLevel" = "off";
       "editor.inlineSuggest.enabled" = true;
-      "liveshare.presence" = true;
       "github.copilot.enable" = {"markdown" = true;};
       "github.copilot.editor.enableAutoCompletions" = true;
       "nix.enableLanguageServer" = true;
