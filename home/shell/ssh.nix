@@ -44,6 +44,12 @@ in {
         zone = "europe-west1-d";
         forwardAgent = true;
       };
+      "dataverse51-gpu" = gcpHost {
+        hostname = "dataverse51-gpu";
+        project = "genie-training";
+        zone = "europe-west4-a";
+        forwardAgent = true;
+      };
       "laurent-dev-hdd" = gcpHost {
         hostname = "laurent-dev-hdd";
         project = "genie-training";
