@@ -15,10 +15,11 @@
       icon = {
         enable = true;
       };
-      cursor = {
-        enable = true;
-        accent = "dark";
-      };
     };
+  };
+
+  catppuccin.pointerCursor = {
+    enable = true;
+    accent = "dark";
   };
 }

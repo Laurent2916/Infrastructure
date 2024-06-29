@@ -6,7 +6,7 @@
   ...
 }: let
   hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland;
-  cursor = config.gtk.catppuccin.cursor;
+  cursor = config.catppuccin.pointerCursor;
 in {
   wayland.windowManager.hyprland = {
     enable = true;
