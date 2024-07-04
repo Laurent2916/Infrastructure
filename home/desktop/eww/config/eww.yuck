@@ -37,27 +37,22 @@
     (metric
       :label "󰕾"
       :value volume
-      :onchange "pamixer --set-volume {}"
     )
     (metric
       :label "󱐋"
       :value {EWW_BATTERY.total_avg}
-      :onchange ""
     )
     (metric
       :label "󰋊"
       :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
-      :onchange ""
     )
     (metric
       :label ""
       :value {EWW_RAM.used_mem_perc}
-      :onchange ""
     )
     (metric
       :label "󰍛"
       :value {EWW_CPU.avg}
-      :onchange ""
     )
     time
   )
@@ -103,7 +98,7 @@
   )
 )
 
-(defwidget metric [label value onchange]
+(defwidget metric [label value]
   (box
     :orientation "h"
     :class "metric"
@@ -115,16 +110,14 @@
     (scale
       :min 0
       :max 100
-      :active {onchange != ""}
       :value value
-      :onchange onchange
     )
   )
 )
 
 (defpoll volume
   :interval "1s"
-  "pamixer --get-volume"
+  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0*//'"
 )
 
 (defpoll time

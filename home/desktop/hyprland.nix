@@ -117,10 +117,10 @@ in {
         ", XF86MonBrightnessDown, exec, ${lib.getExe pkgs.light} -U 5"
 
         # Audio
-        ", XF86AudioMute, exec, ${lib.getExe pkgs.pamixer} --sink 0 -t"
-        ", XF86AudioRaiseVolume, exec, ${lib.getExe pkgs.pamixer} -i 5"
-        ", XF86AudioLowerVolume, exec, ${lib.getExe pkgs.pamixer} -d 5"
-        ", XF86AudioMicMute, exec, ${lib.getExe pkgs.pamixer} --source 0 -t"
+        ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"
+        ", XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"
+        ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
         ", XF86AudioPlay, exec, ${lib.getExe pkgs.playerctl} play-pause"
         ", XF86AudioStop, exec, ${lib.getExe pkgs.playerctl} stop"
         ", XF86AudioNext, exec, ${lib.getExe pkgs.playerctl} next"

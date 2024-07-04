@@ -18,7 +18,7 @@
     pwgen # password generator
     rsync # better scp
     socat # socket cat
-    sysz # better systemctl
+    sysz # tui for systemctl
     xdg-utils
   ];
 }
