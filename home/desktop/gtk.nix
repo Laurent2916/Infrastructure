@@ -18,6 +18,11 @@
     };
   };
 
+  home.pointerCursor = {
+    size = 20;
+    gtk.enable = true;
+    x11.enable = true;
+  };
   catppuccin.pointerCursor = {
     enable = true;
     accent = "dark";
