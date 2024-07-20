@@ -108,9 +108,7 @@ in {
 
         # Screenshot
         ", Print, exec, ${lib.getExe pkgs.grim} `date +'%Y-%m-%dT%H:%M:%S'`.png"
-        "SHIFT, Print, exec, ${lib.getExe pkgs.grim} - | wl-copy -t 'image/png'"
-        "$mod, Print, exec, ${lib.getExe pkgs.slurp} -d | ${lib.getExe pkgs.grim} -g - `date +'%Y-%m-%dT%H:%M:%S'`.png"
-        "$mod SHIFT, Print, exec, ${lib.getExe pkgs.slurp} -d | ${lib.getExe pkgs.grim} -g - - | ${pkgs.wl-clipboard}/bin/wl-copy -t 'image/png'"
+        "$mod, Print, exec, ${lib.getExe pkgs.grim} - | ${lib.getExe pkgs.satty} --filename - --fullscreen --initial-tool crop --copy-command ${pkgs.wl-clipboard}/bin/wl-copy"
 
         # Backlight
         ", XF86MonBrightnessUp, exec, ${lib.getExe pkgs.light} -A 5"
