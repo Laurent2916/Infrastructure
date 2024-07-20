@@ -6,6 +6,7 @@
     ./gitea
     ./nginx
     ./ssh
+    ./fail2ban.nix
   ];
 
   networking.firewall = {
