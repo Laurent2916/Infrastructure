@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/56b7a5788005a3eaecb5298f0dbed0f7d1573abc/logo/nix-snowflake-colours.svg" width=100px>
 
   Laureηt's Infrastructure <br>
-  <img src="https://github.com/catppuccin/catppuccin/blob/c675f7ccdc325cf6ba228ebb53fdf4eaa40aace6/assets/palette/macchiato.png" width="600px">
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/c675f7ccdc325cf6ba228ebb53fdf4eaa40aace6/assets/palette/macchiato.png" width="600px">
 
   <a href="https://github.com/ryantm/agenix">
     <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=Secrets&message=age&color=ea999c&labelColor=303446">
