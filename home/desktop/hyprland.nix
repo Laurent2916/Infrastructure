@@ -104,7 +104,7 @@ in {
         "$mod, L, exec, ${lib.getExe pkgs.swaylock-effects} -f"
         "$mod, space, exec, ${lib.getExe pkgs.fuzzel}"
         "$mod, C, exec, ${lib.getExe pkgs.cliphist} list | ${lib.getExe pkgs.fuzzel} -d --tabs 2 --width 100 | ${lib.getExe pkgs.cliphist} decode | ${pkgs.wl-clipboard}/bin/wl-copy"
-        "$mod, E, exec, BEMOJI_PICKER_CMD='${lib.getExe pkgs.fuzzel} -d' ${lib.getExe pkgs.bemoji} -n"
+        "$mod, E, exec, BEMOJI_PICKER_CMD='${lib.getExe pkgs.fuzzel} -d' ${lib.getExe pkgs.bemoji} -n -e | ${pkgs.wl-clipboard}/bin/wl-copy"
 
         # Screenshot
         ", Print, exec, ${lib.getExe pkgs.grim} `date +'%Y-%m-%dT%H:%M:%S'`.png"
