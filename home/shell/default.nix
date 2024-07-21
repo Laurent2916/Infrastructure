@@ -12,4 +12,8 @@
     ./tmux.nix
     ./fish.nix
   ];
+
+  home.sessionVariables = {
+    DO_NOT_TRACK = 1;
+  };
 }
