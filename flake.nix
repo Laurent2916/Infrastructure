@@ -69,6 +69,12 @@
     };
 
     # cesium nginx sites
+    website = {
+      url = "git+https://git.fainsin.bzh/Laurent/website";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
     resume = {
       url = "git+https://git.fainsin.bzh/Laurent/resume";
       inputs.nixpkgs.follows = "nixpkgs";
