@@ -5,7 +5,6 @@
   lib,
   ...
 }: let
-  hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland;
   cursor = config.catppuccin.pointerCursor;
 in {
   wayland.windowManager.hyprland = {
@@ -23,7 +22,7 @@ in {
         "${lib.getExe pkgs.thunderbird}"
         "${pkgs.wl-clipboard}/bin/wl-paste --watch ${lib.getExe pkgs.cliphist} store"
         "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --start --components=secrets"
-        "${hyprland}/bin/hyprctl setcursor catppuccin-${cursor.flavor}-${cursor.accent}-cursors 24" # FIXME: shouldn't be necessary
+        "${pkgs.hyprland}/bin/hyprctl setcursor catppuccin-${cursor.flavor}-${cursor.accent}-cursors 24" # FIXME: shouldn't be necessary
       ];
 
       # https://wiki.hyprland.org/Configuring/Monitors/

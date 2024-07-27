@@ -1,16 +1,10 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
-  hyprland = inputs.hyprland.packages."${pkgs.system}".hyprland;
-in {
+{pkgs, ...}: {
   services.greetd = {
     enable = true;
 
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${hyprland}/bin/Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${pkgs.hyprland}/bin/Hyprland";
         user = "greeter";
       };
     };

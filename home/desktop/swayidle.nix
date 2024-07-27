@@ -1,18 +1,15 @@
 {
-  inputs,
   pkgs,
   lib,
   ...
-}: let
-  hyprland_pkg = inputs.hyprland.packages."${pkgs.system}".hyprland;
-in {
+}: {
   services.swayidle = {
     enable = true;
     systemdTarget = "hyprland-session.target";
     events = [
       {
         event = "after-resume";
-        command = "${hyprland_pkg}/bin/hyprctl dispatch dpms on";
+        command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on";
       }
       {
         event = "before-sleep";
@@ -26,7 +23,7 @@ in {
       }
       {
         timeout = 150;
-        command = "${hyprland_pkg}/bin/hyprctl dispatch dpms off";
+        command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
       }
       {
         timeout = 300;
