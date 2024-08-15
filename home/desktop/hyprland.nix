@@ -42,7 +42,8 @@ in {
 
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
-        kb_layout = "fr";
+        kb_layout = "fr,fr";
+        kb_variant = "azerty,ergol";
         sensitivity = 0;
         follow_mouse = 2;
 
