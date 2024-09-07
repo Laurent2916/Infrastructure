@@ -26,8 +26,8 @@
         }
         // {
           "/TP-calcul-parallele/" = import ./TP-calcul-parallele.nix {inherit inputs system;};
-          # "/TP-reinforcement-learning/" = import ./TP-reinforcement-learning.nix {inherit inputs system;};
-          "/TP-traitement-audio-visuel/" = import ./TP-traitement-audio-visuel.nix pkgs;
+          "/TP-reinforcement-learning/" = import ./TP-reinforcement-learning.nix {inherit inputs system;};
+          "/TP-traitement-audio-visuel/" = import ./TP-traitement-audio-visuel.nix {inherit inputs system;};
         };
     };
   };
