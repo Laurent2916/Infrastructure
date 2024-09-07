@@ -28,6 +28,11 @@
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "editor.fontLigatures" = true;
       "editor.rulers" = [120];
+      "editor.unicodeHighlight.ambiguousCharacters" = false;
+      "editor.unicodeHighlight.invisibleCharacters" = false;
+      "editor.wordWrapColumn" = 120;
+      "editor.wordWrap" = "off";
+      "editor.wrappingIndent" = "same";
       "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
