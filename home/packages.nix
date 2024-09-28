@@ -8,8 +8,8 @@
     distrobox # docker utils
     docker-compose # docker compose
     duf # replacement for df
-    gnome.nautilus # file explorer
-    gnome.seahorse # key manager
+    nautilus # file explorer
+    seahorse # key manager
     jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager
