@@ -1,9 +1,6 @@
-{pkgs, ...}: {
+{...}: {
   # hardware
-  hardware = {
-    enableRedistributableFirmware = true;
-    graphics.enable = true;
-  };
+  hardware.graphics.enable = true;
 
   # logind configuration
   services.logind = {
@@ -16,9 +13,6 @@
   # tlp, power management
   services.tlp.enable = true;
 
-  # thermald, controls temperature
-  services.thermald.enable = true;
-
   # bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
@@ -29,15 +23,6 @@
   imports = [
     ./partitions.nix
   ];
-
-  # enable finger print sensor.
-  # this has to be configured with `sudo fprintd-enroll <username>`.
-  services.fprintd.enable = true;
-  services.fprintd.tod.enable = true;
-  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
-
-  # Allows for updating firmware via `fwupdmgr`.
-  services.fwupd.enable = true;
 
   # webcam
   # hardware.firmware = [

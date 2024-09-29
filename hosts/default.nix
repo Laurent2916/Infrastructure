@@ -46,10 +46,7 @@ in {
       # inputs.disko.nixosModules.default
       # inputs.lanzaboote.nixosModules.lanzaboote
       # inputs.impermanence.nixosModules.impermanence
-      # inputs.nixos-hardware.nixosModules.dell-xps-13-something
-      inputs.nixos-hardware.nixosModules.common-cpu-intel
-      inputs.nixos-hardware.nixosModules.common-pc-laptop
-      inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+      inputs.nixos-hardware.nixosModules.dell-xps-13-9315
       {inherit home-manager;}
     ];
   };
