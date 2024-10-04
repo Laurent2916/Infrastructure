@@ -55,7 +55,7 @@
 
     # home stuff
     wallpaper = {
-      url = "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28";
+      url = "https://images.unsplash.com/photo-1487856374269-301dc48a3c31?q=100&w=1920";
       flake = false;
     };
     catppuccin = {

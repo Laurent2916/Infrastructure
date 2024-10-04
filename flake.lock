@@ -807,13 +807,13 @@
     "wallpaper": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-w0KUzj0DC+e53v9CrLRJimUTROh98IZixwCkDDLGMto=",
+        "narHash": "sha256-dzmt9JluwqxxNV1rUw6g3J9hEu94JAVamatL2EOLK3A=",
         "type": "file",
-        "url": "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28"
+        "url": "https://images.unsplash.com/photo-1487856374269-301dc48a3c31?q=100&w=1920"
       },
       "original": {
         "type": "file",
-        "url": "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28"
+        "url": "https://images.unsplash.com/photo-1487856374269-301dc48a3c31?q=100&w=1920"
       }
     },
     "website": {
