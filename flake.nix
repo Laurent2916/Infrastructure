@@ -47,7 +47,7 @@
       # inputs.nixpkgs.follows = "nixpkgs";  # leads to many recompilations
     };
     nixos-hardware = {
-      url = "github:Laurent2916/nixos-hardware/dell-xps-9315";
+      url = "github:NixOS/nixos-hardware";
     };
     impermanence = {
       url = "github:nix-community/impermanence";
