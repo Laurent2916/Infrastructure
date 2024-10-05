@@ -8,9 +8,6 @@
   boot.supportedFilesystems = ["ntfs"];
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # TODO: replace by lanzaboot
-  boot.loader.systemd-boot.enable = true;
-
   # clean /tmp at each boot
   boot.tmp.cleanOnBoot = true;
 

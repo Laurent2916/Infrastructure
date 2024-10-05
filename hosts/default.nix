@@ -27,7 +27,7 @@ in {
       inputs.disko.nixosModules.default
       inputs.impermanence.nixosModules.impermanence
       inputs.nixos-hardware.nixosModules.dell-xps-13-9315
-      # inputs.lanzaboote.nixosModules.lanzaboote
+      inputs.lanzaboote.nixosModules.lanzaboote
       {inherit home-manager;}
     ];
   };

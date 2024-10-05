@@ -16,7 +16,7 @@
     ./hardware.nix
     ./i18n.nix
     ./impermanence.nix
-    # ./lanzaboot.nix
+    ./lanzaboot.nix
     ./networking.nix
     ./nix.nix
     ./security.nix
