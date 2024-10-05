@@ -8,6 +8,7 @@
     ./git.nix
     ./micro.nix
     ./ssh.nix
+    ./nix-index.nix
     ./mpv.nix
     ./tmux.nix
     ./fish.nix
