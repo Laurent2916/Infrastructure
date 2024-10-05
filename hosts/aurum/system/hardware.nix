@@ -20,10 +20,6 @@
   # backlight intensity
   programs.light.enable = true;
 
-  imports = [
-    ./partitions.nix
-  ];
-
   # webcam
   # hardware.firmware = [
   #   pkgs.ivsc-firmware

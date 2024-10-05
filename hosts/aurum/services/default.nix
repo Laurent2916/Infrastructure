@@ -1,5 +1,5 @@
 {...}: {
   imports = [
-    ./greetd
+    ./greetd.nix
   ];
 }

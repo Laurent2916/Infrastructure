@@ -8,17 +8,19 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   imports = [
-    ./audio
-    ./boot
-    # ./disko
-    ./docker
-    ./fonts
-    ./hardware
-    ./i18n
-    # ./impermanence
-    ./networking
-    ./nix
-    ./security
-    ./users
+    ./audio.nix
+    ./boot.nix
+    # ./disko.nix
+    ./docker.nix
+    ./fonts.nix
+    ./hardware.nix
+    ./i18n.nix
+    # ./impermanence.nix
+    # ./lanzaboot.nix
+    ./networking.nix
+    ./nix.nix
+    ./partitions.nix
+    ./security.nix
+    ./users.nix
   ];
 }

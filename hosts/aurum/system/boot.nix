@@ -8,7 +8,7 @@
   boot.supportedFilesystems = ["ntfs"];
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # tmp, will be replaced by lanzaboot
+  # TODO: replace by lanzaboot
   boot.loader.systemd-boot.enable = true;
 
   # clean /tmp at each boot
@@ -19,10 +19,6 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  # imports = [
-  #   ./lanzaboot.nix
-  # ];
 
   boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [""];
