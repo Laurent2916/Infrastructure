@@ -12,7 +12,7 @@
     files = [
       "/etc/machine-id"
     ];
-    # TODO: move this into home config, when silicium has impermanence too
+    # TODO: move this into home config
     users.laurent = {
       directories = [
         "Documents"

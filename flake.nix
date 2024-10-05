@@ -1,9 +1,6 @@
 {
   description = "Laureηt's infrastructure";
 
-  # TODO: luks encrypt cesium (dropbear ?)
-  # TODO: setup disko sur silicium
-
   inputs = {
     # core stuff
     nixpkgs = {
