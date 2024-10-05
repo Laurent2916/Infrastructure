@@ -44,7 +44,7 @@
     )
     (metric
       :label "󰋊"
-      :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+      :value {round((1 - (EWW_DISK["/persist"].free / EWW_DISK["/persist"].total)) * 100, 0)}
     )
     (metric
       :label ""
