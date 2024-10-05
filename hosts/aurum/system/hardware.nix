@@ -21,7 +21,7 @@
   programs.light.enable = true;
 
   # impermanence
-  fileSystems."/persist".requiredForBoot = true;
+  fileSystems."/persist".neededForBoot = true;
 
   # webcam
   # hardware.firmware = [
