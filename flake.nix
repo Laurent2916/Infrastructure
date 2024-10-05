@@ -41,13 +41,16 @@
     };
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
-      # inputs.nixpkgs.follows = "nixpkgs";  # leads to many recompilations
     };
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
     };
     impermanence = {
       url = "github:nix-community/impermanence";
+    };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # home stuff

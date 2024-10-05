@@ -3,6 +3,7 @@
 
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.nix-index-database.hmModules.nix-index
 
     ./applications
     ./desktop
