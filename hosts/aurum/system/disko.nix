@@ -51,15 +51,15 @@
           };
         };
       };
-      nodev = {
-        "/" = {
-          fsType = "tmpfs";
-          mountOptions = [
-            "defaults"
-            "mode=755"
-            "size=8G"
-          ];
-        };
+    };
+    nodev = {
+      "/" = {
+        fsType = "tmpfs";
+        mountOptions = [
+          "defaults"
+          "mode=755"
+          "size=8G"
+        ];
       };
     };
   };

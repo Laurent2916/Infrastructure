@@ -1,5 +1,5 @@
 {...}: {
-  environment.persistence."/persistent" = {
+  environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
       "/var/log"

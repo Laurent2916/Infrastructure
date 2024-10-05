@@ -10,16 +10,15 @@
   imports = [
     ./audio.nix
     ./boot.nix
-    # ./disko.nix
+    ./disko.nix
     ./docker.nix
     ./fonts.nix
     ./hardware.nix
     ./i18n.nix
-    # ./impermanence.nix
+    ./impermanence.nix
     # ./lanzaboot.nix
     ./networking.nix
     ./nix.nix
-    ./partitions.nix
     ./security.nix
     ./users.nix
   ];

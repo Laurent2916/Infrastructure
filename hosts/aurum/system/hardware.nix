@@ -1,5 +1,5 @@
 {...}: {
-  # hardware
+  # graphics
   hardware.graphics.enable = true;
 
   # logind configuration
@@ -19,6 +19,9 @@
 
   # backlight intensity
   programs.light.enable = true;
+
+  # impermanence
+  fileSystems."/persist".requiredForBoot = true;
 
   # webcam
   # hardware.firmware = [
