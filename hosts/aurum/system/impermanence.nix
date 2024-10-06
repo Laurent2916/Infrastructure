@@ -21,6 +21,8 @@
         ".thunderbird"
         ".local/share/direnv"
         ".local/share/keyrings"
+        ".local/share/atuin"
+        ".cache/nix"
         {
           directory = ".ssh";
           mode = "0700";
