@@ -37,4 +37,19 @@
       proxyWebsockets = true;
     };
   };
+
+  services.gatus.settings.endpoints = [
+    {
+      name = "git.fainsin.bzh";
+      group = "services";
+      url = "https://git.fainsin.bzh";
+      interval = "5m";
+      conditions = [
+        "[STATUS] == 200"
+        "[RESPONSE_TIME] < 300"
+        "[CERTIFICATE_EXPIRATION] > 240h"
+        "[BODY] == pat(*<title>Explore - Forgejo: Beyond coding. We Forge.</title>*)"
+      ];
+    }
+  ];
 }

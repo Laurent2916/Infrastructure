@@ -5,7 +5,7 @@
     ./atuin.nix
     ./fail2ban.nix
     ./gatus.nix
-    ./gitea.nix
+    ./forgejo.nix
     ./ssh.nix
   ];
 }
