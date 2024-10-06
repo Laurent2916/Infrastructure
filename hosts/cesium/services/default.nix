@@ -1,18 +1,11 @@
 {...}: {
   imports = [
-    ./acme
-    ./atuin
-    # ./gatus
-    ./gitea
     ./nginx
-    ./ssh
+    ./acme.nix
+    ./atuin.nix
     ./fail2ban.nix
+    ./gatus.nix
+    ./gitea.nix
+    ./ssh.nix
   ];
-
-  networking.firewall = {
-    allowedTCPPorts = [
-      80 # http
-      443 # https / tls
-    ];
-  };
 }

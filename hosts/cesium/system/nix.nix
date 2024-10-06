@@ -8,7 +8,7 @@
   nix.settings.auto-optimise-store = true;
   nix.optimise = {
     automatic = true;
-    dates = "daily";
+    dates = ["12:00"];
   };
 
   # garbage collection
