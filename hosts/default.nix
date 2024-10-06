@@ -23,11 +23,11 @@ in {
     modules = [
       ./aurum
       inputs.catppuccin.nixosModules.catppuccin
-      inputs.home-manager.nixosModules.home-manager
-      inputs.disko.nixosModules.default
-      inputs.impermanence.nixosModules.impermanence
       inputs.nixos-hardware.nixosModules.dell-xps-13-9315
+      inputs.home-manager.nixosModules.home-manager
+      inputs.impermanence.nixosModules.impermanence
       inputs.lanzaboote.nixosModules.lanzaboote
+      inputs.disko.nixosModules.default
       {inherit home-manager;}
     ];
   };
@@ -41,10 +41,8 @@ in {
     };
     modules = [
       ./cesium
-      inputs.home-manager.nixosModules.home-manager
       inputs.disko.nixosModules.default
       inputs.agenix.nixosModules.default
-      inputs.lanzaboote.nixosModules.lanzaboote
     ];
   };
 }
