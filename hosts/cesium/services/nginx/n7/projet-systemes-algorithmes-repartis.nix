@@ -1,17 +1,19 @@
 {
   inputs,
   system,
+  location,
+  vhost,
   ...
 }: {
-  services.nginx.virtualHosts."n7.laurent.fainsin.bzh".locations."/projet-systemes-algorithmes-repartis/" = {
+  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
     alias = inputs.projet-systemes-algorithmes-repartis.packages.${system}.slides + "/";
   };
 
   services.gatus.settings.endpoints = [
     {
-      name = "projet-systemes-algorithmes-repartis";
-      group = "n7.laurent.fainsin.bzh";
-      url = "https://n7.laurent.fainsin.bzh/projet-systemes-algorithmes-repartis/";
+      name = location;
+      group = vhost;
+      url = "https://${vhost}/${location}/";
       interval = "15m";
       conditions = [
         "[STATUS] == 200"

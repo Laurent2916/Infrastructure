@@ -1,17 +1,19 @@
 {
   inputs,
   system,
+  location,
+  vhost,
   ...
 }: {
-  services.nginx.virtualHosts."n7.laurent.fainsin.bzh".locations."/TP-calcul-parallele/" = {
+  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
     alias = inputs.TP-calcul-parallele.packages.${system}.report + "/";
   };
 
   services.gatus.settings.endpoints = [
     {
-      name = "TP-calcul-parallele";
-      group = "n7.laurent.fainsin.bzh";
-      url = "https://n7.laurent.fainsin.bzh/TP-calcul-parallele/";
+      name = location;
+      group = vhost;
+      url = "https://${vhost}/${location}/";
       interval = "15m";
       conditions = [
         "[STATUS] == 200"

@@ -1,17 +1,19 @@
 {
   inputs,
   system,
+  location,
+  vhost,
   ...
 }: {
-  services.nginx.virtualHosts."n7.laurent.fainsin.bzh".locations."/TP-traitement-audio-visuel/" = {
+  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
     alias = inputs.TP-traitement-audio-visuel.packages.${system}.notebooks + "/";
   };
 
   services.gatus.settings.endpoints = [
     {
-      name = "TP-traitement-audio-visuel";
-      group = "n7.laurent.fainsin.bzh";
-      url = "https://n7.laurent.fainsin.bzh/TP-traitement-audio-visuel/";
+      name = location;
+      group = vhost;
+      url = "https://${vhost}/${location}/";
       interval = "15m";
       conditions = [
         "[STATUS] == 200"

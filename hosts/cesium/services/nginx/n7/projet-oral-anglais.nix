@@ -1,17 +1,19 @@
 {
   inputs,
   system,
+  location,
+  vhost,
   ...
 }: {
-  services.nginx.virtualHosts."n7.laurent.fainsin.bzh".locations."/projet-oral-anglais/" = {
+  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
     alias = inputs.projet-oral-anglais.packages.${system}.slides + "/";
   };
 
   services.gatus.settings.endpoints = [
     {
-      name = "projet-oral-anglais";
-      group = "n7.laurent.fainsin.bzh";
-      url = "https://n7.laurent.fainsin.bzh/projet-oral-anglais/";
+      name = location;
+      group = vhost;
+      url = "https://${vhost}/${location}/";
       interval = "15m";
       conditions = [
         "[STATUS] == 200"

@@ -1,17 +1,19 @@
 {
   inputs,
   system,
+  vhost,
+  location,
   ...
 }: {
-  services.nginx.virtualHosts."n7.laurent.fainsin.bzh".locations."/projet-audionumerique/" = {
+  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
     alias = inputs.projet-audionumerique.packages.${system}.slides + "/";
   };
 
   services.gatus.settings.endpoints = [
     {
-      name = "projet-audionumerique";
-      group = "n7.laurent.fainsin.bzh";
-      url = "https://n7.laurent.fainsin.bzh/projet-audionumerique/";
+      name = location;
+      group = vhost;
+      url = "https://${vhost}/${location}/";
       interval = "15m";
       conditions = [
         "[STATUS] == 200"

@@ -1,17 +1,19 @@
 {
   inputs,
   system,
+  location,
+  vhost,
   ...
 }: {
-  services.nginx.virtualHosts."n7.laurent.fainsin.bzh".locations."/TP-reinforcement-learning/" = {
+  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
     alias = inputs.TP-reinforcement-learning.packages.${system}.notebooks + "/";
   };
 
   services.gatus.settings.endpoints = [
     {
-      name = "TP-reinforcement-learning";
-      group = "n7.laurent.fainsin.bzh";
-      url = "https://n7.laurent.fainsin.bzh/TP-reinforcement-learning/";
+      name = location;
+      group = vhost;
+      url = "https://${vhost}/${location}/";
       interval = "15m";
       conditions = [
         "[STATUS] == 200"

@@ -7,6 +7,7 @@
     "resume.laurent.fainsin.bzh" = {
       enableACME = true;
       forceSSL = true;
+
       locations = {
         "/" = {
           root = inputs.resume.packages.${system}.default;
