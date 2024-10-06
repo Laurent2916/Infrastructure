@@ -9,7 +9,6 @@
     docker-compose # docker compose
     duf # replacement for df
     nautilus # file explorer
-    seahorse # key manager
     jaq # (fast) json utils
     jmtpfs # for Android MTP
     keepassxc # password manager

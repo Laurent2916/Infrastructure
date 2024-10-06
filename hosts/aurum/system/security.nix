@@ -12,6 +12,9 @@
   # secrets keyring
   services.gnome.gnome-keyring.enable = true;
 
+  # seahorse secret manager
+  programs.seahorse.enable = true;
+
   # RealtimeKit system
   security.rtkit.enable = true;
 
