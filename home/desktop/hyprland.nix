@@ -21,7 +21,6 @@ in {
         "${lib.getExe pkgs.mako}"
         "${lib.getExe pkgs.thunderbird}"
         "${pkgs.wl-clipboard}/bin/wl-paste --watch ${lib.getExe pkgs.cliphist} store"
-        "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon --start --components=secrets"
         "${pkgs.hyprland}/bin/hyprctl setcursor catppuccin-${cursor.flavor}-${cursor.accent}-cursors 24" # FIXME: shouldn't be necessary
       ];
 
