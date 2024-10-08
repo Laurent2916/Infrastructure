@@ -23,6 +23,8 @@
         ".local/share/keyrings"
         ".local/share/atuin"
         ".cache/nix"
+        ".config/Code"
+        ".vscode"
         {
           directory = ".ssh";
           mode = "0700";
