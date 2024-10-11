@@ -170,11 +170,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1728638019,
-        "narHash": "sha256-eEga9ZYpWr4ippI8ntBdcNkXWY7qv1/9kK9jkemAyzQ=",
+        "lastModified": 1728673344,
+        "narHash": "sha256-Iqo1nHEkBeucGE48EWYbZkx9LAPAWyEkzAWH+fPXTUM=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "6af4e02b9cf2a4126af542c9e299f13228cfe2e0",
+        "rev": "a3619332369e1d254c68be5f019b3a8632e79bbc",
         "type": "github"
       },
       "original": {
@@ -307,11 +307,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1728598744,
-        "narHash": "sha256-sSfvyO5xH3HObHHmh6lp/hcvo7tMjFKd/HXpxyrRnoE=",
+        "lastModified": 1728650932,
+        "narHash": "sha256-mGKzqdsRyLnGNl6WjEr7+sghGgBtYHhJQ4mjpgRTCsU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "342a1d682386d3a1d74f9555cb327f2f311dda6e",
+        "rev": "65ae9c147349829d3df0222151f53f79821c5134",
         "type": "github"
       },
       "original": {
@@ -562,6 +562,32 @@
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique"
       }
     },
+    "projet-fin-etude": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1728676620,
+        "narHash": "sha256-iWbq4eeW+EAxfRBPCLD8rvAs7ah9rE0DvXK1osd02Qg=",
+        "ref": "refs/heads/master",
+        "rev": "098426d12cb0ec3c60462ed99f4101eede35df52",
+        "revCount": 58,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport"
+      }
+    },
     "projet-intelligence-artificielle-multimedia": {
       "inputs": {
         "flake-parts": [
@@ -736,6 +762,7 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "projet-audionumerique": "projet-audionumerique",
+        "projet-fin-etude": "projet-fin-etude",
         "projet-intelligence-artificielle-multimedia": "projet-intelligence-artificielle-multimedia",
         "projet-modelisation-geometrique": "projet-modelisation-geometrique",
         "projet-oral-anglais": "projet-oral-anglais",

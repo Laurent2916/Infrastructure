@@ -111,6 +111,12 @@
       inputs.flake-parts.follows = "flake-parts";
       inputs.systems.follows = "systems";
     };
+    projet-fin-etude = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
     TP-calcul-parallele = {
       url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
       inputs.nixpkgs.follows = "nixpkgs";
