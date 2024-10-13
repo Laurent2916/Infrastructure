@@ -117,6 +117,12 @@
       inputs.flake-parts.follows = "flake-parts";
       inputs.systems.follows = "systems";
     };
+    projet-probleme-inverse-3D = {
+      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-probleme-inverse-3D";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.systems.follows = "systems";
+    };
     TP-calcul-parallele = {
       url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
       inputs.nixpkgs.follows = "nixpkgs";
