@@ -22,6 +22,7 @@
         ".local/share/direnv"
         ".local/share/keyrings"
         ".local/share/atuin"
+        ".config/gcloud"
         ".cache/nix"
         ".config/Code"
         ".vscode"
