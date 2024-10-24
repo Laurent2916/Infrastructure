@@ -24,7 +24,7 @@ in {
     enable = true;
 
     compression = true;
-    addKeysToAgent = "ask";
+    addKeysToAgent = "yes";
 
     matchBlocks = {
       "cesium git.fainsin.bzh" = {
