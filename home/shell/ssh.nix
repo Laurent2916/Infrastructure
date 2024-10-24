@@ -50,10 +50,10 @@ in {
         zone = "europe-west4-a";
         forwardAgent = true;
       };
-      "laurent-dev-hdd" = gcpHost {
-        hostname = "laurent-dev-hdd";
+      "dataverse51-cvat" = gcpHost {
+        hostname = "dataverse51-cvat";
         project = "genie-training";
-        zone = "europe-west1-b";
+        zone = "europe-west4-a";
         forwardAgent = true;
       };
       "laurent-dev-l4" = gcpHost {
