@@ -3,7 +3,7 @@
     # https://notofonts.github.io/
     noto-fonts # standard characters
     noto-fonts-lgc-plus # latin, greek, and cyrillic
-    noto-fonts-cjk # chinese, japanese, and korean
+    noto-fonts-cjk-sans # chinese, japanese, and korean
     noto-fonts-emoji # emojis 🐢
 
     # https://github.com/tonsky/FiraCode
