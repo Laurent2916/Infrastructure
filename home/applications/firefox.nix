@@ -13,6 +13,8 @@
           "sidebar.revamp" = true;
           "sidebar.verticalTabs" = true;
           "sidebar.visibility" = "hide-sidebar";
+          # enable userChrome.css
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
         userChrome = ''
           #titlebar {
