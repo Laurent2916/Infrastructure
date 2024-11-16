@@ -55,10 +55,14 @@ in {
       # https://wiki.hyprland.org/Configuring/Variables/#decoration
       decoration = {
         rounding = 2;
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+
+        # https://wiki.hyprland.org/Configuring/Variables/#shadow
+        shadow = {
+          enabled = true;
+          range = 4;
+          render_power = 3;
+          color = "rgba(1a1a1aee)";
+        };
 
         # https://wiki.hyprland.org/Configuring/Variables/#blur
         blur = {
@@ -79,7 +83,6 @@ in {
       dwindle = {
         pseudotile = true;
         preserve_split = true;
-        no_gaps_when_only = true;
       };
 
       # https://wiki.hyprland.org/Configuring/Variables/#gestures
@@ -95,6 +98,20 @@ in {
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = true;
       };
+
+      # https://wiki.hyprland.org/Configuring/Workspace-Rules
+      workspace = [
+        "w[tv1], gapsout:0, gapsin:0"
+        "f[1], gapsout:0, gapsin:0"
+      ];
+
+      # https://wiki.hyprland.org/Configuring/Window-Rules/
+      windowrulev2 = [
+        "bordersize 0, floating:0, onworkspace:w[tv1]"
+        "rounding 0, floating:0, onworkspace:w[tv1]"
+        "bordersize 0, floating:0, onworkspace:f[1]"
+        "rounding 0, floating:0, onworkspace:f[1]"
+      ];
 
       bind = [
         "$mod, Return, exec, ${lib.getExe pkgs.alacritty}"
