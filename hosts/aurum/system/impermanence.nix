@@ -17,6 +17,8 @@
     users.laurent = {
       directories = [
         "Documents"
+        "Images"
+        "Videos"
         ".mozilla"
         ".thunderbird"
         ".local/share/direnv"
