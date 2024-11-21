@@ -26,6 +26,7 @@
         ".local/share/atuin"
         ".config/gcloud"
         ".cache/nix"
+        ".cache/huggingface"
         ".config/Code"
         ".vscode"
         {
