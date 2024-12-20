@@ -62,85 +62,85 @@
       url = "github:catppuccin/nix";
     };
 
-    # cesium nginx sites
-    website = {
-      url = "git+https://git.fainsin.bzh/Laurent/website";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    resume = {
-      url = "git+https://git.fainsin.bzh/Laurent/resume";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-intelligence-artificielle-multimedia = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-modelisation-geometrique = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-systemes-algorithmes-repartis = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-audionumerique = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-oral-japonais = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-oral-anglais = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-fin-etude = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    projet-probleme-inverse-3D = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-probleme-inverse-3D";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    TP-calcul-parallele = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    TP-reinforcement-learning = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
-    TP-traitement-audio-visuel = {
-      url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-traitement-audio-visuel";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.systems.follows = "systems";
-    };
+    # # cesium nginx sites
+    # website = {
+    #   url = "git+https://git.fainsin.bzh/Laurent/website";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # resume = {
+    #   url = "git+https://git.fainsin.bzh/Laurent/resume";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-intelligence-artificielle-multimedia = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-modelisation-geometrique = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-systemes-algorithmes-repartis = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-audionumerique = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-oral-japonais = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-oral-anglais = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-fin-etude = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # projet-probleme-inverse-3D = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/projet-probleme-inverse-3D";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # TP-calcul-parallele = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # TP-reinforcement-learning = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
+    # TP-traitement-audio-visuel = {
+    #   url = "git+https://git.fainsin.bzh/ENSEEIHT/TP-traitement-audio-visuel";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-parts.follows = "flake-parts";
+    #   inputs.systems.follows = "systems";
+    # };
   };
 
   nixConfig = {
