@@ -9,11 +9,6 @@
     users.laurent = ../home;
   };
 in {
-  # naming convention based on the periodic table
-  # NAS would be neodymium
-  # desktop would be neon
-  # smartphone would be lithium
-
   # work laptop
   aurum = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
@@ -32,17 +27,17 @@ in {
     ];
   };
 
-  # vps
-  cesium = nixpkgs.lib.nixosSystem rec {
+  # home server
+  xenon = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
-      inherit system;
     };
     modules = [
-      ./cesium
-      inputs.disko.nixosModules.default
-      inputs.agenix.nixosModules.default
+      ./xenon
+      inputs.nixos-hardware.nixosModules.common-cpu-intel
+      inputs.nixos-hardware.nixosModules.common-pc-ssd
+      inputs.lanzaboote.nixosModules.lanzaboote
     ];
   };
 }
