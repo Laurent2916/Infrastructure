@@ -44,8 +44,20 @@ in {
         zone = "europe-west4-a";
         forwardAgent = true;
       };
+      "dataverse51-spider" = gcpHost {
+        hostname = "dataverse51-spider";
+        project = "genie-training";
+        zone = "europe-west4-a";
+        forwardAgent = true;
+      };
       "dataverse51-gpu" = gcpHost {
         hostname = "dataverse51-gpu";
+        project = "genie-training";
+        zone = "europe-west4-a";
+        forwardAgent = true;
+      };
+      "dataverse51-multi-gpu" = gcpHost {
+        hostname = "dataverse51-multi-gpu";
         project = "genie-training";
         zone = "europe-west4-a";
         forwardAgent = true;
