@@ -11,6 +11,6 @@
     fira-code-symbols # unicode ligature glyphs
 
     # https://github.com/ryanoasis/nerd-fonts
-    (nerdfonts.override {fonts = ["FiraCode"];})
+    nerd-fonts.fira-code
   ];
 }
