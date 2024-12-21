@@ -6,6 +6,9 @@
 }: {
   boot.loader.systemd-boot.enable = true;
 
+  # impermanence
+  fileSystems."/persist".neededForBoot = true;
+
   # clean /tmp at each boot
   boot.tmp.cleanOnBoot = true;
 
