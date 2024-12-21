@@ -38,6 +38,8 @@ in {
       inputs.nixos-hardware.nixosModules.common-cpu-intel
       inputs.nixos-hardware.nixosModules.common-pc-ssd
       inputs.lanzaboote.nixosModules.lanzaboote
+      inputs.impermanence.nixosModules.impermanence
+      inputs.disko.nixosModules.default
     ];
   };
 }
