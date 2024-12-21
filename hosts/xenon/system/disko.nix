@@ -36,7 +36,7 @@
                     "/swap" = {
                       mountpoint = "/.swapvol";
                       swap = {
-                        swapfile.size = "32GiB";
+                        swapfile.size = "32G";
                       };
                     };
                     "/nix" = {
