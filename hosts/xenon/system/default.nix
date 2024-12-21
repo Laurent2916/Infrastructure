@@ -3,7 +3,9 @@
 
   imports = [
     ./boot.nix
+    ./disko.nix
     ./i18n.nix
+    ./impermanence.nix
     ./networking.nix
     ./nix.nix
     ./packages.nix
