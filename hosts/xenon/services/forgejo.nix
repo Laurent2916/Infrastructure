@@ -12,6 +12,7 @@
         LANDING_PAGE = "explore";
         ROOT_URL = "https://git.fainsin.bzh";
         DOMAIN = "git.fainsin.bzh";
+        SSH_DOMAIN = "ssh.fainsin.bzh";
       };
       indexer = {
         REPO_INDEXER_ENABLED = true;
