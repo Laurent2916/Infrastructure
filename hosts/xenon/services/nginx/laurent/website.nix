@@ -15,10 +15,10 @@
 
   services.cloudflared.tunnels."xenon".ingress = {
     "laurent.fainsin.bzh" = {
-      service = "http://localhost:${config.services.nginx.defaultHTTPListenPort}";
+      service = "http://localhost:${toString config.services.nginx.defaultHTTPListenPort}";
     };
     "fainsin.bzh" = {
-      service = "http://localhost:${config.services.nginx.defaultHTTPListenPort}";
+      service = "http://localhost:${toString config.services.nginx.defaultHTTPListenPort}";
     };
   };
 
