@@ -28,10 +28,11 @@ in {
   };
 
   # home server
-  xenon = nixpkgs.lib.nixosSystem {
+  xenon = nixpkgs.lib.nixosSystem rec {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
+      inherit system;
     };
     modules = [
       ./xenon
