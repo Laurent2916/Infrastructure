@@ -5,6 +5,7 @@
     ./fail2ban.nix
     ./forgejo.nix
     ./gatus.nix
+    ./nginx
     ./ssh.nix
   ];
 }
