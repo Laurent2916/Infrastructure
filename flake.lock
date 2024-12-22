@@ -1,5 +1,83 @@
 {
   "nodes": {
+    "TP-calcul-parallele": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704112398,
+        "narHash": "sha256-Dsor2NXQ21QDWahs4xn2sBusvXt9R8Mnj0/ZeiPjL+M=",
+        "ref": "refs/heads/master",
+        "rev": "5249ac1b957275f7e06a94e8db14520aae17e3a7",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-calcul-parallele"
+      }
+    },
+    "TP-reinforcement-learning": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704207599,
+        "narHash": "sha256-/YBlrRwvndfzZlD5A5VAyB67v409yqbu426SHm0TGCM=",
+        "ref": "refs/heads/master",
+        "rev": "bc31941d50b7a1bb59a92a89a5b3b98b254f697a",
+        "revCount": 4,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-reinforcement-learning"
+      }
+    },
+    "TP-traitement-audio-visuel": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1725709496,
+        "narHash": "sha256-9Aba+bCHkbhrmHkyGYb4pcCmt2oG8an5g4sRmxMg0GI=",
+        "ref": "refs/heads/master",
+        "rev": "3c21d9a900a778beedf01464f612e6580a39191b",
+        "revCount": 6,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-traitement-audio-visuel"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/TP-traitement-audio-visuel"
+      }
+    },
     "agenix": {
       "inputs": {
         "darwin": "darwin",
@@ -29,11 +107,11 @@
     },
     "catppuccin": {
       "locked": {
-        "lastModified": 1734671418,
-        "narHash": "sha256-K2Su5hM1nEIgKJ55TB5W+UfN9zBHUxC0SjWAtjXLEnI=",
+        "lastModified": 1734734291,
+        "narHash": "sha256-CFX4diEQHKvZYjnhf7TLg20m3ge1O4vqgplsk/Kuaek=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "6239449c96569547af621899f44a5ea333cb2576",
+        "rev": "1e4c3803b8da874ff75224ec8512cb173036bbd8",
         "type": "github"
       },
       "original": {
@@ -44,11 +122,11 @@
     },
     "crane": {
       "locked": {
-        "lastModified": 1730652660,
-        "narHash": "sha256-+XVYfmVXAiYA0FZT7ijHf555dxCe+AoAT5A6RU+6vSo=",
+        "lastModified": 1731098351,
+        "narHash": "sha256-HQkYvKvaLQqNa10KEFGgWHfMAbWBfFp+4cAgkut+NNE=",
         "owner": "ipetkov",
         "repo": "crane",
-        "rev": "a4ca93905455c07cb7e3aca95d4faf7601cba458",
+        "rev": "ef80ead953c1b28316cc3f8613904edc2eb90c28",
         "type": "github"
       },
       "original": {
@@ -86,11 +164,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734343412,
-        "narHash": "sha256-b7G8oFp0Nj01BYUJ6ENC9Qf/HsYAIZvN9k/p0Kg/PFU=",
+        "lastModified": 1734701201,
+        "narHash": "sha256-hk0roBX10j/hospoWIJIJj3i2skd7Oml6yKQBx7mTFk=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "a08bfe06b39e94eec98dd089a2c1b18af01fef19",
+        "rev": "2ee76c861af3b895b3b104bae04777b61397485b",
         "type": "github"
       },
       "original": {
@@ -178,6 +256,22 @@
         "type": "github"
       }
     },
+    "font-awesome": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688375479,
+        "narHash": "sha256-h9LZum2f9+rZ4l4hjcmE49gDLVlbJUkRi1xSbJLVAGg=",
+        "owner": "duskmoon314",
+        "repo": "typst-fontawesome",
+        "rev": "1a0fcdca90ee07f297294c9c56fbcf3114340a47",
+        "type": "github"
+      },
+      "original": {
+        "owner": "duskmoon314",
+        "repo": "typst-fontawesome",
+        "type": "github"
+      }
+    },
     "gitignore": {
       "inputs": {
         "nixpkgs": [
@@ -207,11 +301,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734622215,
-        "narHash": "sha256-OOfI0XhSJGHblfdNDhfnn8QnZxng63rWk9eeJ2tCbiI=",
+        "lastModified": 1734862405,
+        "narHash": "sha256-bXZJvUMJ2A6sIpYcCUAGjYCD5UDzmpmQCdmJSkPhleU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "1395379a7a36e40f2a76e7b9936cc52950baa1be",
+        "rev": "cb27edb5221d2f2920a03155f8becc502cf60e35",
         "type": "github"
       },
       "original": {
@@ -222,11 +316,11 @@
     },
     "impermanence": {
       "locked": {
-        "lastModified": 1734200366,
-        "narHash": "sha256-0NursoP4BUdnc+wy+Mq3icHkXu/RgP1Sjo0MJxV2+Dw=",
+        "lastModified": 1734772301,
+        "narHash": "sha256-mQEQQzCTUlDiEw/EbblB510P/GQOmIPtKoJrqDqeGVc=",
         "owner": "nix-community",
         "repo": "impermanence",
-        "rev": "c6323585fa0035d780e3d8906eb1b24b65d19a48",
+        "rev": "0ab2f858dfefe73402eb53fbe6a3bad4f6702d5f",
         "type": "github"
       },
       "original": {
@@ -245,11 +339,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1731941836,
-        "narHash": "sha256-zpmAzrvK8KdssBSwiIwwRxaUJ77oWORbW0XFvgCFpTE=",
+        "lastModified": 1734820165,
+        "narHash": "sha256-qkPmnVYb6w2KdipyigI9ipNR7A8dsFStBRH5sZ+rmqA=",
         "owner": "nix-community",
         "repo": "lanzaboote",
-        "rev": "2f48272f34174fd2a5ab3df4d8a46919247be879",
+        "rev": "26a59c1b037e43f82b0fada2a218aeb128bc5d21",
         "type": "github"
       },
       "original": {
@@ -265,11 +359,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734234111,
-        "narHash": "sha256-icEMqBt4HtGH52PU5FHidgBrNJvOfXH6VQKNtnD1aw8=",
+        "lastModified": 1734838217,
+        "narHash": "sha256-zvMLS8BGn+kMG7tLLT3PJ67/S9yqZ9B7V8hKBa9cRRY=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "311d6cf3ad3f56cb051ffab1f480b2909b3f754d",
+        "rev": "d583b2d142f0428313df099f4a2dcf2a0496aa78",
         "type": "github"
       },
       "original": {
@@ -292,11 +386,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1734608426,
-        "narHash": "sha256-+Munut93EXZB16+yULFmc6XDyrMNZuXnI1IfHn3Bt2k=",
+        "lastModified": 1734776291,
+        "narHash": "sha256-wpAU5PxExvJbtMKHPfuMvcrlXqgZ3OKtJvj7i9/221c=",
         "owner": "nix-community",
         "repo": "nixos-anywhere",
-        "rev": "bf4c0c50d65b4f1cf13972da7feaa4108879abc9",
+        "rev": "6d1c78677da42fc89ff8deba1f37b05f3e5760fb",
         "type": "github"
       },
       "original": {
@@ -307,11 +401,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1734352517,
-        "narHash": "sha256-mfv+J/vO4nqmIOlq8Y1rRW8hVsGH3M+I2ESMjhuebDs=",
+        "lastModified": 1734862644,
+        "narHash": "sha256-04xesW7HITdF5WUmNM39WD4tkEERk3Ez2W1nNvdIvIw=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "b12e314726a4226298fe82776b4baeaa7bcf3dcd",
+        "rev": "e8516a23524cc9083f5a02a8d64d14770e4c7c09",
         "type": "github"
       },
       "original": {
@@ -363,11 +457,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1730642263,
-        "narHash": "sha256-UXqvGZOHUDeAo8Sv5A5oObiQgBPELVgHQi130TU0jMU=",
+        "lastModified": 1731919951,
+        "narHash": "sha256-vOM6ETpl1yu9KLi/icTmLJIPbbdJCdAVYUXZceO/Ce4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "650fe87347086b30a6dbcc32b55987ce5a23c6ae",
+        "rev": "04386ac325a813047fc314d4b4d838a5b1e3c7fe",
         "type": "github"
       },
       "original": {
@@ -379,11 +473,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1720386169,
-        "narHash": "sha256-NGKVY4PjzwAa4upkGtAMz1npHGoRzWotlSnVlqI40mo=",
+        "lastModified": 1730741070,
+        "narHash": "sha256-edm8WG19kWozJ/GqyYx2VjW99EdhjKwbY3ZwdlPAAlo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "194846768975b7ad2c4988bdb82572c00222c0d7",
+        "rev": "d063c1dd113c91ab27959ba540c0d9753409edf3",
         "type": "github"
       },
       "original": {
@@ -395,11 +489,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1734424634,
-        "narHash": "sha256-cHar1vqHOOyC7f1+tVycPoWTfKIaqkoe1Q6TnKzuti4=",
+        "lastModified": 1734649271,
+        "narHash": "sha256-4EVBRhOjMDuGtMaofAIqzJbg4Ql7Ai0PSeuVZTHjyKQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d3c42f187194c26d9f0309a8ecc469d6c878ce33",
+        "rev": "d70bd19e0a38ad4790d3913bf08fcbfc9eeca507",
         "type": "github"
       },
       "original": {
@@ -423,11 +517,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1730302582,
-        "narHash": "sha256-W1MIJpADXQCgosJZT8qBYLRuZls2KSiKdpnTVdKBuvU=",
+        "lastModified": 1731363552,
+        "narHash": "sha256-vFta1uHnD29VUY4HJOO/D6p6rxyObnf+InnSMT4jlMU=",
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "af8a16fe5c264f5e9e18bcee2859b40a656876cf",
+        "rev": "cd1af27aa85026ac759d5d3fccf650abe7e1bbf0",
         "type": "github"
       },
       "original": {
@@ -436,8 +530,246 @@
         "type": "github"
       }
     },
+    "projet-audionumerique": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704112202,
+        "narHash": "sha256-LrlNPBFaokP4EvupiJ/z10FqW1PA8G1x2/qf6254YAM=",
+        "ref": "refs/heads/main",
+        "rev": "bf4eef8f071afab0fe5e973e388f5dbdf8e2180d",
+        "revCount": 3,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-audionumerique"
+      }
+    },
+    "projet-fin-etude": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1729964404,
+        "narHash": "sha256-in3P5L2+Y7vZKnp7se/pvM6EGthmARWCwdhFyrYR7/o=",
+        "ref": "refs/heads/master",
+        "rev": "1d0f5c4768e3348f14c289c8648236002d3bf0b4",
+        "revCount": 62,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport"
+      }
+    },
+    "projet-intelligence-artificielle-multimedia": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704111923,
+        "narHash": "sha256-o0uFxct6PSWjmNpd+mD0DfKET9s1wO5lk4uJgzFCaHg=",
+        "ref": "refs/heads/master",
+        "rev": "fd31cefdb735e206cd6f29b1935540735aba771c",
+        "revCount": 26,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
+      }
+    },
+    "projet-modelisation-geometrique": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704112016,
+        "narHash": "sha256-BEykTh1R7A9q2MlLNX5FByH7OEyvFEKUep+v5iVloiI=",
+        "ref": "refs/heads/master",
+        "rev": "8bd711c8e750118da2b487eda932a3acfa64b904",
+        "revCount": 61,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-modelisation-geometrique"
+      }
+    },
+    "projet-oral-anglais": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704112337,
+        "narHash": "sha256-Vw7aLR90XdQVtm2NrtZDSxuLuueNWVuD0uic1bll6Cs=",
+        "ref": "refs/heads/main",
+        "rev": "c1cc163e672585b2c85242b4ee8e30fd68e20b9d",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-anglais"
+      }
+    },
+    "projet-oral-japonais": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704112263,
+        "narHash": "sha256-AcZl5o+EqR+c1AoYVBmXbb0P8HfM7UykxQyddRoo1E8=",
+        "ref": "refs/heads/main",
+        "rev": "36b2c2e152fda38fa9a7ac3a58d4eebcf5b10b02",
+        "revCount": 4,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-oral-japonais"
+      }
+    },
+    "projet-probleme-inverse-3D": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1728839431,
+        "narHash": "sha256-A7F9lyRmfJ2xJa+cbi3UYp0+v8DHmIv8Qa1IA1plox0=",
+        "ref": "refs/heads/master",
+        "rev": "086d4b65d1b1115ee5fdf183aa10e839d2e02166",
+        "revCount": 72,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-probleme-inverse-3D"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-probleme-inverse-3D"
+      }
+    },
+    "projet-systemes-algorithmes-repartis": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704112101,
+        "narHash": "sha256-9dyZpBIBb8h2qUfsEFGII5xZu/z29bowMuwarSDxg+s=",
+        "ref": "refs/heads/main",
+        "rev": "f73c7181f9968a0b600d4e7256043df208c50467",
+        "revCount": 21,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-systemes-algorithmes-repartis"
+      }
+    },
+    "resume": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "font-awesome": "font-awesome",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1704107753,
+        "narHash": "sha256-nqev8Z7mFNWg0mw+y5K+vuh+w5rYnzV5cRL1D/MWGU8=",
+        "ref": "refs/heads/master",
+        "rev": "b9581569058047fc893cfb68afcca65dec9c4fee",
+        "revCount": 13,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/Laurent/resume"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/Laurent/resume"
+      }
+    },
     "root": {
       "inputs": {
+        "TP-calcul-parallele": "TP-calcul-parallele",
+        "TP-reinforcement-learning": "TP-reinforcement-learning",
+        "TP-traitement-audio-visuel": "TP-traitement-audio-visuel",
         "agenix": "agenix",
         "catppuccin": "catppuccin",
         "disko": "disko",
@@ -449,9 +781,19 @@
         "nixos-anywhere": "nixos-anywhere",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
+        "projet-audionumerique": "projet-audionumerique",
+        "projet-fin-etude": "projet-fin-etude",
+        "projet-intelligence-artificielle-multimedia": "projet-intelligence-artificielle-multimedia",
+        "projet-modelisation-geometrique": "projet-modelisation-geometrique",
+        "projet-oral-anglais": "projet-oral-anglais",
+        "projet-oral-japonais": "projet-oral-japonais",
+        "projet-probleme-inverse-3D": "projet-probleme-inverse-3D",
+        "projet-systemes-algorithmes-repartis": "projet-systemes-algorithmes-repartis",
+        "resume": "resume",
         "systems": "systems",
         "treefmt-nix": "treefmt-nix_2",
-        "wallpaper": "wallpaper"
+        "wallpaper": "wallpaper",
+        "website": "website"
       }
     },
     "rust-overlay": {
@@ -462,11 +804,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1730601085,
-        "narHash": "sha256-Sgax33jGuvVHTjl1P78IwzlhAGyOxtx5Q26inKja8S4=",
+        "lastModified": 1731897198,
+        "narHash": "sha256-Ou7vLETSKwmE/HRQz4cImXXJBr/k9gp4J4z/PF8LzTE=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "8d1b40f8dfd7539aaa3de56e207e22b3cc451825",
+        "rev": "0be641045af6d8666c11c2c40e45ffc9667839b5",
         "type": "github"
       },
       "original": {
@@ -518,11 +860,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734543842,
-        "narHash": "sha256-/QceWozrNg915Db9x/Ie5k67n9wKgGdTFng+Z1Qw0kE=",
+        "lastModified": 1734704479,
+        "narHash": "sha256-MMi74+WckoyEWBRcg/oaGRvXC9BVVxDZNRMpL+72wBI=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "76159fc74eeac0599c3618e3601ac2b980a29263",
+        "rev": "65712f5af67234dad91a5a4baee986a8b62dbf8f",
         "type": "github"
       },
       "original": {
@@ -541,6 +883,32 @@
       "original": {
         "type": "file",
         "url": "https://images.unsplash.com/photo-1487856374269-301dc48a3c31?q=100&w=1920"
+      }
+    },
+    "website": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1726674931,
+        "narHash": "sha256-JPYNKUEWOZ8DKebcJy4twoyy3NCHpeiYpvlHzcKho0Q=",
+        "ref": "refs/heads/master",
+        "rev": "75d95625a9917f649598441eb8c914aad365c9e9",
+        "revCount": 53,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/Laurent/website"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/Laurent/website"
       }
     }
   },
