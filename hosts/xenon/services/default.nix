@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./cloudflare.nix
+    ./cloudflared.nix
     ./gatus.nix
     ./ssh.nix
   ];
