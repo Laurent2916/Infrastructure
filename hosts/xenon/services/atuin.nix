@@ -5,7 +5,7 @@
     maxHistoryLength = 1000000000;
   };
 
-  services.cloudflared.tunnels."xenon". ingress = {
+  services.cloudflared.tunnels."xenon".ingress = {
     "atuin.fainsin.bzh" = {
       service = "http://localhost:8888";
     };

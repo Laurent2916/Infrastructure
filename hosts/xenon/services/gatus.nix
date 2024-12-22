@@ -6,7 +6,7 @@
     };
   };
 
-  services.cloudflared.tunnels."xenon". ingress = {
+  services.cloudflared.tunnels."xenon".ingress = {
     "status.fainsin.bzh" = {
       service = "http://localhost:2020";
     };
