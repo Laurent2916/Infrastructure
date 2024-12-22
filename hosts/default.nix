@@ -40,6 +40,7 @@ in {
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.impermanence.nixosModules.impermanence
       inputs.disko.nixosModules.default
+      inputs.agenix.nixosModules.default
     ];
   };
 }
