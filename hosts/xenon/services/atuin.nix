@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   services.atuin = {
     enable = true;
     openRegistration = false;
@@ -7,7 +7,7 @@
 
   services.cloudflared.tunnels."xenon".ingress = {
     "atuin.fainsin.bzh" = {
-      service = "http://localhost:8888";
+      service = "http://localhost:${toString config.services.atuin.port}";
     };
   };
 

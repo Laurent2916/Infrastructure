@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   services.forgejo = {
     enable = true;
     lfs.enable = true;
@@ -28,7 +28,7 @@
 
   services.cloudflared.tunnels."xenon".ingress = {
     "git.fainsin.bzh" = {
-      service = "http://localhost:3000";
+      service = "http://localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
     };
   };
 

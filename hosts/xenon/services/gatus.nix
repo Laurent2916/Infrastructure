@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   services.gatus = {
     enable = true;
     settings = {
@@ -8,7 +8,7 @@
 
   services.cloudflared.tunnels."xenon".ingress = {
     "status.fainsin.bzh" = {
-      service = "http://localhost:2020";
+      service = "http://localhost:${toString config.services.gatus.settings.web.port}";
     };
   };
 
