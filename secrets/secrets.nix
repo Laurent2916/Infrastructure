@@ -3,7 +3,7 @@ let
   aurum = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIItSJTtS7tO0Wz/WgHAFb3xuNFZpm8SOvr/o8uR83zzy laurent@aurum";
   laurent = [silicium aurum];
 
-  xenon = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDQIVwJ/EwChjp57My/v/tPhtcDCvdaRE2XZWUCMOOdk root@xenon";
+  xenon = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIISEQobvbzNVuF6rdNLl8we9V6Eib8miF9eD8jEJQ+sd root@xenon";
 in {
   "cftunnel.age".publicKeys = laurent ++ [xenon];
   "cfcert.age".publicKeys = laurent ++ [xenon];

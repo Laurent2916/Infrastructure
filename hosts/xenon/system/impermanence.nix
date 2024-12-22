@@ -7,7 +7,7 @@
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
       "/etc/secureboot"
-      "/root/.ssh"
+      "/etc/ssh"
     ];
     files = [
       "/etc/machine-id"
