@@ -7,5 +7,4 @@ let
 in {
   "cftunnel.age".publicKeys = laurent ++ [xenon];
   "cfcert.age".publicKeys = laurent ++ [xenon];
-  "forgejo.age".publicKeys = laurent ++ [xenon];
 }

@@ -1,17 +1,8 @@
-{config, ...}: {
-  age.secrets.forgejo = {
-    file = ../../../secrets/forgejo.age;
-    owner = config.services.forgejo.user;
-    group = config.services.forgejo.group;
-  };
-
+{...}: {
   services.forgejo = {
     enable = true;
     lfs.enable = true;
-    database = {
-      type = "postgres";
-      passwordFile = config.age.secrets.forgejo.path;
-    };
+    database.type = "postgres";
     settings = {
       service = {
         DEFAULT_KEEP_EMAIL_PRIVATE = true;
