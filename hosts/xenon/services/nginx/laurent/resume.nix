@@ -1,13 +1,12 @@
 {
   inputs,
   system,
-  config,
   ...
 }: {
   services.nginx.virtualHosts = {
-    "resume.laurent.fainsin.bzh" = {
+    "laurent.fainsin.bzh" = {
       locations = {
-        "/" = {
+        "/resume.pdf" = {
           root = inputs.resume.packages.${system}.default;
           index = "resume.pdf";
         };
@@ -15,17 +14,11 @@
     };
   };
 
-  services.cloudflared.tunnels."xenon".ingress = {
-    "resume.laurent.fainsin.bzh" = {
-      service = "http://localhost:${toString config.services.nginx.defaultHTTPListenPort}";
-    };
-  };
-
   services.gatus.settings.endpoints = [
     {
-      name = "resume.laurent.fainsin.bzh";
+      name = "laurent.fainsin.bzh/resume";
       group = "web";
-      url = "https://resume.laurent.fainsin.bzh";
+      url = "https://laurent.fainsin.bzh/resume.pdf";
       interval = "5m";
       conditions = [
         "[STATUS] == 200"
