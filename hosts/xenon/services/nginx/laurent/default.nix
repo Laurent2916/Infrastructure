@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    # ./resume.nix
+    ./resume.nix
     ./website.nix
   ];
 }

@@ -10,6 +10,6 @@
 
   imports = [
     ./laurent
-    # ./n7
+    ./n7
   ];
 }
