@@ -24,7 +24,7 @@
 
   services.cloudflared = {
     tunnels = {
-      "cftunnel" = {
+      "xenon" = {
         ingress = {
           "status.fainsin.bzh" = {
             service = "http://localhost:2020";

@@ -5,5 +5,6 @@ let
 
   xenon = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDQIVwJ/EwChjp57My/v/tPhtcDCvdaRE2XZWUCMOOdk root@xenon";
 in {
-  "xenon.cftunnel.age".publicKeys = laurent ++ [xenon];
+  "cftunnel.age".publicKeys = laurent ++ [xenon];
+  "cfcert.age".publicKeys = laurent ++ [xenon];
 }
