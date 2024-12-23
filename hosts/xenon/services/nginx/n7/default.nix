@@ -22,7 +22,7 @@ in {
 
   imports = [
     (import ./projet-audionumerique.nix (withLocation "projet-audionumerique"))
-    (import ./projet-fin-etude.nix (withLocation "projet-fin-etude"))
+    # (import ./projet-fin-etude.nix (withLocation "projet-fin-etude"))
     (import ./projet-intelligence-artificielle-multimedia.nix (withLocation "projet-intelligence-artificielle-multimedia"))
     (import ./projet-long.nix (withLocation "projet-long"))
     (import ./projet-modelisation-geometrique.nix (withLocation "projet-modelisation-geometrique"))
