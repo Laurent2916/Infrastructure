@@ -10,7 +10,11 @@
     group = config.services.cloudflared.group;
   };
 
-  environment.etc."cloudflared/cert.pem".source = config.age.secrets.cfcert.path;
+  environment.etc."cloudflared/cert.pem" = {
+    source = config.age.secrets.cfcert.path;
+    user = config.services.cloudflared.user;
+    group = config.services.cloudflared.group;
+  };
 
   services.cloudflared = {
     enable = true;
