@@ -5,7 +5,7 @@
   system,
   ...
 }: let
-  vhost = "n7.laurent.fainsin.bzh";
+  vhost = "n7.fainsin.bzh";
   withLocation = location: {inherit inputs pkgs system vhost location;};
 in {
   services.nginx.virtualHosts = {
