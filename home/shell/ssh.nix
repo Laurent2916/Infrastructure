@@ -27,10 +27,10 @@ in {
     addKeysToAgent = "yes";
 
     matchBlocks = {
-      "cesium git.fainsin.bzh" = {
-        hostname = "fainsin.bzh";
+      "xenon ssh.fainsin.bzh" = {
+        hostname = "ssh.fainsin.bzh";
         user = "root";
-        port = 624;
+        proxyCommand = "${lib.getExe pkgs.cloudflared} access ssh --hostname %h";
       };
       "nicole" = {
         hostname = "3.tcp.eu.ngrok.io";
