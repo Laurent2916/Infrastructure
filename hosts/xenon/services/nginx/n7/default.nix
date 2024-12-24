@@ -34,16 +34,4 @@ in {
     (import ./TP-reinforcement-learning.nix (withLocation "TP-reinforcement-learning"))
     (import ./TP-traitement-audio-visuel.nix (withLocation "TP-traitement-audio-visuel"))
   ];
-
-  services.gatus.settings.endpoints = [
-    {
-      name = vhost;
-      group = vhost;
-      url = "https://${vhost}";
-      interval = "15m";
-      conditions = [
-        "[CERTIFICATE_EXPIRATION] > 240h"
-      ];
-    }
-  ];
 }
