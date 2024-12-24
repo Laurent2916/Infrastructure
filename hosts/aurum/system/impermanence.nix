@@ -24,6 +24,7 @@
         ".local/share/direnv"
         ".local/share/keyrings"
         ".local/share/atuin"
+        ".local/share/bemoji"
         ".config/gcloud"
         ".cache/nix"
         ".cache/huggingface"
@@ -36,7 +37,6 @@
       ];
       files = [
         ".local/state/bemoji-history.txt"
-        ".local/share/bemoji/emojis.txt"
         ".cache/cliphist/db"
         ".cache/fuzzel"
       ];
