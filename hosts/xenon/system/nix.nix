@@ -24,6 +24,17 @@
   # pin nixpkgs registry
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
+  # limit number of cores when building
+  nix.settings.max-jobs = 4;
+
+  # enable auto updates
+  system.autoUpgrade = {
+    enable = true;
+    dates = "*-*-* 09:00:00";
+    randomizedDelaySec = "1h";
+    flake = "github:Laurent2916/Infrastructure";
+  };
+
   # print diff between two generations
   system.activationScripts.nvd-report-changes = ''
     PATH=$PATH:${lib.makeBinPath [pkgs.nvd pkgs.nix]}
