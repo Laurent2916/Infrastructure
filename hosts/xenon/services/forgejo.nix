@@ -27,6 +27,14 @@
     };
   };
 
+  environment.persistence."/persist".directories = [
+    {
+      directory = config.services.forgejo.stateDir;
+      user = config.services.forgejo.user;
+      group = config.services.forgejo.group;
+    }
+  ];
+
   services.cloudflared.tunnels."xenon".ingress = {
     "git.fainsin.bzh" = {
       service = "http://localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
