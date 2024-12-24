@@ -3,6 +3,7 @@
     enable = true;
     lfs.enable = true;
     database.type = "postgres";
+    stateDir = "/var/lib/forgejo";
     settings = {
       service = {
         DEFAULT_KEEP_EMAIL_PRIVATE = true;

@@ -4,7 +4,6 @@
     directories = [
       "/var/log"
       "/var/lib/nixos"
-      "/var/lib/paperless"
       "/var/lib/postgresql"
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
