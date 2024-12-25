@@ -752,11 +752,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735131966,
-        "narHash": "sha256-9xbXSGk0M0F8ab6zAQ4eBa8s22YWf1OQd2JkAjW0rjw=",
+        "lastModified": 1735133073,
+        "narHash": "sha256-s6OtpB1+Duf/pPiKh04ZlFpyaX7SN5g62i51s7Ddrz0=",
         "ref": "refs/heads/master",
-        "rev": "d123c3de0fa9e86c6dd869d7bdb2bcb36fc8676b",
-        "revCount": 14,
+        "rev": "c7e911e43f8fb7fe9f746381e1ed5b3e9879ee26",
+        "revCount": 15,
         "type": "git",
         "url": "https://git.fainsin.bzh/Laurent/resume"
       },
@@ -860,11 +860,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734982074,
-        "narHash": "sha256-N7M37KP7cHWoXicuE536GrVvU8nMDT/gpI1kja2hkdg=",
+        "lastModified": 1735135567,
+        "narHash": "sha256-8T3K5amndEavxnludPyfj3Z1IkcFdRpR23q+T0BVeZE=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "e41e948cf097cbf96ba4dff47a30ea6891af9f33",
+        "rev": "9e09d30a644c57257715902efbb3adc56c79cf28",
         "type": "github"
       },
       "original": {
@@ -898,11 +898,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735130132,
-        "narHash": "sha256-6BQC6yRYcI/3KC5BY4rPvVWN4SXiTRZ/wEsXdtsWdEk=",
+        "lastModified": 1735146385,
+        "narHash": "sha256-8mjdGnzrcXyejyrl2TrjhrR+h+zHQfg3K4R1LV5rh8k=",
         "ref": "refs/heads/master",
-        "rev": "01db83cc2a86da09ed9693853f33b27d65c0d099",
-        "revCount": 55,
+        "rev": "d7518775de935cb4d14caf624242448ea90cd39a",
+        "revCount": 56,
         "type": "git",
         "url": "https://git.fainsin.bzh/Laurent/website"
       },
