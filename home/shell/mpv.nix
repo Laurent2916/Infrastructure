@@ -1,6 +1,7 @@
 {...}: {
   programs.mpv = {
-    catppuccin.enable = false;
     enable = true;
   };
+
+  catppuccin.mpv.enable = true;
 }

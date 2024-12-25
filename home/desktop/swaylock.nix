@@ -6,7 +6,6 @@
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
-    catppuccin.enable = false;
 
     settings = {
       image = "${inputs.wallpaper}";
@@ -44,4 +43,6 @@
       bs-hl-color = "F38BA8";
     };
   };
+
+  catppuccin.swaylock.enable = false;
 }
