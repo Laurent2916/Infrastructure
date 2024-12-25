@@ -752,11 +752,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1704107753,
-        "narHash": "sha256-nqev8Z7mFNWg0mw+y5K+vuh+w5rYnzV5cRL1D/MWGU8=",
+        "lastModified": 1735131966,
+        "narHash": "sha256-9xbXSGk0M0F8ab6zAQ4eBa8s22YWf1OQd2JkAjW0rjw=",
         "ref": "refs/heads/master",
-        "rev": "b9581569058047fc893cfb68afcca65dec9c4fee",
-        "revCount": 13,
+        "rev": "d123c3de0fa9e86c6dd869d7bdb2bcb36fc8676b",
+        "revCount": 14,
         "type": "git",
         "url": "https://git.fainsin.bzh/Laurent/resume"
       },
