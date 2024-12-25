@@ -6,13 +6,6 @@
 }: {
   boot.loader.systemd-boot.enable = true;
 
-  # impermanence
-  fileSystems."/persist".neededForBoot = true;
-  fileSystems."/etc/ssh" = {
-    neededForBoot = true; # required to decrypt agenix secrets
-    depends = ["/persist"];
-  };
-
   # clean /tmp at each boot
   boot.tmp.cleanOnBoot = true;
 

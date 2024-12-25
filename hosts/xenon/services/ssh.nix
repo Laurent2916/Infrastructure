@@ -5,6 +5,11 @@
     settings.PasswordAuthentication = false;
   };
 
+  fileSystems."/etc/ssh" = {
+    neededForBoot = true; # required to decrypt agenix secrets
+    depends = ["/persist"];
+  };
+
   environment.persistence."/persist".directories = [
     {
       directory = "/etc/ssh";

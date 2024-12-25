@@ -1,4 +1,6 @@
 {...}: {
+  fileSystems."/persist".neededForBoot = true;
+
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
