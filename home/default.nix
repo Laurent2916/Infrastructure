@@ -2,6 +2,7 @@
   config.home.stateVersion = "24.05";
 
   imports = [
+    inputs.impermanence.homeManagerModules.impermanence
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-index-database.hmModules.nix-index
 
@@ -9,6 +10,7 @@
     ./desktop
     ./shell
 
+    ./impermanence.nix
     ./packages.nix
   ];
 

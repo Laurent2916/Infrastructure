@@ -8,9 +8,6 @@
   boot.supportedFilesystems = ["ntfs"];
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # impermanence
-  fileSystems."/persist".neededForBoot = true;
-
   # clean /tmp at each boot
   boot.tmp.cleanOnBoot = true;
 
