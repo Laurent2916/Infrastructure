@@ -38,6 +38,11 @@
       "vscode-extension-github-copilot"
       "vscode-extension-github-copilot-chat"
       "libfprint-2-tod1-goodix" # fingerprint reader
+      # webcam drivers
+      # "ipu6-camera-bins-unstable"
+      # "ivsc-firmware-unstable"
+      # "ipu6-camera-bins"
+      # "ivsc-firmware"
     ];
 
   # print diff between two generations
