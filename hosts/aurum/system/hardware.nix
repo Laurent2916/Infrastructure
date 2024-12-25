@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   # graphics
   hardware.graphics.enable = true;
 
@@ -19,9 +19,6 @@
 
   # backlight intensity
   programs.light.enable = true;
-
-  # impermanence
-  fileSystems."/persist".neededForBoot = true;
 
   # webcam
   # hardware.firmware = [
