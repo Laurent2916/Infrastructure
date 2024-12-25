@@ -1,12 +1,9 @@
 {
   inputs,
-  config,
   pkgs,
   lib,
   ...
-}: let
-  cursor = config.catppuccin.pointerCursor;
-in {
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -21,13 +18,12 @@ in {
         "${lib.getExe pkgs.mako}"
         "${lib.getExe pkgs.thunderbird}"
         "${pkgs.wl-clipboard}/bin/wl-paste --watch ${lib.getExe pkgs.cliphist} store"
-        "${pkgs.hyprland}/bin/hyprctl setcursor catppuccin-${cursor.flavor}-${cursor.accent}-cursors 24" # FIXME: shouldn't be necessary
       ];
 
       # https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
-        "DP-3,1920x1080@120,0x0,1"
-        "eDP-1,1920x1200,0x1080,1"
+        "DP-3,  1920x1080@120, 0x0,    1"
+        "eDP-1, 1920x1200,     0x1080, 1"
       ];
 
       # https://wiki.hyprland.org/Configuring/Variables/#general

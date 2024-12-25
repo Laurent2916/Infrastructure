@@ -1,21 +1,18 @@
 {pkgs, ...}: {
   gtk = {
     enable = true;
-
     font = {
       name = "Inter";
       package = pkgs.inter;
       size = 10;
     };
+  };
 
-    catppuccin = {
-      enable = true;
-      size = "compact";
-      tweaks = ["rimless" "normal"];
-      icon = {
-        enable = true;
-      };
-    };
+  catppuccin.gtk = {
+    enable = true;
+    size = "compact";
+    tweaks = ["rimless" "normal"];
+    icon.enable = true;
   };
 
   home.pointerCursor = {
@@ -23,7 +20,8 @@
     gtk.enable = true;
     x11.enable = true;
   };
-  catppuccin.pointerCursor = {
+
+  catppuccin.cursors = {
     enable = true;
     accent = "dark";
   };
