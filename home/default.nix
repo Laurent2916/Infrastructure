@@ -1,5 +1,5 @@
 {inputs, ...}: {
-  config.home.stateVersion = "24.05";
+  config.home.stateVersion = "24.11";
 
   imports = [
     inputs.impermanence.homeManagerModules.impermanence
