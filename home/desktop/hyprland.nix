@@ -17,7 +17,6 @@
         "${lib.getExe pkgs.swaybg} -i ${inputs.wallpaper}"
         "${lib.getExe pkgs.mako}"
         "${lib.getExe pkgs.thunderbird}"
-        "${pkgs.wl-clipboard}/bin/wl-paste --watch ${lib.getExe pkgs.cliphist} store"
       ];
 
       # https://wiki.hyprland.org/Configuring/Monitors/

@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./cliphist.nix
     ./eww
     ./fuzzel.nix
     ./gtk.nix
