@@ -107,11 +107,11 @@
     },
     "catppuccin": {
       "locked": {
-        "lastModified": 1735028008,
-        "narHash": "sha256-crbQNRVQgPH0hX5vZk8xL9JStXo74Es7zDBjRcc4i+A=",
+        "lastModified": 1735203532,
+        "narHash": "sha256-m7KAHLOeF93S8vhT5Mn+KxLfWnI6N7+S6H552tNUlYs=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "bfd20bcf45f1de0e97b551be51495abf8a727f1a",
+        "rev": "58d020d4c85416e2a75ec820e290d3d5b13b3427",
         "type": "github"
       },
       "original": {
@@ -359,11 +359,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734838217,
-        "narHash": "sha256-zvMLS8BGn+kMG7tLLT3PJ67/S9yqZ9B7V8hKBa9cRRY=",
+        "lastModified": 1735221677,
+        "narHash": "sha256-HSaR8sOzAbAHulBpLtTQ0yU5LGI3pszeQn02f0FaAJQ=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "d583b2d142f0428313df099f4a2dcf2a0496aa78",
+        "rev": "89188f939673b4fb2004ae9d1b762ef03384e6f2",
         "type": "github"
       },
       "original": {
@@ -569,11 +569,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734908755,
-        "narHash": "sha256-zcCWQlZFwnDJrzsitAudVmKockBzb6EEAEDaLLsVlFg=",
+        "lastModified": 1735221499,
+        "narHash": "sha256-qVdxZMjjnpMyVZ7RfZhE/HLPycuwolSdViPiVTwaJlM=",
         "ref": "refs/heads/master",
-        "rev": "bc6695e94c7ffb3320f78aee01603fd114c4ca65",
-        "revCount": 63,
+        "rev": "6a952329e9836ca13910b8d52e2a134ddf201ce5",
+        "revCount": 66,
         "type": "git",
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-fin-etude-rapport"
       },
@@ -898,11 +898,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735146385,
-        "narHash": "sha256-8mjdGnzrcXyejyrl2TrjhrR+h+zHQfg3K4R1LV5rh8k=",
+        "lastModified": 1735153612,
+        "narHash": "sha256-frRJ8WiKAwZovLmzxkLP6crkAOw2cUamhrdzbN7TbG4=",
         "ref": "refs/heads/master",
-        "rev": "d7518775de935cb4d14caf624242448ea90cd39a",
-        "revCount": 56,
+        "rev": "877a9914358adfb7f6e465aa8587740e3308a05c",
+        "revCount": 57,
         "type": "git",
         "url": "https://git.fainsin.bzh/Laurent/website"
       },
