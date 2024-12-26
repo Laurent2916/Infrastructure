@@ -8,6 +8,7 @@
       service = {
         DEFAULT_KEEP_EMAIL_PRIVATE = true;
         DISABLE_REGISTRATION = true;
+        REGISTER_MANUAL_CONFIRM = true;
       };
       server = {
         LANDING_PAGE = "explore";
@@ -17,13 +18,38 @@
       };
       indexer = {
         REPO_INDEXER_ENABLED = true;
-        REPO_INDEXER_PATH = "indexers/repos.bleve";
         MAX_FILE_SIZE = 1048576; # 1MiB
-        REPO_INDEXER_EXCLUDE = "node_modules/**";
+        REPO_INDEXER_EXCLUDE = "result/**,node_modules/**";
+      };
+      security = {
+        INSTALL_LOCK = true;
+        MIN_PASSWORD_LENGTH = 20;
+        PASSWORD_COMPLEXITY = "lower,upper,digit";
       };
       session = {
         PROVIDER = "db";
         COOKIE_SECURE = true;
+      };
+      cron = {
+        ENABLED = true;
+      };
+      "cron.delete_old_system_notices" = {
+        ENABLED = true;
+      };
+      "cron.delete_missing_repos" = {
+        ENABLED = true;
+      };
+      "cron.delete_old_actions" = {
+        ENABLED = true;
+      };
+      "cron.gc_lfs" = {
+        ENABLED = true;
+      };
+      oauth2 = {
+        ENABLED = false;
+      };
+      other = {
+        SHOW_FOOTER_BRANDING = false;
       };
     };
   };
