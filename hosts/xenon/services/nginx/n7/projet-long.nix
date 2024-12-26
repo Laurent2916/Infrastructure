@@ -1,19 +1,18 @@
 {
-  pkgs,
-  location,
+  inputs,
+  system,
   vhost,
+  location,
   ...
-}: let
-  pages = pkgs.fetchgit {
-    url = "https://git.fainsin.bzh/ENSEEIHT/projet-long";
-    rev = "8290710fa7461c486dc727966c8eaa2234ae2e7d"; # pages
-    sha256 = "1xwc0hfdn77183vvm6gadibdd0bh379192qkzf2xvidfhb8yzgqr";
-  };
-in {
-  services.nginx.virtualHosts.${vhost}.locations."/${location}/" = {
-    alias = "${pages}/";
-    index = "index.html";
-    tryFiles = "$uri $uri/ /projet-long/index.html";
+}: {
+  services.nginx.virtualHosts.${vhost}.locations = {
+    "/${location}/" = {
+      alias = inputs.projet-long.packages.${system}.slides + "/";
+      tryFiles = "$uri $uri/ /${location}/index.html";
+    };
+    "=/${location}/rapport.pdf" = {
+      alias = inputs.projet-long.packages.${system}.report + "/paper.pdf";
+    };
   };
 
   services.gatus.settings.endpoints = [

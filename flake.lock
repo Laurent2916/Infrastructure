@@ -359,11 +359,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735221677,
-        "narHash": "sha256-HSaR8sOzAbAHulBpLtTQ0yU5LGI3pszeQn02f0FaAJQ=",
+        "lastModified": 1735222882,
+        "narHash": "sha256-kWNi45/mRjQMG+UpaZQ7KyPavYrKfle3WgLn9YeBBVg=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "89188f939673b4fb2004ae9d1b762ef03384e6f2",
+        "rev": "7e3246f6ad43b44bc1c16d580d7bf6467f971530",
         "type": "github"
       },
       "original": {
@@ -595,17 +595,43 @@
         ]
       },
       "locked": {
-        "lastModified": 1704111923,
-        "narHash": "sha256-o0uFxct6PSWjmNpd+mD0DfKET9s1wO5lk4uJgzFCaHg=",
+        "lastModified": 1735222217,
+        "narHash": "sha256-T2PA+Jb4Q4pLRAhXaZ2Bldu4R8ofw+Po0peDe/Ud/78=",
         "ref": "refs/heads/master",
-        "rev": "fd31cefdb735e206cd6f29b1935540735aba771c",
-        "revCount": 26,
+        "rev": "d64a209f96db75e72dff45f253836e543ecb3e39",
+        "revCount": 27,
         "type": "git",
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
       },
       "original": {
         "type": "git",
         "url": "https://git.fainsin.bzh/ENSEEIHT/projet-intelligence-artificielle-multimedia"
+      }
+    },
+    "projet-long": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1735251191,
+        "narHash": "sha256-kcXcaFJDvmC1kI8N22XucnH424FTAAuhjwSYlUsB3j4=",
+        "ref": "refs/heads/master",
+        "rev": "95c3db2993a890f3f224c5a8f8111167b76bbbf6",
+        "revCount": 282,
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-long"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.fainsin.bzh/ENSEEIHT/projet-long"
       }
     },
     "projet-modelisation-geometrique": {
@@ -784,6 +810,7 @@
         "projet-audionumerique": "projet-audionumerique",
         "projet-fin-etude": "projet-fin-etude",
         "projet-intelligence-artificielle-multimedia": "projet-intelligence-artificielle-multimedia",
+        "projet-long": "projet-long",
         "projet-modelisation-geometrique": "projet-modelisation-geometrique",
         "projet-oral-anglais": "projet-oral-anglais",
         "projet-oral-japonais": "projet-oral-japonais",
@@ -898,11 +925,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735153612,
-        "narHash": "sha256-frRJ8WiKAwZovLmzxkLP6crkAOw2cUamhrdzbN7TbG4=",
+        "lastModified": 1735242169,
+        "narHash": "sha256-dkB8yjsEYp0BQ86EQ2VPOgcTK/F18UZ7yUt0F5nkKAs=",
         "ref": "refs/heads/master",
-        "rev": "877a9914358adfb7f6e465aa8587740e3308a05c",
-        "revCount": 57,
+        "rev": "81b6d35c525204e91e38cf38765bc4bf14640125",
+        "revCount": 20,
         "type": "git",
         "url": "https://git.fainsin.bzh/Laurent/website"
       },
