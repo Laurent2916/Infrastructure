@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./atuin.nix
+    ./clamav.nix
     ./cloudflared.nix
     ./fail2ban.nix
     ./forgejo.nix
