@@ -27,4 +27,10 @@ in {
       };
     };
   };
+
+  home.persistence."/persist/home/laurent" = {
+    directories = [
+      ".mozilla"
+    ];
+  };
 }

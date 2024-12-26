@@ -23,4 +23,10 @@ in {
       "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
     };
   };
+
+  home.persistence."/persist/home/laurent" = {
+    directories = [
+      ".thunderbird"
+    ];
+  };
 }

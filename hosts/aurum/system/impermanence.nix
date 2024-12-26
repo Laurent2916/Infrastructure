@@ -1,4 +1,6 @@
 {...}: {
+  programs.fuse.userAllowOther = true; # require by home.impermanence.allowOther
+
   fileSystems."/persist".neededForBoot = true;
 
   environment.persistence."/persist" = {

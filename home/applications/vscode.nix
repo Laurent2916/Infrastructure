@@ -86,4 +86,11 @@
       };
     };
   };
+
+  home.persistence."/persist/home/laurent" = {
+    directories = [
+      ".config/Code"
+      ".vscode"
+    ];
+  };
 }

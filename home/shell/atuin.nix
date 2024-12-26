@@ -10,4 +10,10 @@
       sync.records = true;
     };
   };
+
+  home.persistence."/persist/home/laurent" = {
+    directories = [
+      ".ssh"
+    ];
+  };
 }

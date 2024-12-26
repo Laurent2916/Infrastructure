@@ -19,4 +19,10 @@
       };
     };
   };
+
+  home.persistence."/persist/home/laurent" = {
+    files = [
+      ".cache/fuzzel"
+    ];
+  };
 }
