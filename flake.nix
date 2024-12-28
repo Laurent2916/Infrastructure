@@ -59,7 +59,7 @@
       flake = false;
     };
     catppuccin = {
-      url = "github:catppuccin/nix";
+      url = "github:catppuccin/nix/58d020d4c85416e2a75ec820e290d3d5b13b3427";
     };
 
     # self hosted (forgejo) repos
