@@ -5,7 +5,6 @@
     alejandra # nix formatter
     borgbackup # backup
     dconf # required by home-manager
-    distrobox # docker utils
     docker-compose # docker compose
     duf # replacement for df
     nautilus # file explorer
