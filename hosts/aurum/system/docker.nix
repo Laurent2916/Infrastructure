@@ -4,6 +4,7 @@
 
     enableOnBoot = false;
     autoPrune.enable = true;
+    storageDriver = "btrfs";
   };
 
   # docker users
