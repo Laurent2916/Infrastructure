@@ -17,6 +17,7 @@
         "${lib.getExe pkgs.swaybg} -i ${inputs.wallpaper}"
         "${lib.getExe pkgs.mako}"
         "${lib.getExe pkgs.thunderbird}"
+        "${lib.getExe pkgs.ghostty} --quit-after-last-window-closed=false --initial-window=false"
       ];
 
       # https://wiki.hyprland.org/Configuring/Monitors/
@@ -109,7 +110,7 @@
       ];
 
       bind = [
-        "$mod, Return, exec, ${lib.getExe pkgs.alacritty}"
+        "$mod, Return, exec, ${lib.getExe pkgs.ghostty}"
         "$mod, Q, killactive,"
         "$mod, S, togglefloating,"
         "$mod, L, exec, ${lib.getExe pkgs.swaylock-effects} -f"

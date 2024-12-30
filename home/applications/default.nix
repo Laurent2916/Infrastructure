@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./alacritty.nix
+    ./ghostty.nix
     ./firefox.nix
     ./thunderbird.nix
     ./vscode.nix
