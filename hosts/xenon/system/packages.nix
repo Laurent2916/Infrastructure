@@ -4,6 +4,7 @@
     btop
     gitMinimal
     micro
+    tmux
     sysz
   ];
 }
