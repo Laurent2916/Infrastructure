@@ -20,6 +20,13 @@
   # backlight intensity
   programs.light.enable = true;
 
+  # WiFi HP printer
+  # hardware.sane.enable = true;
+  # users.users.laurent.extraGroups = ["scanner" "lp"];
+  # hardware.sane.extraBackends = [pkgs.hplipWithPlugin];
+  # services.avahi.enable = true;
+  # services.avahi.nssmdns = true;
+
   # webcam
   # hardware.firmware = [
   #   pkgs.ivsc-firmware
