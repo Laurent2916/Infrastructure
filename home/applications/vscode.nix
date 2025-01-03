@@ -33,6 +33,10 @@
       "editor.wordWrapColumn" = 120;
       "editor.wordWrap" = "off";
       "editor.wrappingIndent" = "same";
+      "evenBetterToml.formatter.arrayTrailingComma" = true;
+      "evenBetterToml.formatter.arrayAutoExpand" = true;
+      "evenBetterToml.formatter.reorderArrays" = true;
+      "evenBetterToml.formatter.trailingNewline" = true;
       "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
