@@ -25,6 +25,9 @@ in {
 
     compression = true;
     addKeysToAgent = "yes";
+    extraConfig = ''
+      SetEnv TERM=xterm-256color
+    '';
 
     matchBlocks = {
       "xenon ssh.fainsin.bzh" = {
