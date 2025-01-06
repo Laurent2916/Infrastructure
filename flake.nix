@@ -61,6 +61,11 @@
     catppuccin = {
       url = "github:catppuccin/nix/58d020d4c85416e2a75ec820e290d3d5b13b3427";
     };
+    thunderbird-shortcuts = {
+      url = "github:Laurent2916/thunderbird-shortcuts";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
 
     # self hosted (forgejo) repos
     website = {
