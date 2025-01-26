@@ -12,6 +12,11 @@
   # use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # set lower swappiness
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 0;
+  };
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
