@@ -33,6 +33,12 @@
                   type = "btrfs";
                   extraArgs = ["-f"];
                   subvolumes = {
+                    "/swap" = {
+                      mountpoint = "/.swapvol";
+                      swap = {
+                        swapfile.size = "32G";
+                      };
+                    };
                     "/nix" = {
                       mountOptions = [
                         "compress=zstd"
