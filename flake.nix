@@ -43,7 +43,7 @@
       url = "github:nix-community/lanzaboote";
     };
     nixos-hardware = {
-      url = "github:NixOS/nixos-hardware";
+      url = "github:Laurent2916/nixos-hardware/patch-1";
     };
     impermanence = {
       url = "github:nix-community/impermanence";
