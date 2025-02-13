@@ -41,36 +41,6 @@ in {
         port = 25077;
         forwardAgent = true;
       };
-      "dataverse51" = gcpHost {
-        hostname = "dataverse51";
-        project = "genie-training";
-        zone = "europe-west4-a";
-        forwardAgent = true;
-      };
-      "dataverse51-spider" = gcpHost {
-        hostname = "dataverse51-spider";
-        project = "genie-training";
-        zone = "europe-west4-a";
-        forwardAgent = true;
-      };
-      "dataverse51-gpu" = gcpHost {
-        hostname = "dataverse51-gpu";
-        project = "genie-training";
-        zone = "europe-west4-a";
-        forwardAgent = true;
-      };
-      "dataverse51-multi-gpu" = gcpHost {
-        hostname = "dataverse51-multi-gpu";
-        project = "genie-training";
-        zone = "europe-west4-a";
-        forwardAgent = true;
-      };
-      "dataverse51-cvat" = gcpHost {
-        hostname = "dataverse51-cvat";
-        project = "genie-training";
-        zone = "europe-west4-a";
-        forwardAgent = true;
-      };
       "laurent-dev-l4" = gcpHost {
         hostname = "laurent-dev-l4";
         project = "genie-training";
@@ -81,6 +51,24 @@ in {
         hostname = "laurent-dev-a100";
         project = "genie-training";
         zone = "europe-west4-a";
+        forwardAgent = true;
+      };
+      "laurent-dev-cpu" = gcpHost {
+        hostname = "laurent-dev-cpu";
+        project = "genie-training";
+        zone = "europe-west4-a";
+        forwardAgent = true;
+      };
+      "laurent-dev-h100" = gcpHost {
+        hostname = "laurent-dev-h100";
+        project = "genie-training";
+        zone = "europe-west4-b";
+        forwardAgent = true;
+      };
+      "laurent-std-h100" = gcpHost {
+        hostname = "laurent-std-h100";
+        project = "genie-training";
+        zone = "europe-west4-b";
         forwardAgent = true;
       };
     };
