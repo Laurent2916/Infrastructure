@@ -34,13 +34,11 @@
       url = "github:nix-community/nixos-anywhere";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
-    };
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.disko.follows = "disko";
     };
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
+      inputs.flake-parts.follows = "flake-parts";
     };
     nixos-hardware = {
       url = "github:Laurent2916/nixos-hardware/patch-1";
@@ -166,35 +164,18 @@
   outputs = {
     agenix,
     flake-parts,
-    treefmt-nix,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = import inputs.systems;
 
-      imports = [
-        flake-parts.flakeModules.easyOverlay
-        treefmt-nix.flakeModule
-      ];
-
       perSystem = {
         pkgs,
         system,
         ...
-      }: rec {
-        formatter = pkgs.alejandra;
-
-        treefmt = {
-          projectRootFile = "flake.nix";
-          programs = {
-            alejandra.enable = true;
-            deadnix.enable = true;
-          };
-        };
-
+      }: {
         devShells.default = pkgs.mkShell {
           packages = [
-            formatter # defined above
             pkgs.git # version control
             pkgs.sbctl # secure boot utils
             agenix.packages.${system}.agenix # secrets
