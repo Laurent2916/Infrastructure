@@ -41,7 +41,7 @@
       inputs.flake-parts.follows = "flake-parts";
     };
     nixos-hardware = {
-      url = "github:Laurent2916/nixos-hardware/patch-1";
+      url = "github:NixOS/nixos-hardware";
     };
     impermanence = {
       url = "github:nix-community/impermanence";
