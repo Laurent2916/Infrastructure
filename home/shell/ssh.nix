@@ -41,34 +41,22 @@ in {
         port = 25077;
         forwardAgent = true;
       };
-      "laurent-dev-l4" = gcpHost {
-        hostname = "laurent-dev-l4";
-        project = "genie-training";
-        zone = "europe-west1-b";
-        forwardAgent = true;
-      };
       "laurent-dev-a100" = gcpHost {
         hostname = "laurent-dev-a100";
         project = "genie-training";
         zone = "europe-west4-a";
         forwardAgent = true;
       };
-      "laurent-dev-cpu" = gcpHost {
-        hostname = "laurent-dev-cpu";
+      "laurent-spot-h100-01" = gcpHost {
+        hostname = "laurent-spot-h100-01";
         project = "genie-training";
-        zone = "europe-west4-a";
+        zone = "us-central1-a";
         forwardAgent = true;
       };
-      "laurent-dev-h100" = gcpHost {
-        hostname = "laurent-dev-h100";
+      "laurent-spot-h100-02" = gcpHost {
+        hostname = "laurent-spot-h100-02";
         project = "genie-training";
-        zone = "europe-west4-b";
-        forwardAgent = true;
-      };
-      "laurent-std-h100" = gcpHost {
-        hostname = "laurent-std-h100";
-        project = "genie-training";
-        zone = "europe-west4-b";
+        zone = "us-central1-a";
         forwardAgent = true;
       };
     };
