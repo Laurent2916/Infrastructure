@@ -13,7 +13,7 @@
 
   home.persistence."/persist/home/laurent" = {
     directories = [
-      ".ssh"
+      ".local/share/atuin"
     ];
   };
 }
