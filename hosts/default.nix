@@ -1,5 +1,4 @@
 {inputs, ...}: let
-  nixpkgs = inputs.nixpkgs;
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
@@ -10,7 +9,7 @@
   };
 in {
   # work laptop
-  aurum = nixpkgs.lib.nixosSystem {
+  aurum = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
@@ -28,7 +27,7 @@ in {
   };
 
   # home server
-  xenon = nixpkgs.lib.nixosSystem rec {
+  xenon = inputs.nixpkgs.lib.nixosSystem rec {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
