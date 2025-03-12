@@ -43,6 +43,8 @@
       "gitmoji.showEmojiCode" = true;
       "terminal.integrated.fontFamily" = "'FiraCode Nerd Font Mono', 'Noto Color Emoji'";
       "terminal.integrated.scrollback" = 100000;
+      "window.customTitleBarVisibility"= "never";
+      "window.titleBarStyle" = "native";
       "window.menuBarVisibility" = "toggle";
       "window.zoomLevel" = -0.75;
       "workbench.colorTheme" = "Catppuccin Mocha";
