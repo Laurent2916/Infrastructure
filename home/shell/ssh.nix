@@ -35,30 +35,6 @@ in {
         user = "root";
         proxyCommand = "${lib.getExe pkgs.cloudflared} access ssh --hostname %h";
       };
-      "nicole" = {
-        hostname = "3.tcp.eu.ngrok.io";
-        user = "laurent";
-        port = 25077;
-        forwardAgent = true;
-      };
-      "laurent-dev-a100" = gcpHost {
-        hostname = "laurent-dev-a100";
-        project = "genie-training";
-        zone = "europe-west4-a";
-        forwardAgent = true;
-      };
-      "laurent-spot-h100-01" = gcpHost {
-        hostname = "laurent-spot-h100-01";
-        project = "genie-training";
-        zone = "us-central1-a";
-        forwardAgent = true;
-      };
-      "laurent-spot-h100-02" = gcpHost {
-        hostname = "laurent-spot-h100-02";
-        project = "genie-training";
-        zone = "us-central1-a";
-        forwardAgent = true;
-      };
     };
   };
 
