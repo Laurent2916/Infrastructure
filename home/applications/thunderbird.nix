@@ -69,6 +69,7 @@ in {
       "privacy.donottrackheader.enabled" = true;
       "permissions.default.desktop-notification" = 1;
       "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+      "apz.overscroll.enabled" = false; # disable overscroll
     };
   };
 

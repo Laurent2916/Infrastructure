@@ -12,6 +12,7 @@ in {
           "browser.ctrlTab.sortByRecentlyUsed" = true; # change Ctrl+Tab behaviour
           "toolkit.zoomManager.zoomValues" = zoomValues; # set custom zoom levels
           "general.autoScroll" = true; # enable middle-click autoscroll
+          "apz.overscroll.enabled" = false; # disable overscroll
           # additional devtools
           "devtools.browsertoolbox.enabled" = false;
           "devtools.debugger.remote-enabled" = false;
