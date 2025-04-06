@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   fonts.packages = with pkgs; [
-    # https://notofonts.github.io/
+    # https://notofonts.github.io
     noto-fonts # standard characters
     noto-fonts-lgc-plus # latin, greek, and cyrillic
     noto-fonts-cjk-sans # chinese, japanese, and korean
